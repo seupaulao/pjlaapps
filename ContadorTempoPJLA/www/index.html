@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Contador de tempo PJLAapps</title>
+    </head>
+    <body>
+        <div class="w3-container w3-center w3-teal">
+    <h2>Contador de tempo PJLAapps</h2>
+</div>
+<br>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<div id="relogio" class="w3-container w3-center">
+        <div class="w3-row">
+        <div class="w3-col s4 w3-orange w3-border" onclick="addTempo(30)"><p>+ 30 s</p></div>
+        <div class="w3-col s4 w3-orange w3-border" onclick="addTempo(60)"><p>+ 1 m</p></div>
+        <div class="w3-col s4 w3-orange w3-border" onclick="addTempo(300)"><p>+ 5 m</p></div>
+        </div>
+	<br />
+	<br />
+	 <div class="w3-row-padding">
+	  <div class="w3-col s6 w3-lime w3-xxlarge w3-border">
+	    <div><br><span id="txMinuto">0</span><br><br></div>
+	  </div>
+	  <div class="w3-col s6 w3-lime w3-xxlarge w3-border">
+	    <div><br><span id="txSegundo">0</span><br><br></div>
+	  </div>
+	</div> 
+	<br />
+	<br />
+	<button class="w3-button w3-green w3-xlarge" onclick="rodar()">Rodar 1x</button>
+	<button class="w3-button w3-red w3-xlarge" onclick="parar()">PARE!</button>
+	<button class="w3-button w3-lime w3-xlarge" onclick="rodarsemparar()">Rodar Sem Parar!</button>
+        <h2 class="w3-panel" id="demo"></h2>
+</div>
+<audio id="meuSom">
+  <source src="alo.mp3" type="audio/ogg">
+</audio>
+<script>
+
+var tempo = 0;
+var dtempo = 0;
+var myVar = setInterval(myTimer, 0);
+var countDownDate = new Date().getTime();
+parar();
+
+var som = document.getElementById("meuSom"); 
+var sons=new Array("hey.mp3","alo.mp3","heyheyhey.mp3","tanahora.mp3","tanahoradecomer.mp3","vidaeuteamo.mp3");
+
+function playSom() { 
+  som.play(); 
+} 
+
+function pauseSom() { 
+  som.pause(); 
+} 
+
+function loadSom() { 
+  pauseSom();
+  var ritem = Math.floor((Math.random() * sons.length));
+  som.src = sons[ritem];
+  playSom();
+}
+
+
+function addTempo(tt)
+{
+   tempo += tt;
+   dtempo = tempo;
+   var minuto = Math.floor(tempo / 60);
+   var segundo = Math.floor(tempo % 60);
+   document.getElementById("txMinuto").innerHTML= minuto;
+   document.getElementById("txSegundo").innerHTML= segundo;
+}
+
+function rodar()
+{
+	// Set the date we're counting down to
+	//var countDownDate = new Date("Aug 5, 2019 16:50:00").getTime();
+	var data = new Date();
+        data.setMinutes(parseInt(document.getElementById("txMinuto").innerHTML) + data.getMinutes());
+        data.setSeconds(parseInt(document.getElementById("txSegundo").innerHTML)  + data.getSeconds());
+        countDownDate = data.getTime();
+
+	// Update the count down every 1 second
+	myVar = setInterval(myTimer, 1000);
+}
+
+function rodarsemparar()
+{
+	// Set the date we're counting down to
+	//var countDownDate = new Date("Aug 5, 2019 16:50:00").getTime();
+	var data = new Date();
+        data.setMinutes(parseInt(document.getElementById("txMinuto").innerHTML) + data.getMinutes());
+        data.setSeconds(parseInt(document.getElementById("txSegundo").innerHTML)  + data.getSeconds());
+        countDownDate = data.getTime();
+
+	// Update the count down every 1 second
+	myVar = setInterval(myTimer2, 1000);
+}
+
+
+function parar()
+{
+ clearInterval(myVar);
+ tempo = 0;
+ dtempo = 0;
+ document.getElementById("txMinuto").innerHTML = "0";
+ document.getElementById("txSegundo").innerHTML= "0";
+ document.getElementById("demo").innerHTML="";
+}
+
+function myTimer()
+{
+
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	    
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	    
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	    
+	  // Output the result in an element with id="demo"
+	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+	    
+	  // If the count down is over, write some text 
+	  if (distance < 0) {
+	    clearInterval(myVar);
+        navigator.vibrate(3000);
+        loadSom();
+	    document.getElementById("demo").innerHTML = "TA NA HORA";
+	  }
+	
+}
+
+function myTimer2()
+{
+
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	    
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	    
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	    
+	  // Output the result in an element with id="demo"
+	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+	    
+	  // If the count down is over, write some text 
+	  if (distance < 0) {
+	    clearInterval(myVar);
+        navigator.vibrate(3000);
+        loadSom();
+	    document.getElementById("demo").innerHTML = "TA NA HORA";
+        rodarsemparar();
+	  }
+	
+}
+
+
+</script>
+
+    </body>
+</html>

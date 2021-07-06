@@ -1,0 +1,40 @@
+versão 2.0 - com.pjlapps.bibliapesquisa
+
+problemas e coisas a fazer:
+
+1. textus receptus ainda com problema no hebraico
+2. traducao do textus receptus
+3. rever e implementar busca strong
+4. retire as propagandas e deixe o software livre [banner e interticial]
+5. retirar os problemas dos planos de estudo
+6. corrigir o CSS da Pesquisa : margin, padding
+7. revisar biblia e versos e verificar se há livros faltando
+ou se há versos em falta
+8. verificar se há como colocar sessão com apócrifos separada da bíblia
+9. verificar se há como colocar sessão de sermonetes
+10. verificar se há como exportar para o google docs
+11. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
+12. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
+ - fazer por contagem efetuada e não por dias e datas
+ - mostrar como os livros
+ - pintar de amarelo o que foi efetivamente lido
+ - pintar de azul o que falta ser lido
+13. colocar as versões sob comparativo apenas para evitar a quantidade máxima de palavras para fazer uma cópia
+14. quadro de livros, colocar 2 formatos:
+   - lista de nomes
+   - lista de abreviaturas
+15. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
+ex: gen 1   1 - 31
+    psa 23  2231 - 2237   
+
+16. excluir bases do github e colocar essa sendo a efetiva
+   
+5. TESTAR
+    a. testar todas as funcionalidades
+    b. testar responsividade
+    c. velocidade da carga inicial
+       - esse é o maior problema, devido a falta de banco de dados e a quantidade de memória RAM usada nos aplicativos
+       - interessante seria: carregar o banco apenas no momento de exibir as informações da página e logo depois fechar tudo
+
+
+

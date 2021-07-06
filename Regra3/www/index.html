@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+        <title>Regra de 3</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/w3.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+<div id="menu" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo03">Regra de 3</span></h2>
+ 	</div>
+
+    <div class="w3-container w3-center">       
+      <ul class="w3-ul w3-hoverable">
+          <li id="mr3id1">Regra 3 Simples</li>
+          <li id="mr3id2">Regra 3 Composta</li>
+          <li id="mr3id3">Conversor Temperatura</li>
+          <li id="mr3id4">C&aacute;lculo IMC</li>
+          <li id="mr3id5">Calcular Solu&ccedil;&atilde;o Sistemas Lineares</li>
+          <li id="mr3id6">Calcular Op&ccedil;&otilde;es de Estudo</li>
+          <li id="mr3id7">Dicas memoriza&ccedil;&atilde;o</li>
+      </ul>
+	</div>
+</div>
+
+<div id="regra3simples" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo03">Regra de 3 Simples</span></h2>
+ 	</div>
+    <div class="w3-panel w3-red" id="erromsg2" style="display:none"></div>
+        
+    <div class="w3-container w3-center">       
+        <div>
+             <input type="text" size="8" maxlength="10" id="de1"></input>
+             ---------------------------------------- 
+             <input type="text" size="8" maxlength="10" id="para1"></input>
+        </div>
+        <div>
+             <input type="text" size="8" maxlength="10" id="de2"></input>
+             ---------------------------------------- 
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div>
+            <button id="btcalcular1">Calcular</button><button id="btlimpar1">Limpar</button>
+        </div>
+        <div class="w3-center">
+            <button id="btvoltar1">Voltar</button>
+        </div>
+        <div id="resultado1"></div>
+	</div>
+</div>
+
+<div id="regra3composta" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo03">Regra de 3 Composta</span></h2>
+ 	</div>
+    <div class="w3-panel w3-red" id="erromsg3" style="display:none"></div>
+
+    <div class="w3-container w3-center">       
+        <p>N&uacute;mero de Grandezas: <input id="numgrandezas" type="text" size="3" maxlength="5"></input><button id="btinserir">Campos</button></p>
+	</div>
+    <div class="w3-container w3-center" id="campos"></div>
+    <div class="w3-center">
+            <button class="w3-container w3-center" id="btcalcular2">Calcular</button><button id="btlimpar2">Limpar</button>
+    </div>
+        <div class="w3-center">
+            <button id="btvoltar2">Voltar</button>
+        </div>
+
+    <div id="resultado2"></div>
+
+</div>
+
+<div id="temperatura" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo03">Conversor Temperatura</span></h2>
+ 	</div>
+
+        <div class="w3-center">
+             <p> 
+             <span>Celsius</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="edcelsius" name="edcelsius" size=5 maxlength=10>
+             <br>
+             <span>Farenheit</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="edfarenheit" name="edfarenheit" size=5 maxlength=10>
+             <br>
+             <span>Kelvin</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="edkelvin" name="edkelvin" size=5 maxlength=10>
+             </p>  
+            <button id="btvoltar3">Voltar</button>
+        </div>
+
+</div>
+
+
+<div id="calculoimc" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo04">C&aacute;lculo IMC</span></h2>
+ 	</div>
+
+        <div class="w3-panel w3-center">
+             <p> 
+             <span>Peso (Kg)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txpeso" name="txpeso" size=5 maxlength=10>
+             <br>
+             <span>Altura (cm)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txaltura" name="txaltura" size=5 maxlength=10>
+             <br>
+             <span>Idade (anos)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txidade" name="txidade" size=5 maxlength=10>
+             </p>  
+             <button id="btcalcularimc">Calcular IMC</button><button id="btvoltar4">Voltar</button>
+        </div>
+        <div id="resultadoimc" class="w3-container">
+        </div>
+
+</div>
+
+<div id="sistemaslineares" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo05">Calcular Solu&ccedil;&atilde;o Sistemas Lineares</span></h2>
+ 	</div>
+
+        <div class="w3-center w3-panel">
+             <p> 
+             <span>N&uacute;mero de Ic&oacute;gnitas:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txicognitas" name="txicognitas" value="2" size=5 maxlength=10>
+             <br>
+             <span>N&uacute;mero de Express&otilde;es:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txexpressoes" name="txexpressoes" value="2" size=5 maxlength=10>
+             </p>  
+            <button id="btconstruirsistema">Construir Sistema Linear</button><button id="btvoltar5">Voltar</button>
+            <div id="sistemalinear"></div>
+            <button id="calcularsolucaolinear">Calcular Solu&ccedil;&atilde;o Linear</button>
+            <br>
+            <div class="w3-panel w3-center" id="resultadosistemalinear"></div>
+        </div>
+
+</div>
+
+<div id="escolhaEstudo" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo04">Escolhas Estudo</span></h2>
+ 	</div>
+        <p>Clique em "Inserir Lista" para inserir um item na lista e clique no item da lista para remov&ecirc;-lo</p> 
+        <div class="w3-panel w3-center">
+             <span>Op&ccedil;&atilde;o</span>
+             <input type="text" id="txtEscolhaEstudo" size="25" maxlength="30" /> 
+             <button id="btInserirLista">Inserir Lista</button>
+             <br>
+             <select size="4" id="listaOpcoes"></select> 
+             <br>
+             <button id="btCalcularEstatistica">Calcular Estat&iacute;stica</button>
+             <button id="btLimparCamposEscolhaEstudo">Limpar</button>
+             <button id="btvoltar6">Voltar</button>
+        </div>
+        <div id="resultadoCalcularEstatistica" class="w3-container">
+        </div>
+
+</div>
+
+<div id="dicasmemorizacao" class="tela w3-animate-top" style="display:none">
+	  <div class="cabecalho w3-container w3-lime w3-center">
+		<h2 class="w3-bar-item"><span id="idtitulo05">Dicas memoriza&ccedil;&atilde;o</span></h2>
+ 	</div>
+        <h3>Memorizar algo rapidamente</h3> 
+        <ul>
+            <li>Primeira repetição : logo após aprender</li> 
+            <li>Segunda  repetição : 20 minutos depois</li> 
+            <li>Terceira repetição : 8 horas depois</li> 
+            <li>Quarta   repetição : 24 horas depois</li> 
+        </ul>  
+        <h3>Memorizar algo por um longo per&iacute;odo</h3> 
+        <ul>
+            <li>Primeira repetição : logo após aprender</li> 
+            <li>Segunda  repetição : 30 minutos depois</li> 
+            <li>Terceira repetição : 24 horas depois</li> 
+            <li>Quarta   repetição : 3 semanas depois</li> 
+            <li>Quinta   repetição : 2 meses</li> 
+        </ul>  
+        <div class='w3-panel w3-center'>
+            <button id="btvoltar7">Voltar</button>
+        </div>
+</div>
+
+
+
+
+
+ <script type="text/javascript" src="js/index.js"></script>
+
+
+    </body>
+</html>
