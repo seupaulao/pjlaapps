@@ -265,6 +265,19 @@ function abrirTelaAjuda()
    abrirTela("ajuda");
 }
 
+function abrirTelaSermonetes()
+{
+   closeNav3();
+   abrirTela("sermonetes");
+}
+
+function abrirTelaMensagens()
+{
+   closeNav3();
+   abrirTela("mensagens");
+}
+
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "125px";
 }

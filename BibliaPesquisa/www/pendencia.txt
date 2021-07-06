@@ -2,15 +2,22 @@ versão 2.0 - com.pjlapps.bibliapesquisa
 
 problemas e coisas a fazer:
 
-1. textus receptus ainda com problema no hebraico
-2. traducao do textus receptus
+1. textus receptus hebraico e grego
+   - se usando como servidor, entao funcao w3-include-html funciona
+   - verificar se dá para usar no APK
+   - se der certo, TR também deve ir para HTML 
+   - reduzindo o uso da RAM
+2. traducao da referência strong para português
 3. rever e implementar busca strong
-4. retire as propagandas e deixe o software livre [banner e interticial]
-5. retirar os problemas dos planos de estudo
+4. retire as propagandas
+5. corrigir os problemas dos planos de estudo
 6. corrigir o CSS da Pesquisa : margin, padding
-7. revisar biblia e versos e verificar se há livros faltando
-ou se há versos em falta
-8. verificar se há como colocar sessão com apócrifos separada da bíblia
+7. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
+8. deuterocanônicos
+   OK - encontrar fonte
+   - copiar todos os fontes / capitulos
+   - deve funcionar tal qual WLC - HTML 
+   - tornar html simples para abrir via w3-include-html
 9. verificar se há como colocar sessão de sermonetes
 10. verificar se há como exportar para o google docs
 11. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
@@ -27,7 +34,8 @@ ou se há versos em falta
 ex: gen 1   1 - 31
     psa 23  2231 - 2237   
 
-16. excluir bases do github e colocar essa sendo a efetiva
+OK 16. excluir bases do github e colocar essa sendo a efetiva
+17. verificar se há como colocar sessão de mensagens especiais e meditação matinal
    
 5. TESTAR
     a. testar todas as funcionalidades
