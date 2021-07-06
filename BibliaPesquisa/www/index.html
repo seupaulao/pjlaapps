@@ -19,78 +19,9 @@
         <script type="text/javascript" charset="utf-8" src="js/biblias/aa.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/acf.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/kjv.js"></script>
-        <!--script type="text/javascript" charset="utf-8" src="js/biblias/fob.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/biblias/vrv.js"></script-->
        </head>
 <body>
-<script>
-var AdMob=null;
-var admobid = {};
-if( /(android)/i.test(navigator.userAgent) ) { 
-    admobid = { // for Android
-        banner: 'ca-app-pub-8315072990407734/6179392631',
-        interstitial: 'ca-app-pub-8315072990407734/8763976372'
-    };
-} 
-/*
-  else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-    admobid = { // for iOS
-        banner: 'ca-app-pub-6869992474017983/4806197152',
-        interstitial: 'ca-app-pub-6869992474017983/7563979554'
-    };
-} 
-  else {
-    admobid = { // for Windows Phone
-        banner: 'ca-app-pub-6869992474017983/8878394753',
-        interstitial: 'ca-app-pub-6869992474017983/1355127956'
-    };
-}
-*/
 
-if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-    document.addEventListener('deviceready', initApp, false);
-} else {
- //   initApp();
-}
-
-function initApp() {
-    if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
-
-  /*  AdMob.createBanner( {
-        adId: admobid.banner, 
-        isTesting: false,
-        overlap: true, 
-        offsetTopBar: false, 
-        position: AdMob.AD_POSITION.BOTTOM_CENTER,
-        bgColor: 'black',
-        autoShow: true
-    } );  */
-
-    // preppare and load ad resource in background, e.g. at begining of game level
-     if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
-    
-}
-
-</script>
-<!--div id="princ" class="tela w3-animate-top">
-	  <div class="cabecalho w3-container w3-lime w3-center">
-		<h2 class="w3-bar-item"><span id="idtitulo">B&iacute;blia</span></h2>
-	</div>
-
-	<div class="w3-container">
-	    <ul class="w3-ul w3-hoverable w3-center">
-		<li onclick="abrirTelaLeitura()"><h4><span id="idtitulo01">Ler</span></h4></li>
-		<li onclick="abrirTela('pesquisandobiblia')"><h4><span id="idtitulo02">Pesquisar</span></h4></li>
-		<li onclick="abrirTelaListando()"><h4><span id="idtitulo03">Hist&oacute;rico</span></h4></li>
-		<li onclick="abrirTelaDicionario()"><h4><span id="idtitulo04">Dicion&aacute;rio</span></h4></li>
-		<li onclick="abrirTela('mapas')"><h4><span id="idtitulo05">Mapas</span></h4></li>
-		<li onclick="abrirTelaEstudos()"><h4><span id="idmenu02">Estudos</span></h4></li>
-		<li onclick="abrirTelaConfiguracao()"><h4><span id="idtitulo06">Configura&ccedil;&atilde;o</span></h4></li>
-		<li onclick="abrirTelaAjuda()"><h4><span class="w3-text-red">Ajuda</span></h4></li>
-		<li>&nbsp;</li>
-	    </ul>
-	</div>
-</div-->
 
 <div id="princestudos" class="tela w3-animate-top">
 	  <div class="cabecalho w3-container w3-lime">
@@ -239,31 +170,7 @@ function initApp() {
        </div>
 
 
-            <!--div id="telaModalControlesLeitura" class="w3-modal w3-animate-zoom">
-              <div class="w3-modal-content">
-
-                <header class="cabecalho w3-container w3-lime"> 
-                  <span onclick="document.getElementById('telaModalControlesLeitura').style.display='none'" 
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2><span id="idcontroles">Controles</span></h2>
-                </header>
-
-                <div class="w3-container w3-text-black">
-                    <div class="w3-row">
-                        <input type="text" id="buscasimples" size="30" maxlength="40" class="w3-col s10" class="w3-block">
-                        <div class="w3-center">
-                        <button id="btnprocurargrifar" class="w3-btn w3-border w3-block" onclick="buscar()">Procurar</button>
-                        </div>
-                         
-                    </div>
-                </div>
-                <footer class="cabecalho w3-container w3-lime">
-                  <p>&nbsp;</p>
-                </footer>
-
-              </div>
-            </div-->
-
+         
 	<div  id="leiturarodape">
 	</div>
 </div>
@@ -310,11 +217,6 @@ function initApp() {
 
 
 
-<!--div id="mySidenav2" class="cabecalho sidenav">
-        <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
-        <img class="w3-btn  w3-large" onclick="abrirTelaPrincipal()" src="img/casa48.png"></img>
-        <img class="w3-btn  w3-large" onclick="abrirTelaModalControlesLeitura()" src="img/lupa48.png"></img>
-</div-->    
 
 <div id="mySidenav" class="sidenav">
 	<div  class="w3-container w3-light-grey">
@@ -483,9 +385,9 @@ function initApp() {
 		                <div class="w3-row" id="saidaVersoesPortugues">
 			               <div class="w3-third w3-container w3-blue">
                                         <h2>BLV</h2>
-                                        <div class="w3-row">
-                                           <div class="w3-half w3-container w3-red w3-center w3-padding-16" id="totalVelhoBLV" onclick="abrirtotallivros('pesquisandobiblialivros','velho','BLV')"></div>
-				                               <div class="w3-half w3-container w3-yellow w3-center w3-padding-16" id="totalNovoBLV" onclick="abrirtotallivros('pesquisandobiblialivros','novo','BLV')"></div>
+                                        <div class="w3-row w3-margin">
+                                           <div class="w3-half w3-container w3-red w3-center w3-padding-16 " id="totalVelhoBLV" onclick="abrirtotallivros('pesquisandobiblialivros','velho','BLV')"></div>
+				                               <div class="w3-half w3-container w3-yellow w3-center w3-padding-16 " id="totalNovoBLV" onclick="abrirtotallivros('pesquisandobiblialivros','novo','BLV')"></div>
                                           </div>
                                        </div>
 		               </div>
