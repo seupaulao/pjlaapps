@@ -35,8 +35,8 @@ OK 6. corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da
 ex: gen 1   1 - 31
     psa 23  2231 - 2237   
 
-15. verificar se há como colocar sessão de sermonetes
-16. verificar se há como colocar sessão de mensagens especiais e meditação matinal
+15. sessão de sermonetes
+16. sessão de mensagens especiais e meditação matinal
    
 5. TESTAR
     a. testar todas as funcionalidades
