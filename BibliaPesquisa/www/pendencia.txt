@@ -2,50 +2,51 @@ versão 2.0 - com.pjlapps.bibliapesquisa
 
 problemas e coisas a fazer:
 
-OK 0. excluir bases do github e colocar essa sendo a efetiva
-OK 14. verificar se há como exportar para o google docs - é possível exportar, mas não é possível integrar
-OK 4. retire as propagandas
-OK 6. corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
+OK excluir bases do github e colocar essa sendo a efetiva
+OK verificar se há como exportar para o google docs - é possível exportar, mas não é possível integrar
+OK retire as propagandas
+OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
 
 1. textus receptus hebraico e grego
    - se usando como servidor, entao funcao w3-include-html funciona
    - verificar se dá para usar no APK
-   - se der certo, TR também deve ir para HTML 
+   - se der certo, TR também deve ir para HTML -> tentar converter
    - reduzindo o uso da RAM
-2. traducao da referência strong para português
-3. rever e implementar busca strong
-5. corrigir os problemas dos planos de estudo
-7. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
-8. deuterocanônicos
+2. deuterocanônicos
    OK - encontrar fonte
    OK - copiar todos os fontes / capitulos
    - corrigir as fontes para HTML simples   
    - deve funcionar funcao w3-include-html = TESTAR como APK 
-9.  ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
-10. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
+3. traducao da referência strong para português
+4. rever e implementar busca strong
+5. corrigir os problemas dos planos de estudo
+6. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
+7.  ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
+8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - fazer por contagem efetuada e não por dias e datas
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
  - corrigir o possivel erro que da ao usar essa funcionalidade
-11. colocar as versões sob comparativo apenas para evitar a quantidade máxima de palavras para fazer uma cópia
-12. quadro de livros, colocar 2 formatos:
+9. colocar as versões sob comparativo apenas para evitar a quantidade máxima de palavras para fazer uma cópia
+10. quadro de livros, colocar 2 formatos:
    - lista de nomes
    - lista de abreviaturas
-13. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
+   
+11. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
 ex: gen 1   1 - 31
     psa 23  2231 - 2237   
 
-15. sessão de sermonetes <tornar dinamica>
+12. sessão de sermonetes <tornar dinamica>
 
-16. sessão de mensagens especiais e meditação matinal <tornar dinamica>
+13. sessão de mensagens especiais e meditação matinal <tornar dinamica>
 
-17. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
+14. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
 ou o dicionario que devera ser usado na consulta
 
-18. juntar outra base se possivel : personagens biblicos
+15. juntar outra base se possivel : personagens biblicos
    
-5. TESTAR
+99. TESTAR
     a. testar todas as funcionalidades
     b. testar responsividade
     c. velocidade da carga inicial
