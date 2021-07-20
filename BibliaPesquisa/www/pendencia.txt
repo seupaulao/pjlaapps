@@ -16,23 +16,30 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
    OK - encontrar fonte
    OK - copiar todos os fontes / capitulos
    - corrigir as fontes para HTML simples   
+     OK - baruc
+     - tobias
+     - judite
+     - sabedoria
+     - eclesiastico
+     - macabeus 1
+     - macabeus 2
    - deve funcionar funcao w3-include-html = TESTAR como APK 
 3. traducao da referência strong para português
 4. rever e implementar busca strong
 5. corrigir os problemas dos planos de estudo
 6. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
-7.  ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
+7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - fazer por contagem efetuada e não por dias e datas
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
  - corrigir o possivel erro que da ao usar essa funcionalidade
-9. colocar as versões sob comparativo apenas para evitar a quantidade máxima de palavras para fazer uma cópia
+9. colocar as versões apenas sob comparativo, para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
 10. quadro de livros, colocar 2 formatos:
    - lista de nomes
    - lista de abreviaturas
-   
+
 11. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
 ex: gen 1   1 - 31
     psa 23  2231 - 2237   
