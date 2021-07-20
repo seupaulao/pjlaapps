@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 220: choice menuitem expects a non-empty block.
+    "Compactador de lixo":
+                          ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Nov 30 14:29:21 2020

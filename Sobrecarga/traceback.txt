@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 192, in script call
+    call lixao_03_A
+  File "game/script.rpy", line 209, in script
+    "A prensa só funciona 100% preenchida, e seu nivel eh : [nivelPrensa]"
+ValueError: unsupported format character 'p' (0x70) at index 26
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 192, in script call
+    call lixao_03_A
+  File "game/script.rpy", line 209, in script
+    "A prensa só funciona 100% preenchida, e seu nivel eh : [nivelPrensa]"
+  File "/home/paulojunior/Documentos/renpy-7.3.5-sdk/renpy/ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/home/paulojunior/Documentos/renpy-7.3.5-sdk/renpy/exports.py", line 1334, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character 'p' (0x70) at index 26
+
+Linux-4.15.0-121-generic-x86_64-with-debian-buster-sid
+Ren'Py 7.3.5.606
+Sobrecarga 1.0
+Wed Oct 21 19:16:02 2020
