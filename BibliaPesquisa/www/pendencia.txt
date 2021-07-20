@@ -18,15 +18,16 @@ OK 6. corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da
 7. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
 8. deuterocanônicos
    OK - encontrar fonte
-   - copiar todos os fontes / capitulos
-   - deve funcionar tal qual WLC - HTML 
-   - tornar html simples para abrir via w3-include-html
+   OK - copiar todos os fontes / capitulos
+   - corrigir as fontes para HTML simples   
+   - deve funcionar funcao w3-include-html = TESTAR como APK 
 9.  ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 10. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - fazer por contagem efetuada e não por dias e datas
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
+ - corrigir o possivel erro que da ao usar essa funcionalidade
 11. colocar as versões sob comparativo apenas para evitar a quantidade máxima de palavras para fazer uma cópia
 12. quadro de livros, colocar 2 formatos:
    - lista de nomes
@@ -35,8 +36,14 @@ OK 6. corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da
 ex: gen 1   1 - 31
     psa 23  2231 - 2237   
 
-15. sessão de sermonetes
-16. sessão de mensagens especiais e meditação matinal
+15. sessão de sermonetes <tornar dinamica>
+
+16. sessão de mensagens especiais e meditação matinal <tornar dinamica>
+
+17. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
+ou o dicionario que devera ser usado na consulta
+
+18. juntar outra base se possivel : personagens biblicos
    
 5. TESTAR
     a. testar todas as funcionalidades

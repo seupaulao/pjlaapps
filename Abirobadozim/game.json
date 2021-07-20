@@ -26,7 +26,20 @@
     "verticalSync": false,
     "platformSpecificAssets": {},
     "loadingScreen": {
-      "showGDevelopSplash": true
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
     },
     "extensionProperties": [],
     "platforms": [
@@ -192,6 +205,7 @@
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
+          "effects": [],
           "behaviors": [],
           "string": "Abirobadozim",
           "font": "",
@@ -210,6 +224,7 @@
           "type": "TiledSpriteObject::TiledSprite",
           "width": 128,
           "variables": [],
+          "effects": [],
           "behaviors": []
         },
         {
@@ -221,6 +236,7 @@
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
+          "effects": [],
           "behaviors": [],
           "string": "Iniciar",
           "font": "",
@@ -334,7 +350,13 @@
         "zoomFactor": 0.8303999999999991
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "direcao",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -344,7 +366,7 @@
           "locked": false,
           "name": "piso",
           "persistentUuid": "f5bec4f0-47c2-4ea8-a52d-8821d0a309b1",
-          "width": 642,
+          "width": 731,
           "x": 64,
           "y": 534,
           "zOrder": 1,
@@ -371,14 +393,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 321,
+          "height": 168,
           "layer": "",
           "locked": false,
           "name": "rock",
           "persistentUuid": "029a9d19-4b7b-4256-a473-dad117a21525",
           "width": 65,
           "x": 639,
-          "y": 214,
+          "y": 366,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -426,6 +448,7 @@
           "type": "TiledSpriteObject::TiledSprite",
           "width": 32,
           "variables": [],
+          "effects": [],
           "behaviors": [
             {
               "name": "Platform",
@@ -444,12 +467,13 @@
           "type": "TiledSpriteObject::TiledSprite",
           "width": 32,
           "variables": [],
+          "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ]
@@ -460,11 +484,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
+          "effects": [],
           "behaviors": [
             {
-              "canGrabPlatforms": true,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "canGrabPlatforms": true,
               "acceleration": 1500,
               "deceleration": 1500,
               "gravity": 1000,
@@ -530,22 +555,151 @@
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "direcao",
+                "=",
+                "-1"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "direcao",
+                ">",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "Arreter"
+                "value": "PlatformBehavior::SimulateRightKey"
               },
               "parameters": [
-                "persona"
+                "persona",
+                "PlatformerObject"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "direcao",
+                "<",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlatformBehavior::SimulateLeftKey"
+              },
+              "parameters": [
+                "persona",
+                "PlatformerObject"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "direcao",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "rock",
+                "persona",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "direcao",
+                "*",
+                "-1"
               ],
               "subInstructions": []
             }
