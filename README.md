@@ -13,6 +13,10 @@ Aplicativos pjlaapps
      - desenvolvimento versão 1.1
    - Biblia Pesquisa : __retirar__ ADs
      - desenvolvimento versão 2.0
+     - Novos Serviços
+         - Meditação
+         - Sermonetes
+         Comprar domínio ou Assinar Amazon??? -> dimensionar custo e material
    - Contador de Tempo : ADs video a pedido
      = pronto para postar versão 1.0
    - Memorizando salmos - visual novel - renpy - aprender a desenhar
@@ -20,29 +24,5 @@ Aplicativos pjlaapps
       - android - ads de video a pedido
       - em desenvolvimento
       
-Outros apps:
-   - Zuada
-     = falta melhorar a arte
-   - Sem tirar o dedo
-     = em desenvolvimento 
-   - Sobrecarga
-     = em desenvolvimento
-   - Abirobadozim
-     = em desenvolvimento 
-   - Make your own panflute
-     = pronto pra postar
-   - Treino mercado - básico tape reading
-     - itchio
-     - android
-     = em desenvolvimento 
-   - Apenas um Sudoku
-     = em desenvolvimento
-   - Mistério
-     = em desenvolvimento 
-
-Implementar Serviços :
-
-  - Meditação
-  - Sermonetes
   
-Comprar domínio???
+

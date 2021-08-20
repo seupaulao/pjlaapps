@@ -26,16 +26,15 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
    - deve funcionar funcao w3-include-html = TESTAR como APK 
 3. traducao da referência strong para português
 4. rever e implementar busca strong
-5. corrigir os problemas dos planos de estudo
 6. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
 7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
+ - corrigir os problemas dos planos de estudo, nao aparece mais nada
  - fazer por contagem efetuada e não por dias e datas
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
- - corrigir o possivel erro que da ao usar essa funcionalidade
-9. colocar as versões apenas sob comparativo, para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
+. colocar as versões apenas sob comparativo, para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
 10. quadro de livros, colocar 2 formatos:
    - lista de nomes
    - lista de abreviaturas
