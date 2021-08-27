@@ -19,7 +19,7 @@ function mercado()
 	cotacao = 20.0
 	valor_mercado = 200000
 	valor_firma = 150000
-    acoes = 10000 -- valor_mercado / cotacao
+    acoes = 1000000 -- valor_mercado / cotacao
 end
 
 function indicadores()
