@@ -7,23 +7,11 @@ OK verificar se há como exportar para o google docs - é possível exportar, ma
 OK retire as propagandas
 OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
 
-1. textus receptus hebraico e grego
+1. textus receptus hebraico e grego e deuterocanônicos em html simples
    - se usando como servidor, entao funcao w3-include-html funciona
    - verificar se dá para usar no APK
-   - se der certo, TR também deve ir para HTML -> tentar converter
-   - reduzindo o uso da RAM
-2. deuterocanônicos
-   OK - encontrar fonte
-   OK - copiar todos os fontes / capitulos
-   - corrigir as fontes para HTML simples   
-     OK - baruc
-     - tobias
-     - judite
-     - sabedoria
-     - eclesiastico
-     - macabeus 1
-     - macabeus 2
-   - deve funcionar funcao w3-include-html = TESTAR como APK 
+   - corrigir as fontes deuterocanônicos para HTML simples
+   - deve funcionar funcao w3-include-html = TESTAR como APK
 3. traducao da referência strong para português
 4. rever e implementar busca strong
 6. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
@@ -34,23 +22,25 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
-. colocar as versões apenas sob comparativo, para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
+9. colocar as versões apenas sob comparativo,
+para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
+
 10. quadro de livros, colocar 2 formatos:
    - lista de nomes
    - lista de abreviaturas
 
 11. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
 ex: gen 1   1 - 31
-    psa 23  2231 - 2237   
+    psa 23  2231 - 2237
 
-12. sessão de sermonetes <tornar dinamica>
+12. sessão de sermonetes <tornar dinamica> - contruir app e serviço integrado
 
-13. sessão de mensagens especiais e meditação matinal <tornar dinamica>
+13. sessão de orações diárias - contruir app e serviço integrado
 
 14. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
 ou o dicionario que devera ser usado na consulta
 
-15. juntar outra base se possivel : personagens biblicos
+15. juntar outra base se possivel : personagens biblicos - construir app integrado
    
 99. TESTAR
     a. testar todas as funcionalidades
@@ -58,6 +48,3 @@ ou o dicionario que devera ser usado na consulta
     c. velocidade da carga inicial
        - esse é o maior problema, devido a falta de banco de dados e a quantidade de memória RAM usada nos aplicativos
        - interessante seria: carregar o banco apenas no momento de exibir as informações da página e logo depois fechar tudo
-
-
-
