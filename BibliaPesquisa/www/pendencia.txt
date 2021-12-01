@@ -5,7 +5,7 @@ versão 2.0 - com.pjlapps.bibliapesquisa
    2. colocar titulos entre <h3></h3>
    3. numerar por linha
       - onde tem numero colocar <p><span>NUMERO_VERSO&nbsp;&nbsp;&nbsp;</span><span> texto </span></p>
-      
+
 problemas e coisas a fazer:
 
 OK excluir bases do github e colocar essa sendo a efetiva
