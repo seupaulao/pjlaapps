@@ -18,9 +18,20 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
    - verificar se dá para usar no APK
    - corrigir as fontes deuterocanônicos para HTML simples
    - deve funcionar funcao w3-include-html = TESTAR como APK
+   convertido em html simples:
+      OK  baruc          
+	      eclesiastico
+	  OK  judite         
+	      macabeus 1
+	      macabeus 2
+	      sabedoria
+	      tobias
+          Textus receptus (grego)
+      OK  Textus receptus (wlc - hebraico) 	  
+   
 3. traducao da referência strong para português
 4. rever e implementar busca strong
-6. revisar biblia e versos e verificar se há livros faltando ou se há versos em falta
+6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
 7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
@@ -47,6 +58,16 @@ ex: gen 1   1 - 31
 ou o dicionario que devera ser usado na consulta
 
 15. juntar outra base se possivel : personagens biblicos - construir app integrado
+
+16. ao selecionar o verso aparecer as opções:
+    - marcar
+	- compartilhar
+	- referencia strong do verso 
+	- comparativo
+	  - não permitir selecionar 
+	  - não permitir compartilhar 
+	  
+17. ??? abrir dominio/host pago ???	  
 
 99. TESTAR
     a. testar todas as funcionalidades
