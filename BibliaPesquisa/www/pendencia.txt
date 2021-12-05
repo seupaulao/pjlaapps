@@ -16,10 +16,10 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
       OK  baruc          
 	      eclesiastico
 	  OK  judite         
-	      macabeus 1
-	      macabeus 2
-	      sabedoria
-	      tobias
+	  OK  macabeus 1
+	  OK  macabeus 2
+	  OK  sabedoria
+	  OK  tobias
           Textus receptus (grego)
       OK  Textus receptus (wlc - hebraico) 	  
    
