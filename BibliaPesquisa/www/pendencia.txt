@@ -1,11 +1,5 @@
 versão 2.0 - com.pjlapps.bibliapesquisa
 
-- fazer 3 programas de auxilio
-   1. quebrar linha por numero - se achar um numero, colocar \n no inicio do numero
-   2. colocar titulos entre <h3></h3>
-   3. numerar por linha
-      - onde tem numero colocar <p><span>NUMERO_VERSO&nbsp;&nbsp;&nbsp;</span><span> texto </span></p>
-
 problemas e coisas a fazer:
 
 OK excluir bases do github e colocar essa sendo a efetiva
@@ -56,8 +50,6 @@ ex: gen 1   1 - 31
 
 14. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
 ou o dicionario que devera ser usado na consulta
-
-15. juntar outra base se possivel : personagens biblicos - construir app integrado
 
 16. ao selecionar o verso aparecer as opções:
     - marcar
