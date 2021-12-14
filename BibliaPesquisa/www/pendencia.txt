@@ -7,23 +7,13 @@ OK verificar se há como exportar para o google docs - é possível exportar, ma
 OK retire as propagandas
 OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
 
+0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
+
 1. textus receptus hebraico e grego e deuterocanônicos em html simples
    - se usando como servidor, entao funcao w3-include-html funciona
-   - verificar se dá para usar no APK
-   - corrigir as fontes deuterocanônicos para HTML simples
-   - deve funcionar funcao w3-include-html = TESTAR como APK
    convertido em html simples:
-      OK  baruc          
-	      eclesiastico
-	  OK  judite         
-	  OK  macabeus 1
-	  OK  macabeus 2
-	  OK  sabedoria
-	  OK  tobias
           Textus receptus (grego)
-      OK  Textus receptus (wlc - hebraico) 	  
    
-3. traducao da referência strong para português
 4. rever e implementar busca strong
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
 7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
@@ -33,8 +23,10 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
-9. colocar as versões apenas sob comparativo,
-para evitar a quantidade máxima de palavras para fazer uma cópia e os direitos autorais
+ 
+9. colocar as versões privadas apenas sob comparativo,
+para evitar a quantidade máxima de palavras para fazer uma cópia 
+e os direitos autorais
 
 10. quadro de livros, colocar 2 formatos:
    - lista de nomes
@@ -60,6 +52,8 @@ ou o dicionario que devera ser usado na consulta
 	  - não permitir compartilhar 
 	  
 17. ??? abrir dominio/host pago ???	  
+
+3. traducao da referência strong para português
 
 99. TESTAR
     a. testar todas as funcionalidades
