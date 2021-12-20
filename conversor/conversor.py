@@ -2,7 +2,19 @@ import json
 
 pastas=["MAT","MAR","LUC","JOA","ATO","ROM","1CO","2CO","GAL","EFE","FIL","COL","1TS","2TS","1TM","2TM","TIT","FLM","HEB","TIA","1PE","2PE","1JO","2JO","3JO","JUD","APO"]
 
-biblia= json.loads("""
+def salvarTextoNoArquivo(path, texto):
+    print("EM CONSTRUCAO")
+
+def salvarTexto(livro, icap, novotexto):
+    if diretorioNaoExiste(livro):
+       criarDiretorio(livro)
+    path = livro + "/" +str(icap) + ".html"   
+    if arquivoNaoExiste(path):
+        criarArquivo(path)
+        salvarTextoNoArquivo(path, novotexto)        
+
+def processar():
+    biblia= json.loads("""
 {"40":{"livro":"Mateus", "abrev":"Mt", "qtecapitulos":"28", "capitulos":{"1":{"1":"Βίβλος γενέσεως Ἰησοῦ Χριστοῦ, υἱοῦ Δαβίδ, υἱοῦ Ἀβραάμ"
 ,"2":"Ἀβραὰμ ἐγέννησεν τὸν Ἰσαάκ· Ἰσαὰκ δὲ ἐγέννησεν τὸν Ἰακώβ· Ἰακὼβ δὲ ἐγέννησεν τὸν Ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ"
 ,"3":"Ἰούδας δὲ ἐγέννησεν τὸν Φάρες καὶ τὸν Ζάρα ἐκ τῆς Θαμάρ· Φάρες δὲ ἐγέννησεν τὸν Ἑσρώμ· Ἑσρὼμ δὲ ἐγέννησεν τὸν Ἀράμ"
@@ -7987,3 +7999,23 @@ biblia= json.loads("""
 ,"20":"Λέγει ὁ μαρτυρῶν ταῦτα, Ναί ἔρχομαι ταχύ. Ἀμήν, ναί, ἔρχου, κύριε Ἰησοῦ"
 ,"21":"Ἡ χάρις τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ μετὰ πάντων ὑμῶν. Ἀμήν"}}}} """)
 
+    posicao = 0
+    for ilivro in range(40,67):
+        qtecapitulos = int(biblia[ilivro]["qtecapitulos"])
+        livro = pastas[posicao]
+        for icap in range(1, qtecapitulos+1):
+            k = 1
+            erro = false
+            novotexto = ""
+            while not erro: 
+                try:
+                   textoextraido = biblia[ilivro]["capitulos"][str(icap)][str(k)]
+                   novotexto = novotexto + "<p><span>" + str(k) + "&nbsp;&nbsp;&nbsp;</span><span>" + textoextraido + "</span></p>" 
+                   k = k + 1
+                except:
+                   erro = true            
+            salvarTexto(livro, icap, novotexto)       
+        posicao = posicao + 1    
+    
+
+processar()
