@@ -1,8 +1,8 @@
 {
   "name": "com.pjlaapps.bibliapesquisa",
-  "displayName": "HelloCordova",
-  "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "displayName": "BibliaPesquisa",
+  "version": "2.0.0",
+  "description": "Projeto que visa disponibilizar uma bíblia de domínio público entre outros recursos.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
