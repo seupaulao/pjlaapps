@@ -6,17 +6,17 @@ OK excluir bases do github e colocar essa sendo a efetiva
 OK verificar se há como exportar para o google docs - é possível exportar, mas não é possível integrar
 OK retire as propagandas
 OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
-
-0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
-
-1. textus receptus hebraico e grego e deuterocanônicos em html simples
+OK 7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
+OK 1. textus receptus hebraico e grego e deuterocanônicos em html simples
    - se usando como servidor, entao funcao w3-include-html funciona
    convertido em html simples:
           Textus receptus (grego)
+
+0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
+
    
 4. rever e implementar busca strong
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
-7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
  - fazer por contagem efetuada e não por dias e datas
@@ -28,7 +28,7 @@ OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da te
 para evitar a quantidade máxima de palavras para fazer uma cópia 
 e os direitos autorais
 
-10. quadro de livros, colocar 2 formatos:
+10. quadro de livros, colocar 2 formatos [botão de alternar]:
    - lista de nomes
    - lista de abreviaturas
 
@@ -45,11 +45,13 @@ ou o dicionario que devera ser usado na consulta
 
 16. ao selecionar o verso aparecer as opções:
     - marcar
+        - pintar
 	- compartilhar
 	- referencia strong do verso 
 	- comparativo
 	  - não permitir selecionar 
-	  - não permitir compartilhar 
+	  - não permitir compartilhar
+	- mapa
 	  
 17. ??? abrir dominio/host pago ???	  
 

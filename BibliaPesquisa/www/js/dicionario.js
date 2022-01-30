@@ -22,26 +22,27 @@ function significadoDicionario(palavra)
 {
         var elemento = document.getElementById("saidaDicionario");
         var achou = false;
-        setMensagemDicionario("",""); 
+        setMensagemDicionario("","");
+        let valor = ""; 
         for(var i=0; i < base1.length; i++)
         {
             if (palavra.toLowerCase()==base1[i].palavra.trim().toLowerCase()){
-                elemento.innerHTML = "<h3>" + palavra + "</h3><br>" + base1[i].texto + "<p>&nbsp;</p><p>&nbsp;</p>";
+                valor += "<h3>" + palavra + "</h3><br>" + base1[i].texto + "<p>&nbsp;</p><p>&nbsp;</p>";
                 achou = true;
                 break;
             }
         }
 
-        if (!achou) {
-          for(var i=0; i < base2.length; i++)
+        for(var i=0; i < base2.length; i++)
           {
               if (palavra.toLowerCase()==base2[i].palavra.toLowerCase()){
-                  elemento.innerHTML = "<h3>" + palavra + "</h3><br>" + base2[i].texto + "<p>&nbsp;</p><p>&nbsp;</p>";
+                  valor += "<h3>" + palavra + "</h3><br>" + base2[i].texto + "<p>&nbsp;</p><p>&nbsp;</p>";
                   achou = true;
                   break;
               }
-          }
         }
+
+        elemento.innerHTML = valor;
 
         if (!achou) {
           setMensagemDicionario("ALERTA","Palavra n&atilde;o encontrada na base de dados.");
