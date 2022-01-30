@@ -1,16 +1,26 @@
-import json
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-pastas=["MAT","MAR","LUC","JOA","ATO","ROM","1CO","2CO","GAL","EFE","FIL","COL","1TS","2TS","1TM","2TM","TIT","FLM","HEB","TIA","1PE","2PE","1JO","2JO","3JO","JUD","APO"]
+import json
+import os
+
+pastas=["MAT","MAR","LUC","JHN","ACT","ROM","1CO","2CO","GAL","EPH","PHL","COL"
+,"1TS","2TS","1TM","2TM","TIT","PHM","HEB","JAM"
+,"1PE","2PE","1JN","2JN","3JN","JUD","REV"]
 
 def salvarTextoNoArquivo(path, texto):
-    print("EM CONSTRUCAO")
+    f = open(path, "w", encoding="utf-8")
+    f.write(texto)
+    f.close()
+  
+def criarDiretorio(path):    
+    os.mkdir(path)   
 
 def salvarTexto(livro, icap, novotexto):
-    if diretorioNaoExiste(livro):
+    if not os.path.exists(livro):
        criarDiretorio(livro)
     path = livro + "/" +str(icap) + ".html"   
-    if arquivoNaoExiste(path):
-        criarArquivo(path)
+    if not os.path.exists(path):
         salvarTextoNoArquivo(path, novotexto)        
 
 def processar():
@@ -8001,19 +8011,20 @@ def processar():
 
     posicao = 0
     for ilivro in range(40,67):
-        qtecapitulos = int(biblia[ilivro]["qtecapitulos"])
+        print(biblia[str(ilivro)]["qtecapitulos"])
+        qtecapitulos = int(biblia[str(ilivro)]["qtecapitulos"])
         livro = pastas[posicao]
         for icap in range(1, qtecapitulos+1):
             k = 1
-            erro = false
+            erro = False
             novotexto = ""
             while not erro: 
                 try:
-                   textoextraido = biblia[ilivro]["capitulos"][str(icap)][str(k)]
+                   textoextraido = biblia[str(ilivro)]["capitulos"][str(icap)][str(k)]
                    novotexto = novotexto + "<p><span>" + str(k) + "&nbsp;&nbsp;&nbsp;</span><span>" + textoextraido + "</span></p>" 
                    k = k + 1
                 except:
-                   erro = true            
+                   erro = True
             salvarTexto(livro, icap, novotexto)       
         posicao = posicao + 1    
     

@@ -15,14 +15,18 @@ OK 1. textus receptus hebraico e grego e deuterocanônicos em html simples
 0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
 
    
-4. rever e implementar busca strong
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
+
+7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
+
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
  - fazer por contagem efetuada e não por dias e datas
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
+ 
+0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
  
 9. colocar as versões privadas apenas sob comparativo,
 para evitar a quantidade máxima de palavras para fazer uma cópia 
@@ -37,17 +41,20 @@ ex: gen 1   1 - 31
     psa 23  2231 - 2237
 
 12. sessão de sermonetes <tornar dinamica> - contruir app e serviço integrado
+    - novo ministério
 
 13. sessão de orações diárias - contruir app e serviço integrado
+    - novo ministério
 
 14. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
 ou o dicionario que devera ser usado na consulta
 
+4. rever e implementar busca strong - essa base só é no grego, ou seja, para o NT
 16. ao selecionar o verso aparecer as opções:
     - marcar
         - pintar
 	- compartilhar
-	- referencia strong do verso 
+	- referencia strong do verso [porém só tem no NT essa opção]
 	- comparativo
 	  - não permitir selecionar 
 	  - não permitir compartilhar
