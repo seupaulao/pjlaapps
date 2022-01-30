@@ -13,11 +13,8 @@ OK 1. textus receptus hebraico e grego e deuterocanônicos em html simples
           Textus receptus (grego)
 
 0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
-
    
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
-
-7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
 
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
@@ -25,8 +22,6 @@ OK 1. textus receptus hebraico e grego e deuterocanônicos em html simples
  - mostrar como os livros
  - pintar de amarelo o que foi efetivamente lido
  - pintar de azul o que falta ser lido
- 
-0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
  
 9. colocar as versões privadas apenas sob comparativo,
 para evitar a quantidade máxima de palavras para fazer uma cópia 

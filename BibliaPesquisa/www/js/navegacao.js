@@ -1,4 +1,5 @@
 var telanavegacao = [];
+
 function abrirTela(tela)
 {
     closeNav3();

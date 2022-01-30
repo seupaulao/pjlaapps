@@ -53,13 +53,13 @@
 
 	<div class="w3-container">
 	    <ul class="w3-ul w3-hoverable w3-center">
-		<li onclick="abrirLivroDeuterocanonico()"><h4>Tobias</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>Judite</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>I Macaneus</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>II Macaneus</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>Sabedoria</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>Eclesiástico</h4></li>
-		<li onclick="abrirLivroDeuterocanonico()"><h4>Baruc</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('TOB')"><h4>Tobias</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('JUD')"><h4>Judite</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('1MC')"><h4>I Macaneus</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('2MC')"><h4>II Macaneus</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('SBD')"><h4>Sabedoria</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('ECL')"><h4>Eclesiástico</h4></li>
+		<li onclick="abrirLivroDeuterocanonico('BAR')"><h4>Baruc</h4></li>
 		<li>&nbsp;</li>
 	    </ul>
 	</div>
@@ -833,6 +833,18 @@
      </div>    
 </div>
 
+<div id="oracao" class="tela w3-animate-opacity">
+    <div  class="cabecalho w3-container w3-lime w3-bar">
+
+		<h2 class="w3-bar-item">
+             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
+             </img>
+<span id="idtitulo09_3">Minha Oração Hoje</span></h2>
+	 </div>
+     <div class="w3-panel">
+            <div class="w3-container" id="idoracao"></div>
+     </div>    
+</div>
 
 
 
@@ -934,6 +946,7 @@
         <script type="text/javascript" charset="utf-8" src="js/strong/greekrefdireta.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/strong/greekrefx.js"></script>
 
+		<script type="text/javascript" src="js/util.js"></script>
 		<script type="text/javascript" src="js/banco.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>

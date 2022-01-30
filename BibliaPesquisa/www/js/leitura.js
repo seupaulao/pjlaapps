@@ -631,6 +631,8 @@ function deselecaoCor()
   posSalvarMarcacaoComentarioTela();
 }
 
-
+function abrirLivroDeuterocanonico(sigla){
+   
+}
 
 
