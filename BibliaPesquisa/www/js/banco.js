@@ -4,6 +4,13 @@
           var eComentario=[];
           var eSelecao=[];
           var ePlano = [];
+/* TODO PJR 2022 05 18
+ *
+ * simplificar plano de estudo, agora deve guardar
+ *
+ * id_plano    ultima_posicao_lida_id_plano
+ *
+*/
 
 
           function zerarEPlano()
