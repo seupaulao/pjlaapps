@@ -7,18 +7,50 @@ OK verificar se há como exportar para o google docs - é possível exportar, ma
 OK retire as propagandas
 OK corrigir o CSS da Pesquisa : margin, padding > do resultado totalizador da tela de pesquisa
 OK 7. ao buscar no dicionário, mostrar o resultado de ambas as bases e não apenas da primeira
-OK 1. converter textus receptus hebraico e grego e deuterocanônicos em html simples
-   - se usando como servidor, entao funcao w3-include-html funciona
-   convertido em html simples:
-          Textus receptus (grego)
+OK 1. converter textus receptus hebraico e grego e deuterocanônicos em html simples    
+OK - se usando como servidor, entao funcao w3-include-html funciona
+OK   convertido em html simples:
+OK          Textus receptus (grego)
 
 
+4. unificar base de dados biblica
 
-0. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
+ao exibir comparativo calcular para versões não livres até 500 palavras 
+não permitir copiar e colar 
+não permitir compartilhar 
+transformar wlc em formato json e unificar
+buscar referencia strong para wlc  
+
+[{"IDVERSO":"1",
+  "IDLIVRO":"1"         // usada para buscar dados quantitativos do livro 
+  "CHAVE":"1_1_1",      // usado para busca strong  
+  "LIVRO":"GEN", 
+  "CAPITULO":"1", 
+  "VERSICULO":"1", 
+  "TEXTOS": 
+     {"BLV", "WEB", "AA", "ACF", "KJM", "NVI", "TR", "WLC"}
+}]
+
+4.1. ao selecionar o verso aparecer as opções: 
+  - marcar
+    - pintar
+	- compartilhar
+	- referencia strong do verso 
+	- comparativo
+	  - não permitir selecionar 
+	  - não permitir compartilhar
+    - versões não livres até 500 palavras 
+    - tr - texto completo se houver
+    - wlc - texto completo se houver
+	- mapa
+
+4.2. exibir a biblia sob a nova base de dados unificada
+4.3. mensurar velocidade de carga e velocidade de busca e navegação
 
 5. colocar os deuterocanônicos para abrir 
    
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
+  - salmos havia 151 capitulos - blv 
 
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
@@ -28,46 +60,23 @@ OK 1. converter textus receptus hebraico e grego e deuterocanônicos em html sim
  - pintar de azul o que falta ser lido
  - posicionar sempre no último que falta ser lido
  
-9. colocar as versões privadas apenas sob comparativo,
-para evitar a quantidade máxima de palavras para fazer uma cópia 
-e os direitos autorais
-
-10. quadro de livros, colocar 2 formatos [botão de alternar]:
-   - lista de nomes
-   - lista de abreviaturas
-
+10. quadro de livros, deixar apenas por nomes - colorir por : pentateuco, historico, sabedoria, profetas maiores, profetas menores,
+evangelho, atos, cartas, judas, revelação
+ 
 11. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
 ex: gen 1   1 - 31
     psa 23  2231 - 2237
 
-12. sessão de sermonetes <tornar dinamica> - contruir app e serviço integrado
-    - novo ministério
 
-13. sessão de orações diárias - contruir app e serviço integrado
-    - novo ministério
+99. traducao da referência strong para português
 
-14. fazer de uma forma de carregar na memoria apenas o livro que sera lido,
-ou o dicionario que devera ser usado na consulta
+99. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
+   1. no windows há problema de execução de script [tratar isso]
+   2. criar APK básico via cordova 
+   3. substituir conteudo pelo app - apktool 
+   4. recompactar
+   5. assinar - uberjar  
 
-15. rever e implementar busca strong - essa base só é no grego, ou seja, para o NT
-
-16. ao selecionar o verso aparecer as opções:
-    - marcar
-        - pintar
-	- compartilhar
-	- referencia strong do verso [porém só tem no NT essa opção]
-	- comparativo
-	  - não permitir selecionar 
-	  - não permitir compartilhar
-	- mapa
-	  
-17. ??? abrir dominio/host pago ???	  
-
-18. sessão de estudos bíblicos
-    - jesus
-    - 3 mensagens angelicais
-
-98. traducao da referência strong para português
 
 99. TESTAR
     a. testar todas as funcionalidades
@@ -75,3 +84,7 @@ ou o dicionario que devera ser usado na consulta
     c. velocidade da carga inicial
        - esse é o maior problema, devido a falta de banco de dados e a quantidade de memória RAM usada nos aplicativos
        - interessante seria: carregar o banco apenas no momento de exibir as informações da página e logo depois fechar tudo
+
+
+- usando o python como servidor para testar 
+python -m http.server 8080
