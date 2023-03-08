@@ -13,7 +13,7 @@ OK   convertido em html simples:
 OK          Textus receptus (grego)
 
 
-4. unificar base de dados biblica
+4. unificar base de dados biblica [TAFFYDB]
 
 ao exibir comparativo calcular para versões não livres até 500 palavras 
 não permitir copiar e colar 
@@ -21,14 +21,11 @@ não permitir compartilhar
 transformar wlc em formato json e unificar
 buscar referencia strong para wlc  
 
-[{"IDVERSO":"1",
-  "IDLIVRO":"1"         // usada para buscar dados quantitativos do livro 
-  "CHAVE":"1_1_1",      // usado para busca strong  
-  "LIVRO":"GEN", 
-  "CAPITULO":"1", 
-  "VERSICULO":"1", 
+[{"ID":"1",                // id sequencial 
+  "CHAVE":"GEN_1_1",       // referencia livro, capitulo, VERSICULO 
+  "CHAVESTRONG" : "1_1_1", // usado para busca strong
   "TEXTOS": 
-     {"BLV", "WEB", "AA", "ACF", "KJM", "NVI", "TR", "WLC"}
+     {"BLV":"TEXTO EM BLV", "WEB":"TEXT IN WEB", "AA", "ACF", "KJM", "NVI", "TR", "WLC"}
 }]
 
 4.1. ao selecionar o verso aparecer as opções: 
