@@ -23,10 +23,11 @@ buscar referencia strong para wlc
 
 [{"ID":"1",                // id sequencial 
   "CHAVE":"GEN_1_1",       // referencia livro, capitulo, VERSICULO 
-  "CHAVESTRONG" : "1_1_1", // usado para busca strong
   "TEXTOS": 
      {"BLV":"TEXTO EM BLV", "WEB":"TEXT IN WEB", "AA", "ACF", "KJM", "NVI", "TR", "WLC"}
 }]
+
+# obs :  chave strong 1_1_1
 
 4.1. ao selecionar o verso aparecer as opções: 
   - marcar
@@ -43,6 +44,8 @@ buscar referencia strong para wlc
 
 4.2. exibir a biblia sob a nova base de dados unificada
 4.3. mensurar velocidade de carga e velocidade de busca e navegação
+
+4.4. componentizar usando vue.js
 
 5. colocar os deuterocanônicos para abrir 
    
@@ -65,7 +68,7 @@ ex: gen 1   1 - 31
     psa 23  2231 - 2237
 
 
-99. traducao da referência strong para português
+12. traducao da referência strong para português
 
 99. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
    1. no windows há problema de execução de script [tratar isso]
