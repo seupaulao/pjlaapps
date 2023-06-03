@@ -632,7 +632,13 @@ function deselecaoCor()
 }
 
 function abrirLivroDeuterocanonico(sigla){
-   
+   let livro = 'tobias';
+   if (sigla == 'TOB')   { livro = 'tobias'; }
+   else if (sigla == 'BAR') { livro = 'baruc'; }
+   document.getElementById("capituloDtn").removeAttribute("w3-include-html");
+   document.getElementById("capituloDtn").setAttribute("w3-include-html","js/biblias/deuterocanonicos/"+livro+"/"+getCapituloMain()+".htm");
+   w3.includeHTML();
+    
 }
 
 

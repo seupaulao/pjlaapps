@@ -12,7 +12,7 @@ OK - se usando como servidor, entao funcao w3-include-html funciona
 OK   convertido em html simples:
 OK          Textus receptus (grego)
 
-
+[interessante]
 4. unificar base de dados biblica [TAFFYDB]
 
 ao exibir comparativo calcular para versões não livres até 500 palavras 
@@ -31,7 +31,6 @@ buscar referencia strong para wlc
 
 4.1. ao selecionar o verso aparecer as opções: 
   - marcar
-    - pintar
 	- compartilhar
 	- referencia strong do verso 
 	- comparativo
@@ -44,14 +43,15 @@ buscar referencia strong para wlc
 
 4.2. exibir a biblia sob a nova base de dados unificada
 4.3. mensurar velocidade de carga e velocidade de busca e navegação
-
-4.4. componentizar usando vue.js
+4.4. usar ES6 se possivel
+4.5. migrar para angular/angularjs --- estudar possibilidade 
 
 5. colocar os deuterocanônicos para abrir 
    
 6. revisar biblia e versos e verificar se há livros/capitulos faltando ou se há versos em falta
   - salmos havia 151 capitulos - blv 
 
+[CRTITICO]
 8. no plano de estudo melhorar a passagem de textos para estudo, melhorar a navegação
  - corrigir os problemas dos planos de estudo, nao aparece mais nada
  - fazer por contagem efetuada[gravar sequencial do estudo] e não por dias e datas
@@ -60,9 +60,11 @@ buscar referencia strong para wlc
  - pintar de azul o que falta ser lido
  - posicionar sempre no último que falta ser lido
  
+[interessante]
 10. quadro de livros, deixar apenas por nomes - colorir por : pentateuco, historico, sabedoria, profetas maiores, profetas menores,
 evangelho, atos, cartas, judas, revelação
  
+[interessante]
 11. numerar os versos e exibir o número de ordem dos versos do capitulo [como no psa4memorizar]
 ex: gen 1   1 - 31
     psa 23  2231 - 2237
@@ -70,12 +72,6 @@ ex: gen 1   1 - 31
 
 12. traducao da referência strong para português
 
-99. usar ferramentas uberjar e apktool para editar apks [vide estudo-love]
-   1. no windows há problema de execução de script [tratar isso]
-   2. criar APK básico via cordova 
-   3. substituir conteudo pelo app - apktool 
-   4. recompactar
-   5. assinar - uberjar  
 
 
 99. TESTAR

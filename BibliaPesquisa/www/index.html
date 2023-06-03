@@ -10,8 +10,9 @@
 	    <link rel="stylesheet" href="css/w3.css">
             <link rel="stylesheet" href="css/myStyle.css">
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/w3.js"></script>
-        <script type="text/javascript" src="js/hammer.min.js"></script>
+        <script type="text/javascript" src="js/lib/w3.js"></script>
+        <script type="text/javascript" src="js/lib/taffy-min.js"></script>
+        <script type="text/javascript" src="js/lib/hammer.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/blv.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/web.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/tr.js"></script>
@@ -51,6 +52,7 @@
 <span id="idtitulo">Deuterocan&ocirc;nicos</span></h2>
 	</div>
 
+
 	<div class="w3-container">
 	    <ul class="w3-ul w3-hoverable w3-center">
 		<li onclick="abrirLivroDeuterocanonico('TOB')"><h4>Tobias</h4></li>
@@ -63,6 +65,10 @@
 		<li>&nbsp;</li>
 	    </ul>
 	</div>
+
+    <div id="capituloDtn" w3-include-html="js/biblias/deuterocanonicos/baruc/1.htm" class="w3-panel"></div>
+    <button onclick="topFunction()" id="myBtntr2" class="topBtn" title="Go to top"><span id="idtopo_8">Topo</span></button>
+
 
 </div>
 
@@ -914,23 +920,7 @@
             <div class="w3-center w3-panel">
                    <button class="w3-btn w3-red w3-block" id="apagarTodosComentarios" onclick="zerarComentariosBanco()"><span id='idmsgdeletecomments'>Apagar todos os coment&aacute;rios?</span></button>
             </div>
-            <!--
-            <h3><span id="idtitulobasedados">Notifica&ccedil;&atilde;o verso &aacute;ureo</span></h3>
-            <div class="w3-center">
-                <span id="idtempo1" class="w3-btn w3-medium" onclick="escolherTempo(15)">15 minutos</span>
-                <span id="idtempo2" class="w3-btn w3-medium" onclick="escolherTempo(30)">30 minutos</span>
-               <span id="idtempo3" class="w3-btn w3-medium" onclick="escolherTempo(60)">60 minutos</span>
-             </div>  
-             <h3><span id="idtitulobasedados">Notifica&ccedil;&atilde;o Ler a B&iacute;blia</span></h3>
-             <div class="w3-center">
-                 <span id="idnota1on" class="w3-btn w3-medium" onclick="habilitarNota(1,true)">Habilitar</span>
-                 <span id="idnota1off" class="w3-btn w3-medium" onclick="habilitarNota(1,false)">Desabilitar</span>
-              </div>  
-              <h3><span id="idtitulobasedados">Notifica&ccedil;&atilde;o Retomar Plano Estudo</span></h3>
-              <div class="w3-center">
-                  <span id="idnota2on" class="w3-btn w3-medium" onclick="habilitarNota(2,true)">Habilitar</span>
-                  <span id="idnota2off" class="w3-btn w3-medium" onclick="habilitarNota(2,false)">Desabilitar</span>
-               </div>  -->
+
           </div>
         
 	</div>
