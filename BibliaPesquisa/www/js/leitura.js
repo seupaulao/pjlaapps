@@ -631,14 +631,28 @@ function deselecaoCor()
   posSalvarMarcacaoComentarioTela();
 }
 
-function abrirLivroDeuterocanonico(sigla){
-   let livro = 'tobias';
-   if (sigla == 'TOB')   { livro = 'tobias'; }
-   else if (sigla == 'BAR') { livro = 'baruc'; }
+function getLivroDtn(sigla) {
+   alert(sigla);
+   if (sigla == 'BAR') { return 'baruc'; }
+   else if (sigla == 'JUD') { return 'judite'; }
+   else if (sigla == '1MC') { return 'macabeus_1'; }
+   else if (sigla == '2MC') { return 'macabeus_2'; }
+   else if (sigla == 'SBD') { return 'sabedoria'; }
+   else if (sigla == 'ECL') { return 'eclesiastico'; }
+   else { return 'tobias'; }
+}
+
+function leituraDeuterocanonico(sigla) {
+   w3.hide('#livrosDtn');
+   w3.show('#textoDtn');
+   const livro = getLivroDtn(sigla);
    document.getElementById("capituloDtn").removeAttribute("w3-include-html");
    document.getElementById("capituloDtn").setAttribute("w3-include-html","js/biblias/deuterocanonicos/"+livro+"/"+getCapituloMain()+".htm");
    w3.includeHTML();
-    
 }
+
+
+
+
 
 

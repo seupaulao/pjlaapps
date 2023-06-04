@@ -1,5 +1,12 @@
 var telanavegacao = [];
 
+
+function abrirLivroDtn(sigla) 
+{
+   leituraDeuterocanonico(sigla);
+   abrirTela('telaleituratextodtn');
+}
+
 function abrirTela(tela)
 {
     closeNav3();
@@ -11,6 +18,8 @@ function abrirTela(tela)
 
     document.getElementById(tela).style.display = "block";
 }
+
+
 
 function voltarATela(tela)
 {
@@ -340,6 +349,8 @@ function abrirTelaTextoOriginalLeituraGr()
   abrirTelaTextoOriginalLeitura(2);
 }
 
+
+
 function abrirTelaTextoOriginalLeituraHb()
 {
   w3.show("#fontewlc");
@@ -489,40 +500,10 @@ function salvarMarcacaoTela(cor)
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      //  document.getElementById("myBtn").style.display = "block";
-        // document.getElementById("cmpBtn").style.display = "block";
-        // document.getElementById("myBtn1").style.display = "block";
-      //  document.getElementById("myBtn2").style.display = "block";
-      //  document.getElementById("myBtn3").style.display = "block";
-      //  document.getElementById("myBtn4").style.display = "block";
-      //  document.getElementById("myBtn5").style.display = "block";
-      //  document.getElementById("myBtn6").style.display = "block";
-      //  document.getElementById("myBtntr1").style.display = "block";
-      //  document.getElementById("myBtntr2").style.display = "block";
-      //  document.getElementById("mybtntrvoltar").style.display = "block";
-      //  document.getElementById("mybtntrdetalhe").style.display = "block";
-    } else {
-
-      //  document.getElementById("myBtn").style.display = "none";
-      //  document.getElementById("comBtn").style.display = "none";
-        // document.getElementById("myBtn1").style.display = "none";
-      //   document.getElementById("myBtn2").style.display = "none";
-      //  document.getElementById("myBtn3").style.display = "none";
-      //  document.getElementById("myBtn4").style.display = "none";
-      //  document.getElementById("myBtn5").style.display = "none";
-      //  document.getElementById("myBtn6").style.display = "none";
-      //  document.getElementById("myBtntr1").style.display = "none";
-      //  document.getElementById("myBtntr2").style.display = "none";
-      //  document.getElementById("mybtntrvoltar").style.display = "none";
-      //  document.getElementById("mybtntrdetalhe").style.display = "none";
-    }
-}
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0; // For Chrome, Safari and Opera
     document.documentElement.scrollTop = 0; // For IE and Firefox
     document.getElementById("comBtn").style.display = "none";
 }
+
