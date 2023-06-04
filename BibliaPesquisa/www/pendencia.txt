@@ -11,7 +11,6 @@ PROBLEMA CRITICO
   NEM OS ALERTS DENTRO DOS METODOS FUNCIONAM EFETIVAMENTE 
 
 
-
 problemas e coisas a fazer:
 
 OK excluir bases do github e colocar essa sendo a efetiva
