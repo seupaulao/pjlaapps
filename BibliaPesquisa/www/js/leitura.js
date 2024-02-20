@@ -1,17 +1,17 @@
-var vetorPlanoEstudo=[];
-var posicaoPlanoEstudo;
-var ultimoSelid;
+let vetorPlanoEstudo=[];
+let posicaoPlanoEstudo;
+let ultimoSelid;
 
-getVetorPlanoEstudo=function(){ return vetorPlanoEstudo; }
-setVetorPlanoEstudo=function(valor) { vetorPlanoEstudo=valor; }
-getPosicaoPlanoEstudo=function() { return posicaoPlanoEstudo; }
-setPosicaoPlanoEstudo=function(valor) { posicaoPlanoEstudo=valor; }
-getUltimoSelid=function() { return ultimoSelid; }
-setUltimoSelid=function(valor) { ultimoSelid=valor; }
+const getVetorPlanoEstudo=function(){ return vetorPlanoEstudo; }
+const setVetorPlanoEstudo=function(valor) { vetorPlanoEstudo=valor; }
+const getPosicaoPlanoEstudo=function() { return posicaoPlanoEstudo; }
+const setPosicaoPlanoEstudo=function(valor) { posicaoPlanoEstudo=valor; }
+const getUltimoSelid=function() { return ultimoSelid; }
+const setUltimoSelid=function(valor) { ultimoSelid=valor; }
 
 function mostrarLivros()
 {
-	 var elemento = document.getElementById("ltextlivros");
+	var elemento = document.getElementById("ltextlivros");
    var texto = "<div class='w3-row'>";
    var cores = ['w3-cyan','w3-gray'];
    var c = 1;
@@ -631,6 +631,7 @@ function deselecaoCor()
   posSalvarMarcacaoComentarioTela();
 }
 
+/*
 function getLivroDtn(sigla) {
    alert(sigla);
    if (sigla == 'BAR') { return 'baruc'; }
@@ -642,6 +643,7 @@ function getLivroDtn(sigla) {
    else { return 'tobias'; }
 }
 
+
 function leituraDeuterocanonico(sigla) {
    w3.hide('#livrosDtn');
    w3.show('#textoDtn');
@@ -650,7 +652,7 @@ function leituraDeuterocanonico(sigla) {
    document.getElementById("capituloDtn").setAttribute("w3-include-html","js/biblias/deuterocanonicos/"+livro+"/"+getCapituloMain()+".htm");
    w3.includeHTML();
 }
-
+*/
 
 
 

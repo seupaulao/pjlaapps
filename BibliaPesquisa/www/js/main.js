@@ -22,7 +22,7 @@ var livrosVelho=["G&ecirc;nesis","&Ecirc;xodo","Lev&iacute;tico","N&uacute;meros
 var livrosNovo=["Mateus","Marcos","Lucas","Jo&atilde;o","Atos","Romanos","1 Cor&iacute;ntios","2 Cor&iacute;ntios","G&aacute;latas","Ef&eacute;sios","Filipenses","Colossenses","1 Tessalonicenses","2 Tessalonicenses",
                        "1 Tim&oacute;teo","2 Tim&oacute;teo", "Tito", "Filemom", "Hebreus", "Tiago", "1 Pedro", "2 Pedro","1 Jo&atilde;o","2 Jo&atilde;o","3 Jo&atilde;o",
                        "Judas","Revelação"];
-var livrosDeuterocanonicos=["Livro I","Livro II","Livro III","Livro IV","Livro V","Livro VI"];
+//var livrosDeuterocanonicos=["Livro I","Livro II","Livro III","Livro IV","Livro V","Livro VI"];
 var livroseng=['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi', 'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'];
 var livrosVelhoEng=['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
 var livrosNovoEng=['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'];
@@ -39,11 +39,6 @@ tempcomentario=[];
 
 var semanapt=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
 var semanaen=['Sunday','Monday','Tuesday','Wedsneday','Thursday','Friday','Saturday'];
-
-
-
-//function getIdFuncionalidadeBotaoVoltar() { return idFuncionalidadeBotaoVoltar; }
-//function setIdFuncionalidadeBotaoVoltar(valor) { idFuncionalidadeBotaoVoltar = valor; }
 
 function getCapituloMain()
 {
@@ -78,52 +73,6 @@ function setVersaoAtualMain(valor)
 {
     versaoAtual=valor;
 }
-
-function  admobIniciar()
-{
-   // if ( /(android)/i.test(navigator.userAgent) ) { 
-   //     admobid = { // for Android
-   //         banner: 'ca-app-pub-8315072990407734/6179392631',
-   //         interstitial: 'ca-app-pub-8315072990407734/8763976372'
-   //     };
-   // } else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-   //     admobid = { // for iOS
-   //         banner: 'ca-app-pub-6869992474017983/4806197152',
-   //         interstitial: 'ca-app-pub-6869992474017983/7563979554'
-   //     };
-   // } else {
-   //     admobid = { // for Windows Phone
-   //         banner: 'ca-app-pub-6869992474017983/8878394753',
-   //         interstitial: 'ca-app-pub-6869992474017983/1355127956'
-   //     };
-   // }
-
-   // if (( (ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-   //     document.addEventListener('deviceready', initApp, false);
-   // } 
-   // else {
-   //    initApp();
-   // }
-}
-
-
-function initApp() {
-//if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
-
-/*  AdMob.createBanner( {
-   adId: admobid.banner, 
-   isTesting: false,
-   overlap: true, 
-   offsetTopBar: false, 
-   position: AdMob.AD_POSITION.BOTTOM_CENTER,
-   bgColor: 'black',
-   autoShow: true
-} );  */
-
-// preppare and load ad resource in background, e.g. at begining of game level
-//if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );    
-}
-
 
 function iniciar()
 {

@@ -1,14 +1,33 @@
 # pjlaapps
 
-Aplicativos pjlaapps
+## objetivos 
 
-__retirar__ ads:
+### versão 2.0
+- retirar biblias 
+  - frances
+  - espanhol
+  - deuterocanonicos
+
+- colocar biblias diversas usadas apenas para comparacao
+    - limitadas ao numero de palavras
+
+**RESOLVIDO** 
+- retirar__ ads:
    - todos apps que envolvem a biblia como fonte
 
-__ads__ a pedido: 
-   - Personagens Bíblicos   : ADs video a pedido
-   - Regra de 3 : ADs video a pedido
-   - Contador de Tempo : ADs video a pedido
-   - games   
+- problema ao tentar abrir Estudos
+
+- problema ao tentar abrir Dicionario
+
+
+## instalação pacotes node
+
+`npm install`
+
+## para rodar
+
+`cordova run browser`
+
+
   
 
