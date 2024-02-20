@@ -6,12 +6,14 @@
 - retirar biblias 
   - frances
   - espanhol
-  - deuterocanonicos
 
 - colocar biblias diversas usadas apenas para comparacao
     - limitadas ao numero de palavras
 
 **RESOLVIDO** 
+- retirar biblias
+   - deuterocanonicos
+
 - retirar__ ads:
    - todos apps que envolvem a biblia como fonte
 
