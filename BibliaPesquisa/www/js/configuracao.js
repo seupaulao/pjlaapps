@@ -230,27 +230,7 @@ function escolherTamanhoFonte2()
  w3.removeClass("#idtamfonte1","w3-disabled");
  w3.addClass("#idtamfonte2","w3-disabled");
 }
-/*
-function sobreBotaoVoltar(opcao)
-{
-  db.setItem("botaovoltar",opcao);
-  setIdFuncionalidadeBotaoVoltar(opcao);
-}
 
-function carregarBotaoVoltar()
-{
-  var t1 = db.getItem("botaovoltar");
-  var chavear=document.getElementById("idbotaovoltar");
-  if (isValorDbNull(t1))
-  {
-     sobreBotaoVoltar("0");
-     chavear[0]=0; 
-  } else {
-     sobreBotaoVoltar(t1);
-     chavear[parseInt(t1)]=t1;
-  }
-}
-*/
 
 function carregarFonte()
 {
@@ -298,19 +278,16 @@ function idiomaPortugues()
  w3.removeClass("#idingles","w3-disabled");
  w3.addClass("#idportugues","w3-disabled");
 
- document.getElementById("idtitulo").innerHTML="B&iacute;blia";
+
 
  document.getElementById("idtitulo01").innerHTML="Ler";
-// document.getElementById("idtitulo01_1").innerHTML="Ler";
-// document.getElementById("idtitulo01_2").innerHTML="Ler";
-// document.getElementById("idtitulo01_3").innerHTML="Ler";
-// document.getElementById("idtitulo01_4").innerHTML="Ler";
+
  document.getElementById("idtitulo02").innerHTML="Pesquisar";
  document.getElementById("idtitulo02_1").innerHTML="Pesquisar";
  document.getElementById("idtitulo02_2").innerHTML="Pesquisar";
  document.getElementById("idtitulo02_3").innerHTML="Pesquisar";
  document.getElementById("idtitulo02_4").innerHTML="Pesquisar";
-// document.getElementById("idtitulo02_5").innerHTML="Pesquisar";
+
  document.getElementById("idtitulo03").innerHTML="Hist&oacute;rico";
  document.getElementById("idtitulo03_1").innerHTML="Hist&oacute;rico";
  document.getElementById("idtitulo03_2").innerHTML="Hist&oacute;rico";
@@ -341,38 +318,18 @@ function idiomaPortugues()
  document.getElementById("idtopo_1").innerHTML="Topo";
  document.getElementById("idtopo_2").innerHTML="Topo";
  document.getElementById("idtopo_3").innerHTML="Topo";
-// document.getElementById("idtopo_4").innerHTML="Topo";
+
  document.getElementById("idtopo_5").innerHTML="Topo";
  document.getElementById("idtopo_7").innerHTML="Topo";
  document.getElementById("idtopo_8").innerHTML="Topo";
  document.getElementById("idtopo_9").innerHTML="Topo";
  document.getElementById("idback_2").innerHTML="Voltar";
-// document.getElementById("idlimpar").innerHTML="Limpar";
-// document.getElementById("idlimpar_1").innerHTML="Limpar";
-
-// document.getElementById("idcatalogo").innerHTML="Cat&aacute;logo";
-// document.getElementById("idcatalogo_1").innerHTML="Cat&aacute;logo";
-// document.getElementById("idcontroles").innerHTML="Grifar Texto";
-// document.getElementById("idmarcar").innerHTML="Marcar";
-// document.getElementById("idcomparar").innerHTML="Comparar";
-// document.getElementById("idcomparar_1").innerHTML="Comparar";
-// document.getElementById("idlivros").innerHTML="Livros";
-// document.getElementById("idversos").innerHTML="Versos";
-// document.getElementById("idversos_1").innerHTML="Versos";
-// document.getElementById("idversos_2").innerHTML="Versos";
-// document.getElementById("idversoseversoes").innerHTML="Versos e Vers&otilde;es";
  document.getElementById("idvoltar").innerHTML="Voltar";
- //document.getElementById("idmarcarcomentarcompartilhar").innerHTML="Marcar, Comentar e Compartilhar";
- //document.getElementById("idescolhacor").innerHTML="Escolha uma cor";
  document.getElementById("idescolhacorq").innerHTML="Escolha uma outra cor";
  document.getElementById("idcomentarios_1").innerHTML="Coment&aacute;rios";
  document.getElementById("idcomentarios_2").innerHTML="Coment&aacute;rios";
  document.getElementById("idcomentarcompartilhar").innerHTML="Comentar e Compartilhar";
  document.getElementById("idtotalizador").innerHTML="Totalizadores";
-// document.getElementById("idtitulojanmodal").innerHTML="Aguarde";
-
-
-// document.getElementById("idmsg01").innerHTML="Clique em uma vers&atilde;o para selecionar";
  document.getElementById("idmsg02").innerHTML="Clique em uma n&uacute;mero para abrir o cap&iacute;tulo";
  document.getElementById("idmsg03").innerHTML="Clique em uma n&uacute;mero para ir ao vers&iacute;culo";
  document.getElementById("idmsg04").innerHTML="Clique em um livro";
@@ -381,8 +338,6 @@ function idiomaPortugues()
  document.getElementById("idmsg04_1").innerHTML="Clique em um livro";
  document.getElementById("idmsg05").innerHTML="Explica&ccedil;&atilde;o";
  document.getElementById("idmsg06").innerHTML="Clique nos totalizadores de cada vers&atilde;o do velho ou novo testamento para detalhar os versos";
-// document.getElementById("idmsg07").innerHTML="Em processamento";
-// document.getElementById("idmsg08").innerHTML="Em processamento aguarde um instante...";
  document.getElementById("idmsg09").innerHTML="Selecione um mapa para ver";
 
  document.getElementById("idmsg10").innerHTML="Mundo Antigo";
@@ -420,9 +375,6 @@ function idiomaPortugues()
  document.getElementById("idtamfonte1").innerHTML="M&eacute;dio";
  document.getElementById("idtamfonte2").innerHTML="Grande";
 
- //document.getElementById("idsobrebotaovoltar").innerHTML="A cerca do botão voltar do smartphone";
- //document.getElementById("idmsg30").innerHTML="Deve retornar cada tela até o menu";
- //document.getElementById("idmsg31").innerHTML="Deve ir direto ao menu";
 
 document.getElementById("idtitulobasedados").innerHTML="Base de Dados";
 document.getElementById("idmsgdeletevers").innerHTML="Apagar versos do hist&oacute;rico?";
@@ -439,18 +391,12 @@ function idiomaIngles()
  db.setItem("idioma","en-US");
  w3.addClass("#idingles","w3-disabled");
  w3.removeClass("#idportugues","w3-disabled");
- document.getElementById("idtitulo").innerHTML="Bible";
  document.getElementById("idtitulo01").innerHTML="Read";
-//  document.getElementById("idtitulo01_1").innerHTML="Read";
-//  document.getElementById("idtitulo01_2").innerHTML="Read";
-//  document.getElementById("idtitulo01_3").innerHTML="Read";
-//  document.getElementById("idtitulo01_4").innerHTML="Read";
  document.getElementById("idtitulo02").innerHTML="Search";
  document.getElementById("idtitulo02_1").innerHTML="Search";
  document.getElementById("idtitulo02_2").innerHTML="Search";
  document.getElementById("idtitulo02_3").innerHTML="Search";
  document.getElementById("idtitulo02_4").innerHTML="Search";
- //document.getElementById("idtitulo02_5").innerHTML="Search";
  document.getElementById("idtitulo03").innerHTML="History"; 
  document.getElementById("idtitulo03_1").innerHTML="History";
  document.getElementById("idtitulo03_2").innerHTML="History";
@@ -491,33 +437,13 @@ function idiomaIngles()
  document.getElementById("idtopo_9").innerHTML="Top";
  document.getElementById("idback_2").innerHTML="Back";
 
-
-// document.getElementById("idlimpar").innerHTML="Erase";
-// document.getElementById("idlimpar_1").innerHTML="Erase";
-// document.getElementById("idcatalogo").innerHTML="Catalog";
-// document.getElementById("idcatalogo_1").innerHTML="Catalog";
  document.getElementById("idcontroles").innerHTML="Search Text";
- //document.getElementById("idmarcar").innerHTML="Mark";
- //document.getElementById("idcomparar").innerHTML="Compare";
- //document.getElementById("idcomparar_1").innerHTML="Compare";
-// document.getElementById("idlivros").innerHTML="Books";
-// document.getElementById("idversos").innerHTML="Verses";
-// document.getElementById("idversos_1").innerHTML="Verses";
-// document.getElementById("idversos_2").innerHTML="Verses";
- //document.getElementById("idversoseversoes").innerHTML="Verses and Versions";
  document.getElementById("idvoltar").innerHTML="Back";
- //document.getElementById("idmarcarcomentarcompartilhar").innerHTML="Mark, Comment and Shared";
- //document.getElementById("idescolhacor").innerHTML="Choose a color";
  document.getElementById("idescolhacorq").innerHTML="Choose another color";
-// document.getElementById("idcomentarios").innerHTML="Comments";
  document.getElementById("idcomentarios_1").innerHTML="Comments";
  document.getElementById("idcomentarios_2").innerHTML="Comments";
  document.getElementById("idcomentarcompartilhar").innerHTML="Shared and Comment";
  document.getElementById("idtotalizador").innerHTML="Summary";
-// document.getElementById("idtitulojanmodal").innerHTML="Wait";
- 
-
-// document.getElementById("idmsg01").innerHTML="Click a version to select";
  document.getElementById("idmsg02").innerHTML="Click a number to open a chapter";
  document.getElementById("idmsg03").innerHTML="Click a number to go to the verse";
  document.getElementById("idmsg04").innerHTML="Select a book";
@@ -571,10 +497,5 @@ document.getElementById("msgenddayread").innerHTML="Day ended successfully";
 document.getElementById("msgsaveandreturn").innerHTML="Save and Return to Study Plans";
 document.getElementById("msgtextusreceptusread").innerHTML="Click on the manuscript you want to read";
 document.getElementById("idtitulobasedados").innerHTML="Database";
-
-
- //document.getElementById("idsobrebotaovoltar").innerHTML="The back button of the smartphone";
- //document.getElementById("idmsg30").innerHTML="Must return each screen to the menu";
- //document.getElementById("idmsg31").innerHTML="Must go straight to the menu";
 
 }

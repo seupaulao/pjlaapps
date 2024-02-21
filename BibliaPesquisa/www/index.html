@@ -34,104 +34,11 @@
 	    <ul class="w3-ul w3-hoverable w3-center">
 		<li onclick="abrirTelaPlanoEstudo()"><h4><span id="idtitulo07">Planos Estudo</span></h4></li>
 		<li onclick="abrirTelaLeituraTextoOriginal()"><h4><span id="idtitulo08">Ler Texto Original</span></h4></li>
-		<!--li onclick="abrirTela('deuterocanonicos')"><h4>Deuterocan&ocirc;nicos</h4></li-->
-		<li onclick="abrirTela('princconcordancia')"><h4><span id="idtitulo09 ">Concord&acirc;ncia</span></h4></li>
 		<li>&nbsp;</li>
 	    </ul>
 	</div>
 
 </div>
-<!--div id="deuterocanonicos" class="tela w3-animate-top">
-	  <div class="cabecalho w3-container w3-lime">
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-<span id="idtitulo">Deuterocan&ocirc;nicos</span></h2>
-	</div>
-	<div id="livrosDtn" class="w3-container">
-	    <ul class="w3-ul w3-hoverable w3-center">
-		<li onclick="leituraDeuterocanonico('TOB')"><h4>Tobias</h4></li>
-		<li onclick="leituraDeuterocanonico('JUD')"><h4>Judite</h4></li>
-		<li onclick="leituraDeuterocanonico('1MC')"><h4>I Macaneus</h4></li>
-		<li onclick="leituraDeuterocanonico('2MC')"><h4>II Macaneus</h4></li>
-		<li onclick="leituraDeuterocanonico('SBD')"><h4>Sabedoria</h4></li>
-		<li onclick="leituraDeuterocanonico('ECL')"><h4>Eclesiástico</h4></li>
-		<li onclick="leituraDeuterocanonico('BAR')"><h4>Baruc</h4></li>
-		<li>&nbsp;</li>
-	    </ul>
-	</div>
-
-    <div id="textoDtn" class="w3-container">
-		<div class="w3-panel w3-center" id="botoesLeituradtn">
-			<span class="w3-btn w3-large" onclick="retrocedercapdtn()"><img src='img/seta-esquerda48.png'></img></span>
-			<span class="w3-btn w3-large" onclick="adiantarcapdtn()"><img src='img/seta-direita48.png'></img></span>
-        </div>
-        <div class="w3-container w3-center">
-            <button onclick="mostrarMenuLivrosDtn()" class="w3-btn w3-border w3-large" id="nomelivrotr">Baruc</button>
-            <button onclick="mostrarMenuCapitulosDtn()" class="w3-btn w3-border w3-large" id="nomecaptr">1</button>
-		</div>
-        <div id="capituloDtn" w3-include-html="js/biblias/deuterocanonicos/baruc/1.htm" class="w3-panel"></div>
-        <button onclick="topFunction()" id="myBtndtn" class="topBtn" title="Go to top"><span id="idtopo">Topo</span></button>
-    </div>
-
-</div-->
-
-<div id="princconcordancia" class="tela w3-animate-top">
-	  <div class="cabecalho w3-container w3-lime">
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-
-<span id="idtitulo" onclick="abrirTela('princestudos')">Concord&acirc;ncia</span></h2>
-	</div>
-
-	<div class="w3-container">
-	    <ul class="w3-ul w3-hoverable w3-center">
-		<li onclick="abrirTela('buscanumerostrong')"><h4><span id="idtitulo11">Busca Refer&ecirc;ncia Strong</span></h4></li>
-		<li>&nbsp;</li>
-	    </ul>
-	</div>
-</div>
-
-<div id="buscanumerostrong" class="tela w3-animate-opacity">
-        <div  class="cabecalho w3-container w3-lime w3-bar">
-                
-    
-            <h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-
-<span id="idtitulo09_1" onclick="abrirTela('princestudos')">Busca Refer&ecirc;ncia Strong</span></h2>
-         </div>
-         <div class="w3-panel">
-                
-            <div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
-                <div class="w3-row w3-section">
-                   <div class="w3-rest">
-                      <select id="modoStrong">
-                          <option value="1">Grego</option>
-                          <option value="2">Hebraico</option>
-                      </select> 
-                      <input class="w3-input w3-border" id="textoTransliteracaoPesquisar" name="textoTransliteracaoPesquisar" type="text" placeholder="Texto para pesquisar por transliteração">
-                      <input class="w3-input w3-border" id="textoInglesPesquisar" name="textoInglesPesquisar" type="text" placeholder="Palavra em inglês para pesquisar">
-                      <input class="w3-input w3-border" id="textoModoPesquisar" name="textoModoPesquisar" type="text" placeholder="Palavra em grego para pesquisar">
-                      <input class="w3-input w3-border" id="numeroStrong" name="numeroStrong" type="text" placeholder="Número Strong">
-                   </div>
-                </div>
-                   <div class="w3-panel w3-center">
-                        <span onclick="pesquisarStrong()" class="rodape w3-button w3-lime w3-round"><img src="img/lupa48.png"></img></span>
-                        <span onclick="limparStrong()" class="rodape w3-button w3-lime w3-round"><img src="img/borracha48.png"></img></span>
-                        <div class="w3-container">
-                                <ul class="w3-ul w3-hoverable w3-center">
-                                    <li onclick="abrirTela('princ')"><h4><span id="idtitulo13">Voltar</span></h4></li>
-                                </ul>
-                            </div>
-                 </div>
-            </div>
-    
-         </div>    
-    </div>
-    
 
 
 <div id="princtextooriginal" class="tela w3-animate-opacity">
@@ -211,8 +118,6 @@
 		<li onclick="abrirTelaDicionario()"><h4><span id="idtitulo04">Dicion&aacute;rio</span></h4></li>
 		<li onclick="abrirTela('mapas')"><h4><span id="idtitulo05">Mapas</span></h4></li>
 		<li onclick="abrirTelaEstudos()"><h4><span id="idmenu02">Estudos</span></h4></li>
-        <li onclick="abrirTelaSermonetes()"><h4><span id="idmenu03">Sermonetes</span></h4></li>
-        <li onclick="abrirTelaMensagens()"><h4><span id="idmenu04">Mensagens</span></h4></li>
 		<li onclick="abrirTelaConfiguracao()"><h4><span id="idtitulo06">Configura&ccedil;&atilde;o</span></h4></li>
 		<li onclick="abrirTelaAjuda()"><h4><span class="w3-text-red">Ajuda</span></h4></li>
         </ul>
@@ -816,47 +721,6 @@
             <div class="w3-container" id="idajuda"></div>
      </div>    
 </div>
-
-<div id="sermonetes" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-<span id="idtitulo09_2">Sermonetes</span></h2>
-	 </div>
-     <div class="w3-panel">
-            <div class="w3-container" id="idsermonetes"></div>
-     </div>    
-</div>
-
-<div id="mensagens" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-<span id="idtitulo09_3">Mensagens e Meditações</span></h2>
-	 </div>
-     <div class="w3-panel">
-            <div class="w3-container" id="idmensagens"></div>
-     </div>    
-</div>
-
-<div id="oracao" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-<span id="idtitulo09_3">Minha Oração Hoje</span></h2>
-	 </div>
-     <div class="w3-panel">
-            <div class="w3-container" id="idoracao"></div>
-     </div>    
-</div>
-
-
 
 <div  id="configuracao" class="tela w3-animate-right">
     <div  class="cabecalho w3-container w3-lime w3-bar">
