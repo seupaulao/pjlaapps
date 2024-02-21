@@ -314,6 +314,7 @@ function construirVetorPlanoEstudo(vetorstring)
   carregarEnderecoVetorPlanoEstudo();
 }
 
+
 function carregar()  {
    var detalhe = "";
    setVersiculoMain(1);
@@ -350,8 +351,12 @@ function carregar()  {
    bbuscasimples = false;
    nomecap.innerHTML=getCapituloMain();
    n1.innerHTML=base[getLivroMain()].abrev;
+   
+  
+
    document.getElementById("capitulob1").innerHTML= "<p>&nbsp;</p>"+detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
 }
+
 
 
 function carregarReceptus()  {
