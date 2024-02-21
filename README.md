@@ -6,9 +6,12 @@
 
 - colocar removedor de marcação mais acentuado/exibivel
 
-- colocar estatisticas - posicao do verso no livro, na biblia
-
-- colocar concordancia, referencia, mapas em tempo real - ao selecionar um verso
+- colocar em tempo real - ao selecionar um verso
+  - concordancia, 
+  - referencia, 
+  - mapas
+  - textus receptus
+  - estatistica
 
 - separar as paginas de telas ao inves de one page web app : analisar
 
@@ -24,7 +27,7 @@
   - dicionario : buscar a palavra em todos os dicionarios e imprimir a resposta
 
 **RESOLVIDO** 
-- colocar biblias diversas usadas apenas para comparacao
+- colocar biblias diversas apenas para comparativo de versos
 
 - removido bug de palavras de habacuque aparecer no novo testamento
 
@@ -33,7 +36,7 @@
 
 - removido busca referência strong
 
-- remover biblias de teste
+- remover biblias de outros idiomas e deuterocanonicos
    - deuterocanonicos
    - frances
    - espanhol
