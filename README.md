@@ -4,29 +4,39 @@
 
 ### versão 2.0
 
-- colocar removedor de marcação mais acentuado/exibivel
+- marcador texto
+  - verificar na base de dados, porque as vezes
+  o texto marcado nao corresponde com a imagem clicada
+  - verificar porque as vezes o texto marcado fora de conjunto
+  vai para o conjunto de outro ja existente
+  - criar uma imagem com X no fundo branco : para remover marcação
 
 - colocar em tempo real - ao selecionar um verso
-  - concordancia, 
-  - referencia, 
+  - concordancia/referencia/textus receptus/estatistica 
   - mapas
-  - textus receptus
-  - estatistica
 
-- separar as paginas de telas ao inves de one page web app : analisar
+- dentro do quadro de concordancia deve ter
+  - verso do textus receptus
+  - concordancia
+  - referencia cruzada
+  - estatistica
+  - hebraico e grego
+    - achar fontes para hebraico 
+    - pelo menos transliteracao
 
 - corrigir o estudo
   - corrigir o bug do plano de estudo
   - alterar a listagem do plano de estudo - tornar mais facil de navegar
+
+
+**RESOLVIDO** 
 
 - pesquisa e dicionario : 
   - remover o bug do espaco final
   - na pesquisa o nome tem que ficar em negrito usar ignore-case
   - não restringir a busca apenas por palavras, deve pesquisar frases 
   ou parte da frase e palavra 
-  - dicionario : buscar a palavra em todos os dicionarios e imprimir a resposta
 
-**RESOLVIDO** 
 - colocar biblias diversas apenas para comparativo de versos
 
 - removido bug de palavras de habacuque aparecer no novo testamento

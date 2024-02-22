@@ -35,7 +35,7 @@ function significadoDicionario(palavra)
 
         for(var i=0; i < base2.length; i++)
           {
-              if (palavra.toLowerCase()==base2[i].palavra.toLowerCase()){
+              if (palavra.toLowerCase()==base2[i].palavra.trim().toLowerCase()){
                   valor += "<h3>" + palavra + "</h3><br>" + base2[i].texto + "<p>&nbsp;</p><p>&nbsp;</p>";
                   achou = true;
                   break;

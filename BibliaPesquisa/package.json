@@ -26,5 +26,8 @@
       "browser",
       "android"
     ]
+  },
+  "dependencies": {
+    "cordova": "^12.0.0"
   }
 }

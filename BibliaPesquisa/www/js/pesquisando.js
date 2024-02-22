@@ -44,9 +44,9 @@
 
 */
 function varrerVersos (texto, livros, vresultados) {
-       var totalVelho=0;
-       var totalNovo=0;
-       var total=0;
+       //let totalVelho=0;
+       //var totalNovo=0;
+       //var total=0;
        var palavraProcurada = texto;
        glistaAbrev = [];
        //busca
@@ -64,8 +64,8 @@ function varrerVersos (texto, livros, vresultados) {
                      {
                          //console.log(verso,p,i);
 				         var re = palavraProcurada;
-                         var padrao = new RegExp("\\s"+re.toLowerCase()+"[\\s\\.\\,\\;]","g");
-                         if (padrao.test(verso.toLowerCase())){
+                         var padrao = new RegExp("\\s"+re.trim().toLowerCase()+"[\\s\\.\\,\\;]","g");
+                         if (padrao.test(verso.trim().toLowerCase())){
                              referencia = livros[j].livro + " "+ p + ":" + i;
                              versos.push({versiculo: referencia, texto: tornarPalavraNegrito(palavraProcurada, verso)});
                              vetor=verso.toLowerCase().split(texto.toLowerCase());
@@ -86,9 +86,18 @@ function varrerVersos (texto, livros, vresultados) {
 
     }
 
+    Object.defineProperty(String.prototype, 'capitalize', {
+        value: function() {
+          return this.charAt(0).toUpperCase() + this.slice(1);
+        },
+        enumerable: false
+      });
+
     function tornarPalavraNegrito(palavra, verso)
     {
-       return verso.replace(new RegExp(palavra,"g"), "<b>"+palavra+"</b>");
+       return verso
+       .replace(new RegExp(palavra,"g"), "<b>"+palavra+"</b>")
+       .replace(new RegExp(palavra.capitalize(),"g"), "<b>"+palavra.capitalize()+"</b>");
     }
 
     function pesquisar()
