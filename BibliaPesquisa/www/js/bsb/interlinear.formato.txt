@@ -1,0 +1,38 @@
+### criar programa para extrair de bsb_tables.xls essas informacoes
+{
+    bsb_sort: 
+        {
+            'heb_sort': 999999999,
+            'grk_sort': 999999999,
+            'lang': hebrew/greek,
+            'palavra': 'XXXXXXXX',
+            'translit': 'XXXXXXXX',
+            'verso': 'SIGLALIVRO_NUMCAP_NUMVERS'
+            'trad_bsb': 'XXXXXXXX',
+        }
+}
+
+{
+    bsb_sort: 
+        {
+            'palavra': 'XXXXXXXX',
+            'translit': 'XXXXXXXX',
+            'trad_bdb': 'XXXXXXXX'
+        }
+}
+
+{
+    bsb_sort: 
+        {
+            'gramatica: 'XXXXXXXX',
+            'nverso: 'Livro capitulo:versiculo',
+            'verso': 'SIGLALIVRO_NUMCAP_NUMVERS'
+            'heading: 'XXXXXXXX',
+            'ref_cruzada': 'XXXXXXXX',
+            'nota': 'XXXXXXXX',
+        }
+}
+
+{
+    'SIGLALIVRO_NUMCAP_NUMVERS': [lista de bsb_sort do verso]
+}

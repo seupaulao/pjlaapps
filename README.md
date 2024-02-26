@@ -21,8 +21,10 @@
   - referencia cruzada
   - estatistica
   - hebraico e grego
-    - achar fontes para hebraico 
-    - pelo menos transliteracao
+    - achei o XLSX 
+       -> consegui converter em csv sem perdas
+       -> consegui limpa-lo   
+
 
 - corrigir o estudo
   - corrigir o bug do plano de estudo
