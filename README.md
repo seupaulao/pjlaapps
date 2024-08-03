@@ -9,22 +9,21 @@
   o texto marcado nao corresponde com a imagem clicada
   - verificar porque as vezes o texto marcado fora de conjunto
   vai para o conjunto de outro ja existente
-  - criar uma imagem com X no fundo branco : para remover marcação
+  - melhorar a imagem de de-seleção e posicionamento
 
 - colocar em tempo real - ao selecionar um verso
   - concordancia/referencia/textus receptus/estatistica 
+      - dentro do quadro de concordancia deve ter
+        - verso do textus receptus
+        - concordancia
+        - referencia cruzada
+        - estatistica
+        - hebraico e grego
+          - achei o XLSX 
+            -> OK converter em csv sem perdas
+            -> OK limpa-lo  
+            -> converter em arquivos JSON para ser usados no APP
   - mapas
-
-- dentro do quadro de concordancia deve ter
-  - verso do textus receptus
-  - concordancia
-  - referencia cruzada
-  - estatistica
-  - hebraico e grego
-    - achei o XLSX 
-       -> consegui converter em csv sem perdas
-       -> consegui limpa-lo   
-
 
 - corrigir o estudo
   - corrigir o bug do plano de estudo
