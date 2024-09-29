@@ -525,22 +525,59 @@ function carregarListaVersos(tela, nomeElemento)
   }
   document.getElementById(nomeElemento).innerHTML = str;
 }
-
-function retornaPadraoListaVersoComparar(nome, baseversao, tipo)
+/*
+Se limite caracteres < 0 Entao pegar todo o texto a ser comparado
+Se limite caracteres > 0 Entao comparativo funciona do 1 .. limite caracteres
+*/
+function retornaPadraoListaVersoComparar(nome, baseversao, tipo, limiteCaracteres)
 {
   var str="";
   str += "<div class='cabecalho w3-panel w3-lime'><h4>"+nome+"</h4></div>";
+  let somaTexto = '';
+  let primeiraVez = true;
   for(var i = 0; i < tempmarcacao.length; i++)
   {
      var b = tempmarcacao[i].livro;
      var c = tempmarcacao[i].capitulo;
      var v = tempmarcacao[i].verso;
+     
+     let enderecoVersoBase = enderecoVerso(b,c,v);
      if (tipo == 0)
      {
-      str += "<p>" + enderecoVerso(b,c,v)+"&nbsp;&nbsp;"+extrairVersoBase(baseversao,b,c,v) + "</p>";
+         let texto = extrairVersoBase(baseversao,b,c,v);
+         let tamTextoAnterior = somaTexto.length;
+         somaTexto += texto;
+         if (limiteCaracteres >= 0) {
+            if (somaTexto.length > limiteCaracteres && primeiraVez) {
+               texto = texto.substring(0, limiteCaracteres - tamTextoAnterior) + '...';
+               str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+               primeiraVez = false;
+            }
+            else if (somaTexto.length <= limiteCaracteres) {
+               str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+            } 
+         }
+         else {
+            str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+         }    
      } else {
-      str += "<p>" + enderecoVerso(b,c,v)+"&nbsp;&nbsp;"+extrairVersoBaseTipo1(baseversao,b,c,v) + "</p>";       
-     }
+         let texto = extrairVersoBaseTipo1(baseversao,b,c,v);
+         let tamTextoAnterior = somaTexto.length;
+         somaTexto += texto;
+         if (limiteCaracteres >= 0) {
+            if (somaTexto.length > limiteCaracteres && primeiraVez) {
+               texto = texto.substring(0, limiteCaracteres - tamTextoAnterior) + '...';
+               str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+               primeiraVez = false;
+            }
+            else if (somaTexto.length <= limiteCaracteres) {
+               str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+            } 
+         }
+         else {
+            str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+         }   
+   }
 
   }
   return str;
@@ -551,12 +588,12 @@ function carregarListaVersosComparar(nomeElemento)
 {
   var str = "";
 
-  str += retornaPadraoListaVersoComparar("Biblia Livre",blv,0);
-  str += retornaPadraoListaVersoComparar("Nova Vers&atilde;o Internacional",nvi,1);
-  str += retornaPadraoListaVersoComparar("Almeida Atualizada",aa,1);
-  str += retornaPadraoListaVersoComparar("Almeida Corrigida e Fiel",acf,1);
-  str += retornaPadraoListaVersoComparar("World English Bible",web,0);
-  str += retornaPadraoListaVersoComparar("King James Version",kjv,1);
+  str += retornaPadraoListaVersoComparar("Biblia Livre",blv,0,-1);
+  str += retornaPadraoListaVersoComparar("Nova Vers&atilde;o Internacional",nvi,1,500);
+  str += retornaPadraoListaVersoComparar("Almeida Atualizada",aa,1,500);
+  str += retornaPadraoListaVersoComparar("Almeida Corrigida e Fiel",acf,1,500);
+  str += retornaPadraoListaVersoComparar("World English Bible",web,0,-1);
+  str += retornaPadraoListaVersoComparar("King James Version",kjv,1,500);
   //str += retornaPadraoListaVersoComparar("Valerian Reign Version",vrv);
   //str += retornaPadraoListaVersoComparar("French version",fob);
 
