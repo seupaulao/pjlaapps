@@ -584,6 +584,22 @@ function retornaPadraoListaVersoComparar(nome, baseversao, tipo, limiteCaractere
 
 }
 
+function retornaPadraoListaVersoCompararTextusReceptus(nome) {
+   let str = "<div class='cabecalho w3-panel w3-lime'><h4>"+nome+"</h4></div>";
+   for(var i = 0; i < tempmarcacao.length; i++)
+   {
+      let b = tempmarcacao[i].livro;
+      let c = tempmarcacao[i].capitulo;
+      let v = tempmarcacao[i].verso;
+      let enderecoVersoBase = enderecoVerso(b,c,v);
+      let texto = extrairVersoBaseTranslit(b,c,v,false);
+      str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ texto + "</p>";
+      let transliteracao = extrairVersoBaseTranslit(b,c,v,true);
+      str += "<p>" + enderecoVersoBase +"&nbsp;&nbsp;"+ transliteracao + "</p>";
+   }
+   return str;
+}
+
 function carregarListaVersosComparar(nomeElemento)
 {
   var str = "";
@@ -594,8 +610,7 @@ function carregarListaVersosComparar(nomeElemento)
   str += retornaPadraoListaVersoComparar("Almeida Corrigida e Fiel",acf,1,500);
   str += retornaPadraoListaVersoComparar("World English Bible",web,0,-1);
   str += retornaPadraoListaVersoComparar("King James Version",kjv,1,500);
-  //str += retornaPadraoListaVersoComparar("Valerian Reign Version",vrv);
-  //str += retornaPadraoListaVersoComparar("French version",fob);
+  str += retornaPadraoListaVersoCompararTextusReceptus("Textus Receptus/WLC");
 
   document.getElementById(nomeElemento).innerHTML = str;
 }

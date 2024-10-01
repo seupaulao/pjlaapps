@@ -18,27 +18,16 @@ $ simulate android
 biblia pesquisa 2.0
 
 OK 1. comparativo limitado a 500 palavras em outras versões
-2. comparativo não deixar compartilhar e nem selecionar
-3. remover erros do estudo biblico
-   - independencia de datas
-   - nao usar carrosel
-   - usar lista com numeros 
-     - nao lidos : azul
-     - pendente  : amarelo
-     - lido      : verde	 
-
-   
-
-biblia pesquisa 2.1
-
-1. remover do estudo o texto original 
-2. comparador TR/WCL na biblia
-   1. verso original 
-   2. versao transliterada
-   3. versao livre
-   4. lista de palavras 
-          4.1. numero strong
-          4.2. outras traducoes
+OK 2. comparativo não deixar compartilhar e nem selecionar
+   - tratamento passo 1 é o paliativo e solução
+OK 3. comparador textus receptus com transliteracao  
+OK 4. alterar menu "Estudo" para "Plano de Estudos"
+   - abrir direto na tela de plano de estudos ao clicar no menu lateral
+   5. remover textus receptus e wlc com toda a sua navegação 
+   [ao fazer quebra a aplicação - entender porque]
+      - remover subtelas
+      - limpar código fonte
+OK   6. remover deuterocanonicos
 
 biblia pesquisa 2.2
 
