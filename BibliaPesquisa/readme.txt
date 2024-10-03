@@ -19,15 +19,22 @@ biblia pesquisa 2.0
 
 OK 1. comparativo limitado a 500 palavras em outras versões
 OK 2. comparativo não deixar compartilhar e nem selecionar
-   - tratamento passo 1 é o paliativo e solução
 OK 3. comparador textus receptus com transliteracao  
 OK 4. alterar menu "Estudo" para "Plano de Estudos"
-   - abrir direto na tela de plano de estudos ao clicar no menu lateral
-   5. remover textus receptus e wlc com toda a sua navegação 
-   [ao fazer quebra a aplicação - entender porque]
-      - remover subtelas
-      - limpar código fonte
-OK   6. remover deuterocanonicos
+OK - abrir direto na tela de plano de estudos ao clicar no menu lateral
+   5. remover textus receptus e wlc com toda a sua navegação [PROBLEMA] 
+   ** ao fazer quebra a aplicação **
+OK 6. remover deuterocanonicos
+OK 7. tentar colocar mais 3 a 4 cores nas marcações
+OK 8. colocar a disposição dos icones de seleção na vertical a esquerda
+   9. na leitura, tentar colocar animação de passar a página da 
+   esquerda pra direita e vice-versa
+  10. na seleção de livros, colocar o nome do livro também abaixo da sigla 
+  11. testar o plano de estudo
+  12. no histórico
+      - colocar a cor do marcador
+      - colocar opção de ordenar por cores do marcador 
+  13. pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
 
 biblia pesquisa 2.2
 

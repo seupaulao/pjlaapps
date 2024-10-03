@@ -247,7 +247,7 @@ function desfazer()
    document.getElementById("marBtn").style.display = "none";
    document.getElementById("cmpBtn").style.display = "none";
    document.getElementById("shaBtn").style.display = "none";
-   document.getElementById("comBtn").style.display = "none";
+  // document.getElementById("comBtn").style.display = "none";
 }
 
 function desfazerEVoltar()
