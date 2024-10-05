@@ -11,18 +11,34 @@ const setUltimoSelid=function(valor) { ultimoSelid=valor; }
 
 function mostrarLivros()
 {
-	var elemento = document.getElementById("ltextlivros");
-   var texto = "<div class='w3-row'>";
-   var cores = ['w3-cyan','w3-gray'];
-   var c = 1;
-   var d = 0;
-   var nacional = getNacionalidade()=='pt-BR';
-   //texto += nacional ? "<li><h3>Velho Testamento</h4></li>" : "<li><h4>Old Testament</h3></li>"; 
-	 for (var i = 0; i < 66; i+=1)
+	let elemento = document.getElementById("ltextlivros");
+   let texto = "<div class='w3-row'>";
+   let cores = ['w3-cyan','w3-gray'];
+   let c = 1;
+   let d = 0;
+   let nacional = getNacionalidade()=='pt-BR';
+   texto += nacional ? "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>Velho Testamento</h3></div>" : "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>Old Testament</h3></div>"; 
+	 for (let i = 0; i < 39; i+=1)
 	 {
-      var temp1 = "<div onclick='irparalivro("+parseInt(c)+")' class='w3-col w3-btn " + cores[d] + " w3-border s4 w3-padding-16'>" + (nacional ? abrevpt[i] : abreveng[i]) + "<br>" + (nacional ? livrospt[i] : livroseng[i]) + "</div>";
+      let temp1 = "<div onclick='irparalivro("+parseInt(c)+")' class='w3-col w3-btn w3-border s6 w3-padding-16'>" + (nacional ? abrevpt[i] : abreveng[i]) + "<br>" + (nacional ? livrospt[i] : livroseng[i]) + "</div>";
       texto += temp1;
-      if (c % 3 == 0)
+      if (c % 2 == 0)
+      {
+         texto += "</div><div class='w3-row'>"        
+      }
+      c+=1;
+      d+=1;
+      if (d >= cores.length) d = 0;
+	 }
+	 texto += "</div>";
+    c = 1;
+    d = 0;
+    texto += nacional ? "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>Novo Testamento</h3></div>" : "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>New Testament</h3></div>"; 
+	 for (let i = 39; i < 66; i+=1)
+	 {
+      let temp1 = "<div onclick='irparalivro("+parseInt(c)+")' class='w3-col w3-btn w3-border s6 w3-padding-16'>" + (nacional ? abrevpt[i] : abreveng[i]) + "<br>" + (nacional ? livrospt[i] : livroseng[i]) + "</div>";
+      texto += temp1;
+      if (c % 2 == 0)
       {
          texto += "</div><div class='w3-row'>"        
       }

@@ -17,16 +17,18 @@ $ simulate android
 
 biblia pesquisa 2.0
 
-OK 1. comparativo limitado a 500 palavras em outras versões
-OK 2. comparativo não deixar compartilhar e nem selecionar
-OK 3. comparador textus receptus com transliteracao  
-OK 4. alterar menu "Estudo" para "Plano de Estudos"
+OK 01. comparativo limitado a 500 palavras em outras versões
+OK 02. comparativo não deixar compartilhar e nem selecionar
+OK 03. comparador textus receptus com transliteracao  
+OK 04. alterar menu "Estudo" para "Plano de Estudos"
 OK - abrir direto na tela de plano de estudos ao clicar no menu lateral
-   5. remover textus receptus e wlc com toda a sua navegação [PROBLEMA] 
+   05. remover textus receptus e wlc com toda a sua navegação [PROBLEMA] 
    ** ao fazer quebra a aplicação **
-OK 6. remover deuterocanonicos
-OK 7. tentar colocar mais 3 a 4 cores nas marcações
-OK 8. colocar a disposição dos icones de seleção na vertical a esquerda
+OK 06. remover deuterocanonicos
+OK 07. tentar colocar mais 3 a 4 cores nas marcações
+OK 08. colocar a disposição dos icones de seleção na vertical a esquerda
+OK 09. na seleção de livros deixar em 2 colunas
+OK     e identificar o antigo testamento e o novo testamento 
 OK 10. na seleção de livros, colocar o nome do livro também abaixo da sigla 
   11. testar o plano de estudo
   12. no histórico
