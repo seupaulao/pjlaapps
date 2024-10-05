@@ -20,7 +20,7 @@ function mostrarLivros()
    //texto += nacional ? "<li><h3>Velho Testamento</h4></li>" : "<li><h4>Old Testament</h3></li>"; 
 	 for (var i = 0; i < 66; i+=1)
 	 {
-      var temp1 = "<div onclick='irparalivro("+parseInt(c)+")' class='w3-col w3-btn " + cores[d] + " w3-border s4 w3-padding-16'>" + (nacional ? abrevpt[i] : abreveng[i]) + "</div>";
+      var temp1 = "<div onclick='irparalivro("+parseInt(c)+")' class='w3-col w3-btn " + cores[d] + " w3-border s4 w3-padding-16'>" + (nacional ? abrevpt[i] : abreveng[i]) + "<br>" + (nacional ? livrospt[i] : livroseng[i]) + "</div>";
       texto += temp1;
       if (c % 3 == 0)
       {
@@ -349,8 +349,8 @@ function carregar()  {
    nomecap=document.getElementById("nomecap");
    n1 = document.getElementById("nomelivro");
    bbuscasimples = false;
-   nomecap.innerHTML=getCapituloMain();
-   n1.innerHTML=base[getLivroMain()].abrev;
+   nomecap.innerHTML="<b>" + getCapituloMain() + "</b>";
+   n1.innerHTML=base[getLivroMain()].livro;
    document.getElementById("capitulob1").innerHTML= "<p>&nbsp;</p>"+detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
 }
 

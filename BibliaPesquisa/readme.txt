@@ -27,9 +27,7 @@ OK - abrir direto na tela de plano de estudos ao clicar no menu lateral
 OK 6. remover deuterocanonicos
 OK 7. tentar colocar mais 3 a 4 cores nas marcações
 OK 8. colocar a disposição dos icones de seleção na vertical a esquerda
-   9. na leitura, tentar colocar animação de passar a página da 
-   esquerda pra direita e vice-versa
-  10. na seleção de livros, colocar o nome do livro também abaixo da sigla 
+OK 10. na seleção de livros, colocar o nome do livro também abaixo da sigla 
   11. testar o plano de estudo
   12. no histórico
       - colocar a cor do marcador
