@@ -12,10 +12,10 @@ function setMensagemListando(tipo, msg)
    } 
 }
 
-function escreverSelecaoMarcacaoVerso(va, b, c, v)
+function escreverSelecaoMarcacaoVerso(va, b, c, v, cor)
 {
   loadVersion(va);
-  return getSiglaVersaoPorId(va)+"&nbsp;"+enderecoVerso(b,c,v) + "&nbsp;&nbsp;" + extrairVerso(b,c,v);
+  return getSiglaVersaoPorId(va)+"&nbsp;"+enderecoVerso(b,c,v) + "&nbsp;&nbsp;<span style='background-color:"+cor+"'>" + extrairVerso(b,c,v)+ "</span>";
 } 
 
 function escreverSelecaoMarcacaoVersoCompartilhar(va, b, c, v)
@@ -60,21 +60,23 @@ function carregarListandoMarcacoes(id)
               var idselecao = eSelecao[i].id;
               var corselecao = eSelecao[i].cor;
               if(corselecao=="#ffffff") continue;
-              str += "<div class='w3-container w3-card-4 w3-white w3-margin'>";
+            //  str += "<div class='w3-container w3-card-4 w3-white w3-margin'>";
               if (eMarcacao.length > 0) {
                       for (var j=0; j<eMarcacao.length; j++)
                       {
                            if (idselecao == eMarcacao[j].selecaoid)
                            {
-                              str += "<p>" + escreverSelecaoMarcacaoVerso(eMarcacao[j].versao, eMarcacao[j].livro, eMarcacao[j].capitulo, eMarcacao[j].verso) + "</p>";
+                              str += "<div class='w3-container w3-card-4 w3-white w3-margin'>";
+                              str += "<p>" + escreverSelecaoMarcacaoVerso(eMarcacao[j].versao, eMarcacao[j].livro, eMarcacao[j].capitulo, eMarcacao[j].verso, corselecao) + "</p>";
+                    
+                              str += "<div class='w3-panel w3-center w3-row'>";
+                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='abrirTelaListandoComentario("+idselecao+",null,null)'><img src='img/comentar32.png'></img></span>"
+                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoExcluirSelecaoMarcacao("+idselecao+")'><img src='img/menos32.png'></img></span>"
+                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoCompartilharSelecao("+idselecao+")'><img src='img/compartilhar32.png'></img></span>"
+                              str +="</div></div>";
                            }
                       }
               }
-              str += "<div class='w3-panel w3-center w3-row'>";
-              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='abrirTelaListandoComentario("+idselecao+",null,null)'><img src='img/comentar32.png'></img></span>"
-              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoExcluirSelecaoMarcacao("+idselecao+")'><img src='img/menos32.png'></img></span>"
-              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoCompartilharSelecao("+idselecao+")'><img src='img/compartilhar32.png'></img></span>"
-              str +="</div></div>";
            }
          elemento.innerHTML = str+"<p>&nbsp;</p><p>&nbsp;</p>";  
    } else {

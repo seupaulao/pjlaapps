@@ -29,12 +29,17 @@ OK 07. tentar colocar mais 3 a 4 cores nas marcações
 OK 08. colocar a disposição dos icones de seleção na vertical a esquerda
 OK 09. na seleção de livros deixar em 2 colunas
 OK     e identificar o antigo testamento e o novo testamento 
-OK 10. na seleção de livros, colocar o nome do livro também abaixo da sigla 
+OK 10. na seleção de livros, colocar o nome do livro também abaixo da sigla
+OK     - correção da listagem de livros, pegando livros do AT no NT 
   11. testar o plano de estudo
   12. no histórico
-      - colocar a cor do marcador
-      - colocar opção de ordenar por cores do marcador 
+OK      - colocar a cor do marcador
+OK      - separar todos os versos e não mais colocar eles agrupados
+      - melhorar a disponibilizacoes e visualizacao dos 3 botoes dessa tela
+      - colocar opção de ordenar por cores do marcador
+      - filtrar por cor do marcador/seleção 
   13. pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
+  14. permitir dar o zoom na tela 
 
 biblia pesquisa 2.2
 

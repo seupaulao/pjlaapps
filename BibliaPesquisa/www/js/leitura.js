@@ -31,7 +31,7 @@ function mostrarLivros()
       if (d >= cores.length) d = 0;
 	 }
 	 texto += "</div>";
-    c = 1;
+    c = 40;
     d = 0;
     texto += nacional ? "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>Novo Testamento</h3></div>" : "<div class='w3-col w3-border s12 w3-center w3-gray'><h3 class='w3-text-orange' style='text-shadow:1px 1px 0 #444'>New Testament</h3></div>"; 
 	 for (let i = 39; i < 66; i+=1)
@@ -93,6 +93,7 @@ function mostrarVersos(cap)
 	elemento.innerHTML = texto;
 }
 
+/*
 function mostrarLivrosTR()
 {
      var nacional = getNacionalidade()=='pt-BR';
@@ -197,7 +198,7 @@ var bbase = getNacionalidade() == 'pt-BR' ? blv : web;
 	elemento.innerHTML = texto;
 }
 
-
+*/
 
 function buscar()
 {
@@ -206,6 +207,7 @@ function buscar()
    carregar();
 }
 
+/*
 detalharSelecaoTR=function (va,b,c,v)
 {
   var el1 = document.getElementById("iddetalhartr");
@@ -257,6 +259,7 @@ function escreveMarcacaoTR(t1, va, b, c, v)
 {
               return "<p>" + v + " : <span id='v"+v+"'><span onclick='detalharSelecaoTR("+va+","+b+","+c+","+v+")'>" + t1 + "</span></span></p>";
 }
+*/
 
 function escreveMarcacao(t1, va, b, c, v)
 {
@@ -369,7 +372,7 @@ function carregar()  {
    n1.innerHTML=base[getLivroMain()].livro;
    document.getElementById("capitulob1").innerHTML= "<p>&nbsp;</p>"+detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
 }
-
+/*
 function carregarReceptus()  {
    var detalhe = "";
    setVersiculoMain(1);
@@ -393,13 +396,17 @@ function carregarReceptus()  {
    n1.innerHTML=getNacionalidade()=='pt-BR'? base[getLivroMain()].livro : livroseng[getLivroMain()-1];
    b1.innerHTML= detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
 }
+*/
 
+/*
 function preCarregarWLC()
 {
   mostrarVersosWLC(getCapituloMain());
   mostrarCapitulosWLC();
 }
+*/
 
+/*
 function carregarReceptusWlc()
 {
   setVersiculoMain(1);
@@ -411,7 +418,7 @@ function carregarReceptusWlc()
   w3.includeHTML();
 
 }
-
+*/
 
 function preselecaocontem(temp, va, livro, cap, verso)
 {

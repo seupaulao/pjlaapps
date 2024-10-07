@@ -126,6 +126,7 @@ function irparalivro(ibk)
     topFunction();
 }
 
+/*
 
 function irparatr(versiculo)
 {
@@ -177,7 +178,7 @@ function irparalivrowlc(ibk)
     abrirTela('leituracapitulostr');
     topFunction();
 }
-
+*/
 
 function mostrarMenuLivros()
 {
@@ -186,7 +187,7 @@ function mostrarMenuLivros()
    mostrarLivros();
    abrirTela("leituralivros");
 }
-
+/*
 mostrarMenuLivrosTR=function()
 {
    mostrarLivrosTR();
@@ -218,7 +219,7 @@ mostrarMenuVersosWLC=function()
 {
    abrirTela("leituraversostr");
 }
-
+*/
 function mostrarMenuLeituraVersoes()
 {
    desfazer();
@@ -339,7 +340,7 @@ function abrirTelaTextoOriginalLeitura(versao)
   setLivroMain(43);
   setCapituloMain(1);
   carregarVersao();
-  carregarReceptus();
+  //carregarReceptus();
   //carregarReceptusWlc();
   abrirTela('telaleituratextooriginal');
 }
@@ -359,16 +360,17 @@ function abrirTelaTextoOriginalLeituraHb()
   setLivroMain(1);
   setCapituloMain(1);
   carregarVersao();
-  carregarReceptusWlc();
+  //carregarReceptusWlc();
   abrirTela('telaleituratextooriginal');
 
 }
 
+/*
 function abrirTelaDetalharTR()
 {
   abrirTela('telaleituratextooriginaldetalhar');
 }
-
+*/
 function abrirTelaModalControlesLeitura()
 {  
    //closeNav2();

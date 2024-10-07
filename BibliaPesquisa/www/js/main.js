@@ -206,7 +206,7 @@ function retrocedercaptr()
             }
         }
     }
-   carregarReceptus();
+ //  carregarReceptus();
 }
 
 function retrocedercapwlc()
@@ -222,7 +222,7 @@ function retrocedercapwlc()
             setCapituloMain(numeroCapitulos()); 
         }
     }
-   carregarReceptusWlc();
+  // carregarReceptusWlc();
 }
 
 
@@ -264,7 +264,7 @@ function adiantarcaptr()
           setCapituloMain(1);
        }
    }
-   carregarReceptus();
+ //  carregarReceptus();
 }
 
 function adiantarcapwlc()
@@ -283,5 +283,5 @@ function adiantarcapwlc()
         setCapituloMain(1);
      }
    }
-   carregarReceptusWlc();
+ //  carregarReceptusWlc();
 }
