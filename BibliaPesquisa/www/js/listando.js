@@ -68,11 +68,11 @@ function carregarListandoMarcacoes(id)
                            {
                               str += "<div class='w3-container w3-card-4 w3-white w3-margin'>";
                               str += "<p>" + escreverSelecaoMarcacaoVerso(eMarcacao[j].versao, eMarcacao[j].livro, eMarcacao[j].capitulo, eMarcacao[j].verso, corselecao) + "</p>";
-                    
-                              str += "<div class='w3-panel w3-center w3-row'>";
-                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='abrirTelaListandoComentario("+idselecao+",null,null)'><img src='img/comentar32.png'></img></span>"
-                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoExcluirSelecaoMarcacao("+idselecao+")'><img src='img/menos32.png'></img></span>"
-                              str += "<span class='rodape w3-btn w3-lime w3-col s4 w3-medium' onclick='listandoCompartilharSelecao("+idselecao+")'><img src='img/compartilhar32.png'></img></span>"
+                              // tentar colocar o flexlayout aqui
+                              str += "<div class='w3-panel' style='display:flex; justify-content:center'>";
+                              str += "<span class='w3-btn  w3-blue' onclick='abrirTelaListandoComentario("+idselecao+",null,null)'><img src='img/comentar32.png'></img></span>"
+                              str += "<span class='w3-btn  w3-blue w3-margin-left w3-margin-right' onclick='listandoExcluirSelecaoMarcacao("+idselecao+")'><img src='img/menos32.png'></img></span>"
+                              str += "<span class='w3-btn  w3-blue' onclick='listandoCompartilharSelecao("+idselecao+")'><img src='img/compartilhar32.png'></img></span>"
                               str +="</div></div>";
                            }
                       }
