@@ -34,11 +34,12 @@ OK     - correção da listagem de livros, pegando livros do AT no NT
 11. no histórico
 OK      - colocar a cor do marcador
 OK      - separar todos os versos e não mais colocar eles agrupados
+ok * topo fixo
+ok * permitir dar o zoom na tela
+ok * ao voltar, na leitura, ir para o topo da página 
 * historico - ordenar por cores
-ok * leitura - topo fixo
 * testar o plano de estudo
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
-ok * permitir dar o zoom na tela 
 
 biblia pesquisa 2.2
 

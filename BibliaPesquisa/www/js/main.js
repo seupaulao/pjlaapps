@@ -188,6 +188,7 @@ function retrocedercap()
         }
     }
    carregar();
+   topFunction();
 }
 
 function retrocedercaptr()
@@ -245,6 +246,7 @@ function adiantarcap()
      }
    }
    carregar();
+   topFunction();
 }
 
 

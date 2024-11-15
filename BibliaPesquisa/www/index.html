@@ -93,7 +93,7 @@
 </div>
 
 <div id="telaComparar" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
                
 		<h2 class="w3-bar-item"><span id="idcomparar_1">Comparar</span></h2>
 	</div>
@@ -218,7 +218,7 @@
 		     <h3><span id="idtotalizador">Totalizadores</span></h3><div id="totalizadores"></div>
                      <textarea id="txtpesquisandobibliacomentario" rows=5 cols=35></textarea>
 
-                   <div class="w3-panel w3-center">
+                   <div class="w3-container w3-center">
                    <span onclick="compartilharPesquisandoBiblia()" class="w3-btn w3-large w3-border w3-green"><img src="img/compartilhar32.png"></img></span>
                    <span onclick="abrirTela('pesquisandobiblia')" class="w3-btn w3-large w3-border w3-blue"><img src="img/casa32.png"></img></span>
                    </div>
@@ -248,7 +248,7 @@
 
 
 <div  id="leituracapitulos" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -264,7 +264,7 @@
 </div>
 
 <div  id="leituraversos" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -282,7 +282,7 @@
 
 
 <div  id="pesquisandobiblia" class="tela w3-animate-right">
-        <div  class="cabecalho w3-container w3-lime w3-bar">
+        <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -292,7 +292,11 @@
 	</div>
 
         <div class="w3-panel w3-red" id="erropesquisandobiblia" style="display:none"></div>
-   	<div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+   	<div class="w3-container">
+            <br />
+            <br />
+            <br />
+            <br />
 		       <div class="w3-row w3-section">
                         <div class="w3-container">
                             <input class="w3-input w3-border" id="textoPesquisa" name="textoPesquisa" type="text" placeholder="Texto para pesquisar">
@@ -310,7 +314,7 @@
                             <p><span id="idmsg06">Clique nos totalizadores de cada vers&atilde;o do velho ou novo testamento para detalhar os versos</span></p>
                         </div>
 		                <div class="w3-row" id="saidaVersoesPortugues">
-			               <div class="w3-third w3-container w3-blue">
+			               <div class="w3-container w3-blue w3-center">
                                         <h2>BLV</h2>
                                         <div class="w3-row w3-margin">
                                            <div class="w3-half w3-container w3-red w3-center w3-padding-16 " id="totalVelhoBLV" onclick="abrirtotallivros('pesquisandobiblialivros','velho','BLV')"></div>
@@ -319,7 +323,7 @@
                                        </div>
 		               </div>
 		               <div class="w3-row" id="saidaVersoesIngles">
-			              <div class="w3-half w3-container w3-blue">
+			              <div class="w3-container w3-blue">
                                         <h2>WEB</h2>
                                         <div class="w3-row">
                                            <div class="w3-half w3-container w3-red w3-center w3-padding-16" id="totalVelhoWEB" onclick="abrirtotallivros('pesquisandobiblialivros','velho','WEB')"></div>
@@ -336,7 +340,7 @@
 </div>
 
 <div  id="pesquisandobiblialivros" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar" style="position: fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -344,14 +348,14 @@
 
 <span id="idtitulo02_3">Pesquisar</span></h2>
 	</div>
-
+    <br><br><br><br>
 	<div class="w3-container w3-light-grey w3-card-4 w3-margin" id="resultadolivros"></div>
         <button onclick="topFunction()" id="myBtn2" class="topBtn"  title="Go to top"><span id="idtopo_2">Topo</span></button>
 	
 </div>
 
 <div  id="pesquisandobibliaversos" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar" style="position: fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -362,7 +366,7 @@
     <div class="cabecalho w3-container w3-lime">
         <h3 class="w3-center"><span id="nomeDoLivro"></span></h3>
     </div>
-
+    <br><br>
 	<div class="w3-container w3-light-grey w3-card-4 w3-margin" id="resultadolivroversos"></div>
      <button onclick="topFunction()" id="myBtn3" class="topBtn" title="Go to top"><span id="idtopo_3">Topo</span></button>
 
@@ -370,7 +374,7 @@
 </div>
 
 <div  id="mapas" class="tela w3-animate-right">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -407,7 +411,7 @@
 </div>
 
 <div  id="mapa01" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -431,21 +435,22 @@
 
 
 <div  id="dicionario" class="tela w3-animate-right">
-        <div  class="cabecalho w3-container w3-lime w3-bar">
+        <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
              </img>
 
 <span id="idtitulo04_1">Dicion&aacute;rio</span></h2>
 	</div>
-        <div class="w3-panel w3-red" id="errodicionario" style="display:none"></div>
-	<div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+        <div class="w3-container w3-red" id="errodicionario" style="display:none"></div>
+	<div class="w3-container">
+        <br><br><br><br>
 		        <div class="w3-row w3-section">
                    <div class="w3-rest">
                       <input class="w3-input w3-border" id="textoPesquisaDicionario" name="textoPesquisaDicionario" type="text" placeholder="Texto para pesquisar no dicion&aacute;rio">
                    </div>
                 </div>
-                   <div class="w3-panel w3-center">
+                   <div class="w3-container w3-center">
                         <span onclick="pesquisarDicionario()" class="rodape w3-button w3-lime w3-round"><img src="img/lupa48.png"></img></span>
                         <span onclick="abrirTela('dicionariocatalogo')" class="rodape w3-button w3-lime w3-round"><img src="img/catalogo48.png"></img></span>
                         <span onclick="limparDicionario()" class="rodape w3-button w3-lime w3-round"><img src="img/borracha48.png"></img></span>
@@ -532,23 +537,6 @@
 </div>
 
 
-<div  id="listando" class="tela w3-animate-right">
-        <div  class="cabecalho w3-container w3-lime w3-bar">
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-
-<span id="idtitulo03_1" >Hist&oacute;rico</span></h2>
-	</div>
-        <div class="w3-panel w3-red" id="errolistando" style="display:none"></div>
-	<div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
-		<div id="listandomarcacoes"></div>
-        <button onclick="topFunction()" id="myBtn5" class="topBtn" title="Go to top"><span id="idtopo_5">Topo</span></button>
-
-	</div>
-</div>
-
-
 <div id="listandocomentario" class="tela w3-animate-opacity">
     <div  class="cabecalho w3-container w3-lime w3-bar">
 		<h2 class="w3-bar-item">
@@ -575,7 +563,7 @@
 
 
 <div id="planosestudo" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+    <div  class="cabecalho w3-container w3-lime w3-bar" style="position: fixed">
 
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
@@ -583,13 +571,13 @@
 
 <span id="idtitulo07_1">Planos de Estudo</span></h2>
 	</div>
+    <br><br><br><br><br>
 	<div  class="w3-container" id="listarplanosestudo"></div>
 </div>
 
 <div id="planosestudover" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-     
-		<h2 class="w3-bar-item">
+    <div  class="cabecalho w3-container w3-lime w3-bar" style="position: fixed">
+ 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
              </img>
 
@@ -597,6 +585,7 @@
                 </h2>
      </div>
      <div class="w3-container w3-center">          
+        <br><br><br><br><br>
 		<h4 class="w3-bar-item"><span id='tituloPlanoEstudoSelecionado'></span></h4>
           <button onclick="rePlano()" id="botaoReiniciar" class="w3-btn w3-yellow w3-center" style="display:none">Reiniciar Plano</button>
         <button onclick="topFunction()" id="myBtn6" class="topBtn" title="Go to top"><span id="idtopo_7">Topo</span></button>
@@ -722,26 +711,44 @@
 
 
 <div id="ajuda" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
              </img>
-<span id="idtitulo09_1">Ajuda</span></h2>
+            <span id="idtitulo09_1">Ajuda</span>
+        </h2>
 	 </div>
-     <div class="w3-panel">
+     <div class="w3-container">
             <div class="w3-container" id="idajuda"></div>
      </div>    
 </div>
 
-<div  id="configuracao" class="tela w3-animate-right">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
+<div  id="listando" class="tela w3-animate-right">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
+        <h2 class="w3-bar-item">
+            <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
+            </img>
+            <span id="idtitulo03_1" >Hist&oacute;rico XXX</span>
+        </h2>
+    </div>
+    <div class="w3-container w3-red" id="errolistando" style="display:none"></div>
+    <div class="w3-container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="listandomarcacoes"></div>
+        <button onclick="topFunction()" id="myBtn5" class="topBtn" title="Go to top"><span id="idtopo_5">TopoXXX</span></button>
+    </div>
+</div>
 
+<div  id="configuracao" class="tela w3-animate-opacity">
+    <div  class="cabecalho w3-container w3-lime w3-bar"  style="position:fixed">
 		<h2 class="w3-bar-item">
              <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
              </img>
-
-<span id="idtitulo06_1">Configura&ccedil;&atilde;o</span></h2>
+             <span id="idtitulo06_1">Configura&ccedil;&atilde;o</span>
+            </h2>
 	</div>
         <div class="w3-panel w3-green" id="msgConfig" style="display:none"></div>
 	<div class="w3-container ">
