@@ -314,16 +314,16 @@ function idiomaPortugues()
  document.getElementById("idselecionarcorfundo").innerHTML="Selecione a cor de fundo";
  document.getElementById("idselecionaridioma").innerHTML="Selecione o idioma";
 
- document.getElementById("idtopo").innerHTML="Topo";
+//  document.getElementById("idtopo").innerHTML="Topo";
  document.getElementById("idtopo_1").innerHTML="Topo";
  document.getElementById("idtopo_2").innerHTML="Topo";
  document.getElementById("idtopo_3").innerHTML="Topo";
 
  document.getElementById("idtopo_5").innerHTML="Topo";
  document.getElementById("idtopo_7").innerHTML="Topo";
- document.getElementById("idtopo_8").innerHTML="Topo";
- document.getElementById("idtopo_9").innerHTML="Topo";
- document.getElementById("idback_2").innerHTML="Voltar";
+//  document.getElementById("idtopo_8").innerHTML="Topo";
+//  document.getElementById("idtopo_9").innerHTML="Topo";
+//  document.getElementById("idback_2").innerHTML="Voltar";
  document.getElementById("idvoltar").innerHTML="Voltar";
  document.getElementById("idescolhacorq").innerHTML="Escolha uma outra cor";
  document.getElementById("idcomentarios_1").innerHTML="Coment&aacute;rios";
@@ -333,9 +333,9 @@ function idiomaPortugues()
  document.getElementById("idmsg02").innerHTML="Clique em uma n&uacute;mero para abrir o cap&iacute;tulo";
  document.getElementById("idmsg03").innerHTML="Clique em uma n&uacute;mero para ir ao vers&iacute;culo";
  document.getElementById("idmsg04").innerHTML="Clique em um livro";
- document.getElementById("idmsg02_1").innerHTML="Clique em uma n&uacute;mero para abrir o cap&iacute;tulo";
- document.getElementById("idmsg03_1").innerHTML="Clique em uma n&uacute;mero para ir ao vers&iacute;culo";
- document.getElementById("idmsg04_1").innerHTML="Clique em um livro";
+//  document.getElementById("idmsg02_1").innerHTML="Clique em uma n&uacute;mero para abrir o cap&iacute;tulo";
+//  document.getElementById("idmsg03_1").innerHTML="Clique em uma n&uacute;mero para ir ao vers&iacute;culo";
+//  document.getElementById("idmsg04_1").innerHTML="Clique em um livro";
  document.getElementById("idmsg05").innerHTML="Explica&ccedil;&atilde;o";
  document.getElementById("idmsg06").innerHTML="Clique nos totalizadores de cada vers&atilde;o do velho ou novo testamento para detalhar os versos";
  document.getElementById("idmsg09").innerHTML="Selecione um mapa para ver";
@@ -410,34 +410,35 @@ function idiomaIngles()
  document.getElementById("idtitulo06").innerHTML="Config";
  document.getElementById("idtitulo06_1").innerHTML="Config";
 
- document.getElementById("idtitulo07").innerHTML="Study Plans";
+//  document.getElementById("idtitulo07").innerHTML="Study Plans";
  document.getElementById("idtitulo07_1").innerHTML="Study Plans";
+ document.getElementById("idmenu02").innerHTML="Study Plans";
 
- document.getElementById("idtitulo08").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_1").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_2").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_3").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_4").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_5").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_6").innerHTML="Strong Concordance";
+//  document.getElementById("idtitulo08").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_1").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_2").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_3").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_4").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_5").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_6").innerHTML="Strong Concordance";
 
 
  document.getElementById("idselecionarcorpadrao").innerHTML="Select standard color";
  document.getElementById("idselecionarcorfundo").innerHTML="Selecione background color";
  document.getElementById("idselecionaridioma").innerHTML="Select nationality";
 
- document.getElementById("idtopo").innerHTML="Top";
+//  document.getElementById("idtopo").innerHTML="Top";
  document.getElementById("idtopo_1").innerHTML="Top";
  document.getElementById("idtopo_2").innerHTML="Top";
  document.getElementById("idtopo_3").innerHTML="Top";
- document.getElementById("idtopo_4").innerHTML="Top";
+//  document.getElementById("idtopo_4").innerHTML="Top";
  document.getElementById("idtopo_5").innerHTML="Top";
  document.getElementById("idtopo_7").innerHTML="Top";
- document.getElementById("idtopo_8").innerHTML="Top";
- document.getElementById("idtopo_9").innerHTML="Top";
- document.getElementById("idback_2").innerHTML="Back";
+//  document.getElementById("idtopo_8").innerHTML="Top";
+//  document.getElementById("idtopo_9").innerHTML="Top";
+//  document.getElementById("idback_2").innerHTML="Back";
 
- document.getElementById("idcontroles").innerHTML="Search Text";
+//  document.getElementById("idcontroles").innerHTML="Search Text";
  document.getElementById("idvoltar").innerHTML="Back";
  document.getElementById("idescolhacorq").innerHTML="Choose another color";
  document.getElementById("idcomentarios_1").innerHTML="Comments";
@@ -447,9 +448,9 @@ function idiomaIngles()
  document.getElementById("idmsg02").innerHTML="Click a number to open a chapter";
  document.getElementById("idmsg03").innerHTML="Click a number to go to the verse";
  document.getElementById("idmsg04").innerHTML="Select a book";
- document.getElementById("idmsg02_1").innerHTML="Click a number to open a chapter";
- document.getElementById("idmsg03_1").innerHTML="Click a number to go to the verse";
- document.getElementById("idmsg04_1").innerHTML="Select a book";
+//  document.getElementById("idmsg02_1").innerHTML="Click a number to open a chapter";
+//  document.getElementById("idmsg03_1").innerHTML="Click a number to go to the verse";
+//  document.getElementById("idmsg04_1").innerHTML="Select a book";
  document.getElementById("idmsg05").innerHTML="Explanation";
  document.getElementById("idmsg06").innerHTML="Click on the totalizers of each version of the old or new testament to detail the verses";
 // document.getElementById("idmsg07").innerHTML="Processing";
@@ -495,7 +496,7 @@ document.getElementById("idmsgdeletecomments").innerHTML="Erase all comments?";
 
 document.getElementById("msgenddayread").innerHTML="Day ended successfully";
 document.getElementById("msgsaveandreturn").innerHTML="Save and Return to Study Plans";
-document.getElementById("msgtextusreceptusread").innerHTML="Click on the manuscript you want to read";
+// document.getElementById("msgtextusreceptusread").innerHTML="Click on the manuscript you want to read";
 document.getElementById("idtitulobasedados").innerHTML="Database";
 
 }
