@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimun-scale=1.0, width=device-width">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, width=device-width">
 	    <link rel="stylesheet" href="css/w3.css">
             <link rel="stylesheet" href="css/myStyle.css">
         <script type="text/javascript" src="cordova.js"></script>
@@ -22,45 +22,6 @@
         <script type="text/javascript" charset="utf-8" src="js/biblias/heb.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/biblias/translit.js"></script>
        </head>
-
-
-<div id="princestudos" class="tela w3-animate-top">
-	  <div class="cabecalho w3-container w3-lime">
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-                <span id="idtitulo07">Estudos</span></h2>
-	</div>
-
-	<div class="w3-container">
-	    <ul class="w3-ul w3-hoverable w3-center">
-		<li onclick="abrirTelaPlanoEstudo()"><h4><span id="idtitulo07">Planos Estudo</span></h4></li>
-		<li onclick="abrirTelaLeituraTextoOriginal()"><h4><span id="idtitulo08">Ler Texto Original</span></h4></li>
-		<li>&nbsp;</li>
-	    </ul>
-	</div>
-
-</div>
-
-
-<div id="princtextooriginal" class="tela w3-animate-opacity">
-    <div  class="cabecalho w3-container w3-lime w3-bar">
-                
-
-		<h2 class="w3-bar-item">
-             <img class="w3-btn  w3-large" onclick="openNav3()" src="img/menu48.png">
-             </img>
-
-<span id="idtitulo08_1" onclick="abrirTela('princestudos')">Biblia Original</span></h2>
-	</div>
-	<div  class="w3-container">
-        <p><span id="msgtextusreceptusread"><b>Clique na vers&atilde;o que deseja ler</b></span></p>
-        <p>&nbsp;</p>
-            <button class="w3-btn w3-block" onclick="abrirTelaTextoOriginalLeituraHb()">Velho Testamento Hebraico</button>
-            <button class="w3-btn w3-block" onclick="abrirTelaTextoOriginalLeituraGr()">Novo Testamento Grego</button>
-    </div> 
-
-</div>
 
 
 <div id="leitura" class="tela w3-animate-right">
@@ -384,8 +345,9 @@
 
 <span id="idtitulo05_1">Mapas</span></h2>
 	</div>
-
+    
 	<div class="w3-container ">
+        <br><br> <br><br>
 		<label><span id="idmsg09">Selecione um mapa para ver</span></label>
         <ul class="w3-ul w3-hoverable w3-center">
            <li onclick="carregarMapa(1)"><span id="idmsg10">Mundo Antigo</span></li>
@@ -424,8 +386,9 @@
     <div class="cabecalho w3-container w3-lime">
        <h3 class="w3-center"><span id="nomeDoMapa"></span></h3>
     </div> 
-
+    <br><br> 
     <div class="w3-panel w3-card-4 w3-light-grey w3-text-blue w3-margin">
+       
             <p><span id="idmsg29">Gire o smartphone para colocar em modo paisagem</span></p>
         </div>
 	<div class="w3-container w3-teal w3-center">
@@ -753,8 +716,9 @@
             </h2>
 	</div>
         <div class="w3-panel w3-green" id="msgConfig" style="display:none"></div>
-	<div class="w3-container ">
+	<div class="w3-container">
 		<div>
+            <br><br><br><br>
         <h3><span id="idselecionarcorpadrao">Selecione a cor padr&atilde;o</span></h3>
             <div class="w3-row">
                 <div class="w3-col s3 w3-red w3-center w3-padding-16" onclick="mudarCor('w3-red')"><p>&nbsp;</p></div>

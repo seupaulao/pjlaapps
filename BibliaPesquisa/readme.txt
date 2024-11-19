@@ -35,11 +35,13 @@ OK     - correção da listagem de livros, pegando livros do AT no NT
 OK      - colocar a cor do marcador
 OK      - separar todos os versos e não mais colocar eles agrupados
 ok * topo fixo
-ok * permitir dar o zoom na tela
 ok * ao voltar, na leitura, ir para o topo da página 
+* testar telas por conta da alteração de topo fixo 
+* muitas funções quebraram com a última atualização no mobile, verificar cada uma delas
 * historico - ordenar por cores
 * testar o plano de estudo
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
+* zoom na tela - ainda não funcionou no android 
 
 biblia pesquisa 2.2
 

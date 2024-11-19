@@ -300,15 +300,15 @@ function idiomaPortugues()
  document.getElementById("idtitulo05_2").innerHTML="Mapas";
  document.getElementById("idtitulo06").innerHTML="Configura&ccedil;&atilde;o";
  document.getElementById("idtitulo06_1").innerHTML="Configura&ccedil;&atilde;o";
- document.getElementById("idtitulo07").innerHTML="Planos de Estudo";
+//  document.getElementById("idtitulo07").innerHTML="Planos de Estudo";
  document.getElementById("idtitulo07_1").innerHTML="Planos de Estudo";
- document.getElementById("idtitulo08").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_1").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_2").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_3").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_4").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_5").innerHTML="Textus Receptus";
- document.getElementById("idtitulo08_6").innerHTML="Strong Concordance";
+//  document.getElementById("idtitulo08").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_1").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_2").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_3").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_4").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_5").innerHTML="Textus Receptus";
+//  document.getElementById("idtitulo08_6").innerHTML="Strong Concordance";
 
  document.getElementById("idselecionarcorpadrao").innerHTML="Selecione a cor padr&atilde;o";
  document.getElementById("idselecionarcorfundo").innerHTML="Selecione a cor de fundo";
@@ -382,7 +382,7 @@ document.getElementById("idmsgdeletecomments").innerHTML="Apagar todos os coment
 
 document.getElementById("msgenddayread").innerHTML="Dia Finalizado com sucesso";
 document.getElementById("msgsaveandreturn").innerHTML="Salvar e Voltar ao Plano de Estudos";
-document.getElementById("msgtextusreceptusread").innerHTML="Clique no manuscrito que deseja ler";
+// document.getElementById("msgtextusreceptusread").innerHTML="Clique no manuscrito que deseja ler";
 
 }
 
