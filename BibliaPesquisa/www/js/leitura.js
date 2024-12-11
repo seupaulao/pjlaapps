@@ -358,12 +358,19 @@ function carregar()  {
            var t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
 	       while (t1 != null)
 	       {
-                 detalhe = detalhe + escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain());
-	             setVersiculoMain(getVersiculoMain()+1);
+             let oo = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), false);
+             let oot = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), true);
+             detalhe = detalhe + 
+                       escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain())
+                       + "<p>"+ oo + "</p>"
+                       + "<p>"+ oot + "</p>";
+	          setVersiculoMain(getVersiculoMain()+1);
         		 t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
 	       }
 
     }
+
+;
 
    nomecap=document.getElementById("nomecap");
    n1 = document.getElementById("nomelivro");

@@ -59,6 +59,7 @@ function extrairVersoBaseTipo1(baseversao,b,c,v)
 }
 
 function extrairVersoBaseTranslit(b,c,v,isTranslit) {
+   console.log(b,c,v);
    let abl = [
       "GEN","EXO","LEV","NUM","DEU","JOS","JDG","RUT","1SA","2SA",
       "1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB","PSA","PRO",
