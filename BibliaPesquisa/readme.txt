@@ -40,7 +40,7 @@ ok * testar telas por conta da alteração de topo fixo
 ok * muitas funções quebraram com a última atualização no mobile, verificar cada uma delas
 ok * limpando codigo e telas não usadas 
 * limpar libjs e css não usados
-* historico - ordenar por cores
+ok * historico - ordenar por cores
 * testar o plano de estudo
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
 * zoom na tela - ainda não funcionou no android 

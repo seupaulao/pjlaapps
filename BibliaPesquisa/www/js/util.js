@@ -59,7 +59,7 @@ function extrairVersoBaseTipo1(baseversao,b,c,v)
 }
 
 function extrairVersoBaseTranslit(b,c,v,isTranslit) {
-   console.log(b,c,v);
+  // console.log(b,c,v);
    let abl = [
       "GEN","EXO","LEV","NUM","DEU","JOS","JDG","RUT","1SA","2SA",
       "1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB","PSA","PRO",
@@ -71,7 +71,7 @@ function extrairVersoBaseTranslit(b,c,v,isTranslit) {
    ];
    let abrevLivro = abl[b-1].toUpperCase();
    let chave = abrevLivro + "_" + c + "_" + v;
-   console.log(chave);
+   //console.log(chave);
    let isVelho = b < 40;
    if (isTranslit) {
       return translit[chave];

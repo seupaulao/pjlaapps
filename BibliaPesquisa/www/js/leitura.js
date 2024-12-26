@@ -370,7 +370,7 @@ function carregar()  {
 
     }
 
-;
+
 
    nomecap=document.getElementById("nomecap");
    n1 = document.getElementById("nomelivro");

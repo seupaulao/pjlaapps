@@ -385,12 +385,16 @@ function fecharTelaModalControlesLeitura()
 
 function abrirTelaListando()
 {
-   carregarListandoMarcacoes("listandomarcacoes");
+   carregarListandoMarcacoes("listandomarcacoes", false);
    carregarCores();
    abrirTela('listando');
-  // AdMob.isInterstitialReady(function(isready){
-   // if(isready) AdMob.showInterstitial();
- // });
+}
+
+function abrirTelaListandoCores()
+{
+   carregarListandoMarcacoes("listandomarcacoes", true);
+   carregarCores();
+   abrirTela('listando');
 }
 
 function abrirTelaListandoComentario(selid, idcomentario, texto)

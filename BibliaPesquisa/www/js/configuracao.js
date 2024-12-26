@@ -289,6 +289,7 @@ function idiomaPortugues()
  document.getElementById("idtitulo02_4").innerHTML="Pesquisar";
 
  document.getElementById("idtitulo03").innerHTML="Hist&oacute;rico";
+ document.getElementById("idtitulo03a").innerHTML="Hist&oacute;rico por Cores";
  document.getElementById("idtitulo03_1").innerHTML="Hist&oacute;rico";
  document.getElementById("idtitulo03_2").innerHTML="Hist&oacute;rico";
  document.getElementById("idtitulo04").innerHTML="Dicion&aacute;rio";
@@ -398,6 +399,7 @@ function idiomaIngles()
  document.getElementById("idtitulo02_3").innerHTML="Search";
  document.getElementById("idtitulo02_4").innerHTML="Search";
  document.getElementById("idtitulo03").innerHTML="History"; 
+ document.getElementById("idtitulo03a").innerHTML="History"; 
  document.getElementById("idtitulo03_1").innerHTML="History";
  document.getElementById("idtitulo03_2").innerHTML="History";
  document.getElementById("idtitulo04").innerHTML="Dictionary";
