@@ -18,3 +18,7 @@
        - desvio padrão
        - variância
        - distribuição normal 
+
+1. colocar aplicação em react native e fazer formulas acima 
+2. colocar ADs
+3. publicar	   
