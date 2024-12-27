@@ -126,59 +126,6 @@ function irparalivro(ibk)
     topFunction();
 }
 
-/*
-
-function irparatr(versiculo)
-{
-       abrirTela("telaleituratextooriginal");
-       document.getElementById("leiturarodapetr").innerHTML="<a id='idvchave1' href='#v"+versiculo+"'>temp</a>";
-       document.getElementById("idvchave1").click();
-       document.getElementById("leiturarodapetr").innerHTML = "";
-}
-
-
-function irparacapitulotr(capitulo)
-{
-	setCapituloMain(capitulo);
-	carregarReceptus();
-    abrirTela('leituraversostr');
-    topFunction();
-}
-
-function irparalivrotr(ibk)
-{
-	setLivroMain(ibk);
-	setCapituloMain(1);
-	carregarReceptus();
-    abrirTela('leituracapitulostr');
-    topFunction();
-}
-
-function irparawlc(versiculo)
-{
-       abrirTela("telaleituratextooriginal");
-       document.getElementById("leiturarodapetr").innerHTML="<a id='idvchave1' href='#v"+versiculo+"'>temp</a>";
-       document.getElementById("idvchave1").click();
-       document.getElementById("leiturarodapetr").innerHTML = "";
-}
-
-function irparacapitulowlc(capitulo)
-{
-	setCapituloMain(capitulo);
-    carregarReceptusWlc();
-    abrirTela('leituraversostr');
-    topFunction();
-}
-
-function irparalivrowlc(ibk)
-{
-	setLivroMain(ibk);
-	setCapituloMain(1);
-    preCarregarWLC();
-    abrirTela('leituracapitulostr');
-    topFunction();
-}
-*/
 
 function mostrarMenuLivros()
 {
@@ -187,39 +134,7 @@ function mostrarMenuLivros()
    mostrarLivros();
    abrirTela("leituralivros");
 }
-/*
-mostrarMenuLivrosTR=function()
-{
-   mostrarLivrosTR();
-   abrirTela("leituralivrostr");
-}
 
-mostrarMenuCapitulosTR=function()
-{
-   abrirTela("leituracapitulostr");
-}
-
-mostrarMenuVersosTR=function()
-{
-   abrirTela("leituraversostr");
-}
-
-mostrarMenuLivrosWLC=function()
-{
-   mostrarLivrosWLC();
-   abrirTela("leituralivrostr");
-}
-
-mostrarMenuCapitulosWLC=function()
-{
-   abrirTela("leituracapitulostr");
-}
-
-mostrarMenuVersosWLC=function()
-{
-   abrirTela("leituraversostr");
-}
-*/
 function mostrarMenuLeituraVersoes()
 {
    desfazer();
@@ -502,9 +417,6 @@ function salvarMarcacaoTela(cor)
    fecharTelaMarcacao();
 }
 
-
-// When the user scrolls down 20px from the top of the document, show the button
-//window.onscroll = function() {scrollFunction()};
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {

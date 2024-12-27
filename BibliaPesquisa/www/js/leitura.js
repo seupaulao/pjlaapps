@@ -93,112 +93,6 @@ function mostrarVersos(cap)
 	elemento.innerHTML = texto;
 }
 
-/*
-function mostrarLivrosTR()
-{
-     var nacional = getNacionalidade()=='pt-BR';
-	 var elemento = document.getElementById("ltextlivrostr");
-	 var texto = "<ul class='w3-ul w3-center w3-hoverable w3-card-4'>";
-	 var c = 39;
-     texto += "<li><h4>"+(nacional?"Novo Testamento":"New Testament")+"</h4></li>"; 
-	 for (var i = 0; i < livrosNovo.length; i++)
-	 {
-		 texto += "<li onclick='irparalivrotr("+parseInt(c+1)+")'><p>&nbsp;</p>" + (nacional ? livrosNovo[i] : livrosNovoEng[i]) + "<p>&nbsp;</p></li>";
-		 c+=1;
-	 }
-	 texto += "</ul><p>&nbsp;</p><p>&nbsp;</p>";
-	 elemento.innerHTML = texto;
-}
-
-function mostrarCapitulosTR()
-{
-	 var elemento = document.getElementById("ltextcapitulostr");
-	 var texto = "<div>";
-         
-         for (var i = 0 ; i < tr[getLivroMain()].qtecapitulos; i+=1)
-         {
-		  texto += "<button class='w3-button w3-circle w3-gray' onclick='irparacapitulotr("+(i+1)+")'>" + contarZeros((i+1),(i+1)) + "</button>&nbsp;";
-		  if (i % 5 == 0)
-		  {
-			texto += "</div><div>";
-		  }
-         }
-	texto += "</div>";
-	elemento.innerHTML = texto;
-}
-
-function mostrarVersosTR(cap)
-{
-	 var elemento = document.getElementById("ltextversostr");
-	 var texto = "<div>";
-	 var index = 1;
-var bbase = getNacionalidade() == 'pt-BR' ? blv : web;
-	   while (bbase[getLivroMain()].capitulos[getCapituloMain()][index] != undefined)
-	   {
-		  texto += "<button class='w3-button w3-circle w3-gray' onclick='irparatr("+index+")'>" + contarZeros(cap,index) + "</button>&nbsp;";
-		  if (index % 5 == 0)
-		  {
-			texto += "</div><div>";
-		  }
-		  index += 1;
-	   }
-	texto += "</div>";
-	elemento.innerHTML = texto;
-}
-
-function mostrarLivrosWLC()
-{
-     var nacional = getNacionalidade()=='pt-BR';
-	 var elemento = document.getElementById("ltextlivrostr");
-	 var texto = "<ul class='w3-ul w3-center w3-hoverable w3-card-4'>";
-	 var c = 0;
-     texto += "<li><h4>"+(nacional?"Velho Testamento":"Old Testament")+"</h4></li>"; 
-	 for (var i = 0; i < livrosVelho.length; i++)
-	 {
-		 texto += "<li onclick='irparalivrowlc("+parseInt(c+1)+")'><p>&nbsp;</p>" + (nacional ? livrosVelho[i] : livrosVelhoEng[i]) + "<p>&nbsp;</p></li>";
-		 c+=1;
-	 }
-	 texto += "</ul><p>&nbsp;</p><p>&nbsp;</p>";
-	 elemento.innerHTML = texto;
-}
-
-function mostrarCapitulosWLC()
-{
-	 var elemento = document.getElementById("ltextcapitulostr");
-	 var texto = "<div>";
-         var bbase = getNacionalidade() == 'pt-BR' ? blv : web;
-         for (var i = 0 ; i < bbase[getLivroMain()].qtecapitulos; i+=1)
-         {
-		  texto += "<button class='w3-button w3-circle w3-gray' onclick='irparacapitulowlc("+(i+1)+")'>" + contarZeros((i+1),(i+1)) + "</button>&nbsp;";
-		  if (i % 5 == 0)
-		  {
-			texto += "</div><div>";
-		  }
-         }
-	texto += "</div>";
-	elemento.innerHTML = texto;
-}
-
-function mostrarVersosWLC(cap)
-{
-	 var elemento = document.getElementById("ltextversostr");
-	 var texto = "<div>";
-	 var index = 1;
-var bbase = getNacionalidade() == 'pt-BR' ? blv : web;
-	   while (bbase[getLivroMain()].capitulos[getCapituloMain()][index] != undefined)
-	   {
-		  texto += "<button class='w3-button w3-circle w3-gray' onclick='irparawlc("+index+")'>" + contarZeros(cap,index) + "</button>&nbsp;";
-		  if (index % 5 == 0)
-		  {
-			texto += "</div><div>";
-		  }
-		  index += 1;
-	   }
-	texto += "</div>";
-	elemento.innerHTML = texto;
-}
-
-*/
 
 function buscar()
 {
@@ -206,60 +100,6 @@ function buscar()
    bbuscasimples=true;
    carregar();
 }
-
-/*
-detalharSelecaoTR=function (va,b,c,v)
-{
-  var el1 = document.getElementById("iddetalhartr");
-  var endereco = b+'_'+c+'_'+v;
-  var vetor=greekrefdireta[endereco];
-  var saida="<ul class='w3-ul w3-hoverable'>";
-  var vetow=[];
-  for (var i=0; i<vetor.length; i++)
-  {
-     var chave=vetor[i];     
-     if (vetow.indexOf(chave) < 0)
-     {
-         var elm=greekrefs[parseInt(chave)-1];
-         var saida2='';
-            if(getNacionalidade()=='pt-BR')
-            { 
-                saida += "<li><b><span class='w3-text-red'>Referencia</span>:</b>"+elm.ref;  
-                saida += "<br><b><span class='w3-text-blue'>Radical Original</span>:</b>"+elm.orw;  
-                saida += "<br><b><span class='w3-text-green'>Translitera&ccedil;&atilde;o</span>:</b>" + elm.tra;
-                saida += "<br><b><span>Defini&ccedil;&atilde;o 1</span>:</b>" + elm.sho;  
-                saida += "<br><b><span>Defini&ccedil;&atilde;o 2</span>:</b>" + elm.def;
-                saida += "<br><b><span>Fon&eacute;tica</span>:</b>" + elm.pho;
-                saida += "<br><b><span>Gram&aacute;tica</span>:</b>" + elm.psp;
-            } else {
-                saida += "<li><b><span class='w3-text-red'>Reference</span>:</b>"+elm.ref;  
-                saida += "<br><b><span class='w3-text-blue'>Original Word</span>:</b>"+elm.orw;  
-                saida += "<br><b><span class='w3-text-green'>Transliteration</span>:</b>" + elm.tra;
-                saida += "<br><b><span>Definition 1</span>:</b>" + elm.sho;  
-                saida += "<br><b><span>Definition 2</span>:</b>" + elm.def;
-                saida += "<br><b><span>Phonetic</span>:</b>" + elm.pho;
-                saida += "<br><b><span>Grammar</span>:</b>" + elm.psp;
-            }
-            for(var j=0; j<greekrefx[elm.ref].length; j++)
-            {
-               saida2+=greekrefx[elm.ref][j]+', ';
-            } 
-            saida += "<br><b><span>Referencia Cruzada</span>:</b>" + saida2; 
-            saida += "</p></li>";
-        vetow.push(chave);  
-     } 
-  }
-  saida += "</ul><p>&nbsp;</p><p>&nbsp;</p>"
-
- el1.innerHTML=saida;
- abrirTelaDetalharTR();
-}
-
-function escreveMarcacaoTR(t1, va, b, c, v)
-{
-              return "<p>" + v + " : <span id='v"+v+"'><span onclick='detalharSelecaoTR("+va+","+b+","+c+","+v+")'>" + t1 + "</span></span></p>";
-}
-*/
 
 function escreveMarcacao(t1, va, b, c, v)
 {
@@ -362,7 +202,7 @@ function carregar()  {
              let oot = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), true);
              detalhe = detalhe + 
                        escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain())
-                       + "<p>"+ oo + "</p>"
+                       + "<p style='font-size: 24px'>"+ oo + "</p>"
                        + "<p>"+ oot + "</p>";
 	          setVersiculoMain(getVersiculoMain()+1);
         		 t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
@@ -378,54 +218,8 @@ function carregar()  {
    nomecap.innerHTML="<b>" + getCapituloMain() + "</b>";
    n1.innerHTML=base[getLivroMain()].livro;
    document.getElementById("capitulob1").innerHTML= "<p>&nbsp;</p>"+detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
+   
 }
-/*
-function carregarReceptus()  {
-   var detalhe = "";
-   setVersiculoMain(1);
-   mostrarVersosTR(getCapituloMain());
-   mostrarCapitulosTR();
-   document.getElementById("capitulostr").innerHTML = "";
-
-       var t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
-	   while (t1 != null)
-	   {
-                detalhe = detalhe + escreveMarcacaoTR(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain());
-	            setVersiculoMain(getVersiculoMain()+1);
-		        t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
-	   }
-
-
-   nomecap=document.getElementById("nomecaptr");
-   var b1 = document.getElementById("capitulostr");
-   var n1 = document.getElementById("nomelivrotr");
-   nomecap.innerHTML=getCapituloMain();
-   n1.innerHTML=getNacionalidade()=='pt-BR'? base[getLivroMain()].livro : livroseng[getLivroMain()-1];
-   b1.innerHTML= detalhe+"<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
-}
-*/
-
-/*
-function preCarregarWLC()
-{
-  mostrarVersosWLC(getCapituloMain());
-  mostrarCapitulosWLC();
-}
-*/
-
-/*
-function carregarReceptusWlc()
-{
-  setVersiculoMain(1);
-  preCarregarWLC();
-  document.getElementById("nomecapwlc").innerHTML=getCapituloMain();
-  document.getElementById("nomelivrowlc").innerHTML=getNacionalidade()=='pt-BR'? base[getLivroMain()].livro : livroseng[getLivroMain()-1];
-  document.getElementById("capitulowlc").removeAttribute("w3-include-html");
-  document.getElementById("capitulowlc").setAttribute("w3-include-html","js/biblias/wlc-base/"+livs[getLivroMain()-1]+"/"+getCapituloMain()+".htm");
-  w3.includeHTML();
-
-}
-*/
 
 function preselecaocontem(temp, va, livro, cap, verso)
 {
@@ -713,28 +507,6 @@ function deselecaoCor()
   posSalvarMarcacaoComentarioTela();
 }
 
-/*
-function getLivroDtn(sigla) {
-   alert(sigla);
-   if (sigla == 'BAR') { return 'baruc'; }
-   else if (sigla == 'JUD') { return 'judite'; }
-   else if (sigla == '1MC') { return 'macabeus_1'; }
-   else if (sigla == '2MC') { return 'macabeus_2'; }
-   else if (sigla == 'SBD') { return 'sabedoria'; }
-   else if (sigla == 'ECL') { return 'eclesiastico'; }
-   else { return 'tobias'; }
-}
-
-
-function leituraDeuterocanonico(sigla) {
-   w3.hide('#livrosDtn');
-   w3.show('#textoDtn');
-   const livro = getLivroDtn(sigla);
-   document.getElementById("capituloDtn").removeAttribute("w3-include-html");
-   document.getElementById("capituloDtn").setAttribute("w3-include-html","js/biblias/deuterocanonicos/"+livro+"/"+getCapituloMain()+".htm");
-   w3.includeHTML();
-}
-*/
 
 
 

@@ -43,7 +43,11 @@ ok * limpando codigo e telas não usadas
 ok * historico - ordenar por cores
 * testar o plano de estudo
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
-* zoom na tela - ainda não funcionou no android 
+* zoom na tela 
+  - problema é o hammer, apenas no div 'capitulob1' que é a leitura, 
+  por default ele desabilita o pinch e o rotate para nao ter element blocking
+  - no resto do app por nao usar hammer o zoom funciona de boa 
+* melhorar o tempo de resposta do app e outras métricas com o lighthouse  
 
 biblia pesquisa 2.2
 
