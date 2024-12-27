@@ -202,7 +202,7 @@ function carregar()  {
              let oot = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), true);
              detalhe = detalhe + 
                        escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain())
-                       + "<p style='font-size: 24px'>"+ oo + "</p>"
+                       + "<p style='font-size: "+tamanhoFonteTextoOriginal+"px'>"+ oo + "</p>"
                        + "<p>"+ oot + "</p>";
 	          setVersiculoMain(getVersiculoMain()+1);
         		 t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());

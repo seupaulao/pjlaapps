@@ -39,16 +39,16 @@ ok * ao voltar, na leitura, ir para o topo da página
 ok * testar telas por conta da alteração de topo fixo 
 ok * muitas funções quebraram com a última atualização no mobile, verificar cada uma delas
 ok * limpando codigo e telas não usadas 
-* limpar libjs e css não usados
+ok * limpar libjs e css não usados
 ok * historico - ordenar por cores
+ok * colocar controle de tamanho do texto original  
 * testar o plano de estudo
-* pensar e colocar o "buy me a coffee" no ajuda/ajude-nos
-* zoom na tela 
-  - problema é o hammer, apenas no div 'capitulob1' que é a leitura, 
-  por default ele desabilita o pinch e o rotate para nao ter element blocking
-  - no resto do app por nao usar hammer o zoom funciona de boa 
-* melhorar o tempo de resposta do app e outras métricas com o lighthouse  
+* pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
 biblia pesquisa 2.2
 
 1. integrar mapas aos textos		  
+2. zoom na tela 
+  - problema é o hammer, apenas no div 'capitulob1' que é a leitura, 
+  por default ele desabilita o pinch e o rotate para nao ter element blocking
+  - no resto do app por nao usar hammer o zoom funciona de boa 

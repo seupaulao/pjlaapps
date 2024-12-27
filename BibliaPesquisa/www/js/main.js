@@ -14,6 +14,7 @@ var versaoMarcacao;
 var livroMarcacao;
 var capituloMarcacao;
 var versoMarcacao;
+var tamanhoFonteTextoOriginal = 24;
 var livrosVelho=["G&ecirc;nesis","&Ecirc;xodo","Lev&iacute;tico","N&uacute;meros","Deuteron&ocirc;mio","Josu&eacute;","Ju&iacute;zes","Rute","1 Samuel", "2 Samuel", "1 Reis", "2 Reis",
                         "1 Cr&ocirc;nicas", "2 Cr&ocirc;nicas", "Esdras", "Neemias", "Ester", "J&oacute;",
                         "Salmos", "Prov&eacute;rbios","Eclesiastes","C&acirc;nticos","Isa&iacute;as","Jeremias","Lamenta&ccedil;&otilde;es de Jeremias","Ezequiel","Daniel","Os&eacute;ias","Joel","Am&oacute;s","Obadias",
@@ -89,6 +90,8 @@ function iniciar()
          carregarIdioma();
          carregarFonte();
          carregarTamanhoFonte();
+         tamanhoFonteTextoOriginal = getTamanhoFonteTextoOriginal() == null ? 24 : getTamanhoFonteTextoOriginal();
+         document.getElementById("idtamanhofontetextooriginal").innerHTML = "<b>"+tamanhoFonteTextoOriginal+"</b>";
    }
    setVersaoAtualMain(0);
    setVersiculoMain(1);

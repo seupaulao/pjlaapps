@@ -99,6 +99,8 @@ function getNacionalidade()
 
 
 
+
+
 function getFonte()
 {
   return db.getItem("fonte");
@@ -206,6 +208,25 @@ function escolherFonte3()
  w3.removeClass("#idfonte2","w3-disabled");
  w3.addClass("#idfonte3","w3-disabled");
 }
+
+function getTamanhoFonteTextoOriginal()
+{
+  return db.getItem("tamanhoFonteTextoOriginal");
+}
+
+function reduzirTamFonteOri() {
+     tamanhoFonteTextoOriginal = tamanhoFonteTextoOriginal - 2;
+     if (tamanhoFonteTextoOriginal < 12) tamanhoFonteTextoOriginal = 12;
+     db.setItem("tamanhoFonteTextoOriginal",tamanhoFonteTextoOriginal);
+     document.getElementById("idtamanhofontetextooriginal").innerHTML = "<b>"+tamanhoFonteTextoOriginal+"</b>";
+}
+function aumentarTamFonteOri() {
+   tamanhoFonteTextoOriginal = tamanhoFonteTextoOriginal + 2;
+   if (tamanhoFonteTextoOriginal > 32) tamanhoFonteTextoOriginal = 32; 
+   db.setItem("tamanhoFonteTextoOriginal",tamanhoFonteTextoOriginal);
+   document.getElementById("idtamanhofontetextooriginal").innerHTML = "<b>"+tamanhoFonteTextoOriginal+"</b>";
+}
+
 function escolherTamanhoFonte0()
 {
  db.setItem("tamanhofonte","0");
