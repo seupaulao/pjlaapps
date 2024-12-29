@@ -198,12 +198,17 @@ function carregar()  {
            var t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
 	       while (t1 != null)
 	       {
-             let oo = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), false);
-             let oot = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), true);
-             detalhe = detalhe + 
-                       escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain())
-                       + "<p style='font-size: "+tamanhoFonteTextoOriginal+"px'>"+ oo + "</p>"
-                       + "<p>"+ oot + "</p>";
+             if (getExibirTO() == 1) {
+                let oo = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), false);
+                let oot = extrairVersoBaseTranslit(getLivroMain(), getCapituloMain(), getVersiculoMain(), true);
+               detalhe = detalhe + 
+               escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain())
+               + "<p style='font-size: "+tamanhoFonteTextoOriginal+"px'>"+ oo + "</p>"
+               + "<p>"+ oot + "</p>";
+             } else {
+                detalhe = detalhe + 
+                          escreveMarcacao(t1, getVersaoAtualMain(), getLivroMain(), getCapituloMain(), getVersiculoMain());
+             }
 	          setVersiculoMain(getVersiculoMain()+1);
         		 t1 = extrairVerso(getLivroMain(), getCapituloMain(), getVersiculoMain());
 	       }

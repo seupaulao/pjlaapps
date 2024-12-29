@@ -14,6 +14,23 @@ function mudarCor(novacor)
     db.setItem("corcabecalho",novacor);
 }
 
+function getExibirTO()
+{
+  return db.getItem("exibirTextoOriginal");
+}
+
+function exibirTO() {
+      db.setItem("exibirTextoOriginal", 1);
+      w3.hide("#idexibirto");
+      w3.show("#idnaoexibirto");
+}
+
+function naoExibirTO() {
+      db.setItem("exibirTextoOriginal", 0);
+      w3.show("#idexibirto");
+      w3.hide("#idnaoexibirto");
+}
+
 function mudarFundoBranco()
 {
   setPadraoCorFundo(1);

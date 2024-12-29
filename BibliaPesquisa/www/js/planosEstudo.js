@@ -41,7 +41,7 @@ carregarDivPlanosEstudo=function()
      document.getElementById('listarplanosestudo').innerHTML=str;
 }
 
-ultimoPlano = function()
+function ultimoPlano()
 {
   fecharControleLeitura();
   carregarPlanoEstudo(ultimoPlanoSelecionado);

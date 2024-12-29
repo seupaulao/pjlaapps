@@ -90,8 +90,17 @@ function iniciar()
          carregarIdioma();
          carregarFonte();
          carregarTamanhoFonte();
+       //  db.removeItem("exibirTextoOriginal");
          tamanhoFonteTextoOriginal = getTamanhoFonteTextoOriginal() == null ? 24 : getTamanhoFonteTextoOriginal();
          document.getElementById("idtamanhofontetextooriginal").innerHTML = "<b>"+tamanhoFonteTextoOriginal+"</b>";
+         if (getExibirTO() == null) {
+            db.setItem("exibirTextoOriginal", 0);
+         }
+         if (getExibirTO() == 1) {
+            exibirTO();
+         } else {
+            naoExibirTO();
+         }
    }
    setVersaoAtualMain(0);
    setVersiculoMain(1);

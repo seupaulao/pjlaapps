@@ -42,7 +42,10 @@ ok * limpando codigo e telas não usadas
 ok * limpar libjs e css não usados
 ok * historico - ordenar por cores
 ok * colocar controle de tamanho do texto original  
+ok * exibir/esconder texto original + transliteracao
 * testar o plano de estudo
+  - nao existe mais botao de ir pro lado, agora o controle é com hammer 
+  - viabilizar a navegação no PLANO DE ESTUDO 
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
 biblia pesquisa 2.2
