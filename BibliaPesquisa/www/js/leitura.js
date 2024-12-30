@@ -126,53 +126,6 @@ function escreveMarcacao(t1, va, b, c, v)
 }
 
 
-function carregarEnderecoVetorPlanoEstudo()
-{
-   setLivroMain(getVetorPlanoEstudo()[getPosicaoPlanoEstudo()].livro);
-   setCapituloMain(getVetorPlanoEstudo()[getPosicaoPlanoEstudo()].capitulo);
-   carregarCores();
-   carregarEstrutura();
-   carregarVersao();
-   carregar();
-   w3.show("#botoesPlanoEstudo");
-   w3.hide("#botoesLeitura");
-}
-
-adiantarcapplanoestudo=function()
-{
-   setPosicaoPlanoEstudo(getPosicaoPlanoEstudo() + 1);
-   if (getPosicaoPlanoEstudo() >= getVetorPlanoEstudo().length) 
-   {
-      abrirTelaAcabouPlanoEstudoDia(); 
-   } else {
-      carregarEnderecoVetorPlanoEstudo();
-   }
-}
-
-retrocedercapplanoestudo=function()
-{
-   setPosicaoPlanoEstudo(getPosicaoPlanoEstudo() - 1);
-   if (getPosicaoPlanoEstudo() < 0) setPosicaoPlanoEstudo(0);
-   carregarEnderecoVetorPlanoEstudo();
-}
-
-function construirVetorPlanoEstudo(vetorstring)
-{
-  vetorstring = vetorstring.substring(0, vetorstring.length-1);
-  var vetor1 = vetorstring.split(',');
-  vetorPlanoEstudo=[];
-  for (var i=0; i<vetor1.length; i++)
-  {
-     var vetor2 = vetor1[i].split(' ');
-     var liv = vetor2[0];
-     var indice = getNacionalidade() == "en-US" ? abreveng.indexOf(liv)+1 : abrevpt.indexOf(liv)+1;
-     var cap = vetor2[1];
-     vetorPlanoEstudo.push({"livro":indice, "capitulo":cap})
-  } 
-  setPosicaoPlanoEstudo(0);
-  carregarEnderecoVetorPlanoEstudo();
-}
-
 
 function carregar()  {
    var detalhe = "";

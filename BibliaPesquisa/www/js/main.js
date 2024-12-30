@@ -179,10 +179,18 @@ function numeroCapitulos()
 
 var mc = new Hammer(document.getElementById("capitulob1"));
 mc.on("swipeleft", function(ev) {
-    adiantarcap();
+    if (db.getItem("FLAG_USANDO_PLANO_ESTUDO") == 1) {
+        adiantarcapplanoestudo();
+    } else {
+        adiantarcap();
+    }
 });
 mc.on("swiperight", function(ev) {
-    retrocedercap();
+    if (db.getItem("FLAG_USANDO_PLANO_ESTUDO") == 1) {
+        retrocedercapplanoestudo();
+    } else {
+        retrocedercap();
+    }
 });
 
 

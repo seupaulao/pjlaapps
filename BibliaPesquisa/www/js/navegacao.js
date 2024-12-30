@@ -95,7 +95,7 @@ function abrirTelaPrincipal()
 function abrirTelaPlanoEstudo()
 {
    closeNav3();
-   carregarPlanosBD();
+   //carregarPlanosBD();
    carregarDivPlanosEstudo();
    abrirTela('planosestudo');
 }
@@ -340,6 +340,8 @@ function abrirTelaLeitura()
    } else {
       setVersaoAtualMain(0);
    }
+   //TODO na desabilitar flag de PLANO DE ESTUDO para usar as rotinas normais de navegação no modo LEITURA
+   db.setItem("FLAG_USANDO_PLANO_ESTUDO", 0);
    carregarCores();
    carregarEstrutura();
    carregarVersao();

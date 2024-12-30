@@ -357,71 +357,71 @@
              ePlano.push({'sigla':sigla, 'dia':dia});
          }
 
-         function inserirPlanoBanco(sigla, dia)
-         {
-            var str = sigla + "," + dia + ";";
-            if (sigla!=undefined && dia!=undefined) salvar("slotPlanos",str);   
-         }
+         // function inserirPlanoBanco(sigla, dia)
+         // {
+         //    var str = sigla + "," + dia + ";";
+         //    if (sigla!=undefined && dia!=undefined) salvar("slotPlanos",str);   
+         // }
 
-         function salvarPlanosBanco()
-         {
-            for(var i=0; i<ePlano.length; i++)
-            {
-              inserirPlanoBanco(ePlano[i].sigla, ePlano[i].dia);
-            }
-         } 
+         // function salvarPlanosBanco()
+         // {
+         //    for(var i=0; i<ePlano.length; i++)
+         //    {
+         //      inserirPlanoBanco(ePlano[i].sigla, ePlano[i].dia);
+         //    }
+         // } 
 
-         function selectPlanos()
-         {
-             return db.getItem("slotPlanos");
-         }
+         // function selectPlanos()
+         // {
+         //     return db.getItem("slotPlanos");
+         // }
 
-         function carregarPlanosBD()
-         {
-            zerarEPlano();
-            var bdplanos = selectPlanos();
-            if (bdplanos != undefined)
-            {
-                var planos = bdplanos.split(';');
-                for(var i=0; i<planos.length; i++)
-                {
-                   if (planos[i].length > 0)
-                   {
-                     var itens = planos[i].split(',');
-                     itens[0] = itens[0].replace('null','');
-                     inserirPlanoEstrutura(itens[0], itens[1]); 
-                   }
-                }
-            } 
-         }
+         // function carregarPlanosBD()
+         // {
+         //    zerarEPlano();
+         //    var bdplanos = selectPlanos();
+         //    if (bdplanos != undefined)
+         //    {
+         //        var planos = bdplanos.split(';');
+         //        for(var i=0; i<planos.length; i++)
+         //        {
+         //           if (planos[i].length > 0)
+         //           {
+         //             var itens = planos[i].split(',');
+         //             itens[0] = itens[0].replace('null','');
+         //             inserirPlanoEstrutura(itens[0], itens[1]); 
+         //           }
+         //        }
+         //    } 
+         // }
 
-         function contarDiasPlano(siglaPlano)
-         {
-            carregarPlanosBD();
-            var c=0;  
-            for (var i=0; i<ePlano.length; i++)
-            {
-               if (ePlano[i].sigla == siglaPlano)
-               {
-                  c+=1;
-               }
-            }
-            return c; 
-         } 
+         // function contarDiasPlano(siglaPlano)
+         // {
+         //    carregarPlanosBD();
+         //    var c=0;  
+         //    for (var i=0; i<ePlano.length; i++)
+         //    {
+         //       if (ePlano[i].sigla == siglaPlano)
+         //       {
+         //          c+=1;
+         //       }
+         //    }
+         //    return c; 
+         // } 
 
-         function selectDiasPlano(siglaPlano)
-         {
-            var dp=[];
-            carregarPlanosBD();
-            for (var i=0; i<ePlano.length; i++)
-            {
-               if (ePlano[i].sigla == siglaPlano)
-               {
-                  dp.push(ePlano[i].dia);
-               }
-            }
-            return dp;
-         }
+         // function selectDiasPlano(siglaPlano)
+         // {
+         //    var dp=[];
+         //    carregarPlanosBD();
+         //    for (var i=0; i<ePlano.length; i++)
+         //    {
+         //       if (ePlano[i].sigla == siglaPlano)
+         //       {
+         //          dp.push(ePlano[i].dia);
+         //       }
+         //    }
+         //    return dp;
+         // }
 
          function buscarNoVetor(planos, chave) 
          {
@@ -436,57 +436,57 @@
             return retorno; 
          }
 
-         function removerUmPlano(siglaPlano)
-         {
-            carregarPlanosBD();
-            db.removeItem('slotPlanos');
-            var indice = buscarNoVetor(ePlano, siglaPlano);
-            while(indice >= 0)
-            {
-               console.log(indice);
-               ePlano.splice(indice, 1);
-               indice = buscarNoVetor(ePlano, siglaPlano);
-            }
-            console.log(ePlano);
-            salvarPlanosBanco();
-         } 
+         // function removerUmPlano(siglaPlano)
+         // {
+         //    carregarPlanosBD();
+         //    db.removeItem('slotPlanos');
+         //    var indice = buscarNoVetor(ePlano, siglaPlano);
+         //    while(indice >= 0)
+         //    {
+         //       console.log(indice);
+         //       ePlano.splice(indice, 1);
+         //       indice = buscarNoVetor(ePlano, siglaPlano);
+         //    }
+         //    console.log(ePlano);
+         //    salvarPlanosBanco();
+         // } 
  
 
-         function existeDataInicio(sigla)
-         {
-           var ret=db.getItem('slotPlanosDataInicio');
-           if(ret==undefined||ret==null) return false;
-           var vet=ret.split(';');
-           for(var i=0;i<vet.length;i++)
-           {
-              var duo=vet[i].split(',');
-              if (duo[0].trim()==sigla) return true; 
-           }
-           return false;
-         }
+         // function existeDataInicio(sigla)
+         // {
+         //   var ret=db.getItem('slotPlanosDataInicio');
+         //   if(ret==undefined||ret==null) return false;
+         //   var vet=ret.split(';');
+         //   for(var i=0;i<vet.length;i++)
+         //   {
+         //      var duo=vet[i].split(',');
+         //      if (duo[0].trim()==sigla) return true; 
+         //   }
+         //   return false;
+         // }
 
-         function getDataInicioPlano(sigla)
-         {
+         // function getDataInicioPlano(sigla)
+         // {
             
-            var retorno;
-            if (existeDataInicio(sigla))
-            {
-               var vet = db.getItem('slotPlanosDataInicio').split(';');
-               for(var i=0;i<vet.length;i++)
-               {
-                   var duo=vet[i].split(',');
-                   if (duo[0].trim()==sigla){ 
-                       retorno = new Date(Number(duo[1]));
-                       break;
-                   }
-               }
-            } 
-            else {
-              var d = new Date()
-              retorno = d.getTime();
-            }
-            return retorno; 
-         }
+         //    var retorno;
+         //    if (existeDataInicio(sigla))
+         //    {
+         //       var vet = db.getItem('slotPlanosDataInicio').split(';');
+         //       for(var i=0;i<vet.length;i++)
+         //       {
+         //           var duo=vet[i].split(',');
+         //           if (duo[0].trim()==sigla){ 
+         //               retorno = new Date(Number(duo[1]));
+         //               break;
+         //           }
+         //       }
+         //    } 
+         //    else {
+         //      var d = new Date()
+         //      retorno = d.getTime();
+         //    }
+         //    return retorno; 
+         // }
 
          function buscarIndiceNoVetor(vet, chave) 
          {
@@ -501,24 +501,24 @@
             return retorno; 
          }
 
-         function gravarDataInicioEstudoBanco(sigla,data)
-         {
-           var ret=db.getItem('slotPlanosDataInicio');
-           if (!existeDataInicio(sigla)) {
-               salvar('slotPlanosDataInicio',(sigla+","+data+";"));
-           }           
-         }
+         // function gravarDataInicioEstudoBanco(sigla,data)
+         // {
+         //   var ret=db.getItem('slotPlanosDataInicio');
+         //   if (!existeDataInicio(sigla)) {
+         //       salvar('slotPlanosDataInicio',(sigla+","+data+";"));
+         //   }           
+         // }
 
-         function removerUmaDataInicio(sigla)
-         {
-            //alert('cheguei removerDataInicio');
-            var ret=db.getItem('slotPlanosDataInicio');
-            var vet=ret.split(';');
-            var indice=buscarIndiceNoVetor(vet,sigla);
-            if (indice>=0) vet.splice(indice,1);
-            var str=vet.join(';');
-            db.setItem('slotPlanosDataInicio', str);
-         }
+         // function removerUmaDataInicio(sigla)
+         // {
+         //    //alert('cheguei removerDataInicio');
+         //    var ret=db.getItem('slotPlanosDataInicio');
+         //    var vet=ret.split(';');
+         //    var indice=buscarIndiceNoVetor(vet,sigla);
+         //    if (indice>=0) vet.splice(indice,1);
+         //    var str=vet.join(';');
+         //    db.setItem('slotPlanosDataInicio', str);
+         // }
 
         function setLivroCapituloBD(l, c)
         {
