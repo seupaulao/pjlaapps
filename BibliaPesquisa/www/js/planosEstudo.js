@@ -8,7 +8,7 @@ var siglaPlano;
 getSiglaPlano=function(){ return siglaPlano; }
 setSiglaPlano=function(valor){ siglaPlano = valor; }
 
-selecionarTitulo=function(plano)
+function selecionarTitulo(plano)
 {
   var nacionalidade=getNacionalidade()=="pt-BR";
   switch(plano){
@@ -28,7 +28,7 @@ getMaxPlanos=function()
   return 8;
 }
 
-carregarDivPlanosEstudo=function()
+function carregarDivPlanosEstudo()
 {
        var str = getNacionalidade()=="pt-BR" ? "Selecione um plano" : "Select a plan";    
        str = ' <label><span id="idmsg30">' + str + '</span></label> ';
@@ -48,7 +48,7 @@ function ultimoPlano()
   abrirTela('planosestudover');
 }
 
-setarSiglaPlano=function(plano)
+function setarSiglaPlano(plano)
 {
    switch (plano) 
    {
@@ -72,7 +72,7 @@ function rePlano()
 }
 
 
-carregarPlanoEstudo = function(plano)
+function carregarPlanoEstudo (plano)
 {
   ultimoPlanoSelecionado = plano;
   setarSiglaPlano(plano);
@@ -93,7 +93,7 @@ carregarPlanoEstudo = function(plano)
   
 }
 
-carregarPlano = function(plano)
+function carregarPlano (plano)
 {
   var str="";
   switch (plano)
@@ -110,12 +110,12 @@ carregarPlano = function(plano)
   return str;
 }
 
-getBlvOrWeb=function()
+function getBlvOrWeb()
 {
   return getNacionalidade()=='pt-BR'? blv : web;
 }
 
-planoLivrosSabedoria=function()
+function planoLivrosSabedoria()
 {
  var v = carregarVetorCapitulos(getBlvOrWeb());
  var soma = getNacionalidade()=="pt-BR" ? somaTodosGCapAteLivro(v,'Jó') : somaTodosGCapAteLivro(v,'Job');
@@ -124,52 +124,52 @@ planoLivrosSabedoria=function()
  return calcularPlanoBasico(soma+1, somac+soma, 3, v); 
 }
 
-planoPenta = function()
+function planoPenta ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
 //  return calcularPlanoAlternado(1, 187, 3, 5, gcap);
   return calcularPlanoAlternado(1, 187, 5, gcap);
 }
 
-planoEvangelho = function()
+function planoEvangelho ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
 //  return calcularPlanoAlternado(somaTodosGCapVT(gcap)+1, 89+somaTodosGCapVT(gcap), 3, 5, gcap);
   return calcularPlanoAlternado(somaTodosGCapVT(gcap)+1, 89+somaTodosGCapVT(gcap), 3, gcap);
 }
 
-planoVT = function()
+function planoVT ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(1, somaTodosGCapVT(gcap), 3, gcap);
 }
 
-planoNT = function()
+function planoNT ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(somaTodosGCapVT(gcap)+1, somaTodosGCapNT(gcap)+somaTodosGCapVT(gcap)+1, 3, gcap);
 }
 
-popularPlanoClassico1 = function()
+function popularPlanoClassico1()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(1, somaTodosGCap(gcap), 5, gcap);
 }  
 
-popularPlanoClassico2 = function()
+function popularPlanoClassico2 ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(1, somaTodosGCap(gcap), 3, gcap);
 }  
 
-popularPlanoClassico3 = function()
+function popularPlanoClassico3 ()
 {
   var gcap = carregarVetorCapitulos(getBlvOrWeb());
  // return calcularPlanoAlternado(1, somaTodosGCap(gcap), 3, 5, gcap);
   return calcularPlanoBasico(1, somaTodosGCap(gcap), 3, gcap);
 }
   
-abrirControleLeitura=function(vetorstring,dia)
+function abrirControleLeitura (vetorstring,dia)
 {
   gravarDataInicioEstudoBanco(getSiglaPlano(), getDataInicioPlano(getSiglaPlano())); 
 //  gravarDataInicioEstudoBanco(getSiglaPlano(), new Date()); 
@@ -177,7 +177,7 @@ abrirControleLeitura=function(vetorstring,dia)
   abrirTelaLeituraControle(vetorstring);
 }
 
-fecharControleLeitura=function()
+function fecharControleLeitura()
 {
   w3.addClass("#s"+getDiaPlanoEstudo(), "w3-blue");
   inserirPlanoBanco(getSiglaPlano(), getDiaPlanoEstudo());
@@ -191,7 +191,7 @@ fecharControleLeitura=function()
   //carregarPlanoEstudo(ultimoPlanoSelecionado);
 //}
 
-calculaPlanoBasico = function (inicial, total, somador, gcap)
+function calculaPlanoBasico (inicial, total, somador, gcap)
 {
     var str = "<ul class='w3-ul w3-hoverable'>";
     var dia = 1;
@@ -220,7 +220,7 @@ calculaPlanoBasico = function (inicial, total, somador, gcap)
 
 
 
-calcularPlanoAlternado = function(inicial, total, somadorDiaNormal, somadorFimSemana, gcap)
+function calcularPlanoAlternado (inicial, total, somadorDiaNormal, somadorFimSemana, gcap)
 {
 
     var str = "<ul class='w3-ul w3-hoverable'>";
@@ -262,7 +262,7 @@ calcularPlanoAlternado = function(inicial, total, somadorDiaNormal, somadorFimSe
 
 
 
-carregarVetorCapitulos = function(livros)
+function carregarVetorCapitulos (livros)
 {
    var gcap = new Array();
    for(var i=1;i<=66;i++)
@@ -296,7 +296,7 @@ function acumulaControleLeitura(valor, qte, gcap, total)
 
 
 
-somaTodosGCap = function(gcap)
+function somaTodosGCap (gcap)
 {
   var soma=0;
   for(var i=0;i<gcap.length;i++)
@@ -306,7 +306,7 @@ somaTodosGCap = function(gcap)
   return soma;
 }
 
-somaTodosGCapAteLivro = function(gcap,livroabrev)
+function somaTodosGCapAteLivro (gcap,livroabrev)
 {
   var soma=0;
   var indice=0;
@@ -318,14 +318,14 @@ somaTodosGCapAteLivro = function(gcap,livroabrev)
   return soma;
 }
 
-buscarIndiceGCap=function(gcap, livro)
+function buscarIndiceGCap(gcap, livro)
 {
    var indice=0;
    while ( gcap[indice].livro != livro ) indice++; 
    return indice;
 }
 
-somaTodosGCapVetor = function(gcap,vetor)
+function somaTodosGCapVetor (gcap,vetor)
 {
   var soma=0;
   var indice=0;
@@ -339,7 +339,7 @@ somaTodosGCapVetor = function(gcap,vetor)
 }
 
 
-somaTodosGCapVT = function(gcap)
+function somaTodosGCapVT (gcap)
 {
   var soma=0;
   for(var i=0;i<39;i++)
@@ -349,7 +349,7 @@ somaTodosGCapVT = function(gcap)
   return soma;
 }
 
-somaTodosGCapNT = function(gcap)
+function somaTodosGCapNT (gcap)
 {
   var soma=0;
   for(var i=39;i<66;i++)

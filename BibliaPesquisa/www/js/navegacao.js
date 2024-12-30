@@ -367,6 +367,8 @@ function abrirTelaLeituraControle(vetorstring)
    carregarEstrutura();
    carregarVersao();
    construirVetorPlanoEstudo(vetorstring);
+   //TODO essa tela foi removida, nao existe mais essa base, portanto nao consigo recuperar o 
+   //andamento desse controle
    w3.show("#botoesPlanoEstudo");
    w3.addClass("#nomelivro","w3-disabled");
    w3.addClass("#nomecap","w3-disabled");

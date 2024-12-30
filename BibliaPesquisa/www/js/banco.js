@@ -352,18 +352,18 @@
            }
          }
 
-         inserirPlanoEstrutura=function(sigla, dia)
+         function inserirPlanoEstrutura(sigla, dia)
          {
              ePlano.push({'sigla':sigla, 'dia':dia});
          }
 
-         inserirPlanoBanco=function(sigla, dia)
+         function inserirPlanoBanco(sigla, dia)
          {
             var str = sigla + "," + dia + ";";
             if (sigla!=undefined && dia!=undefined) salvar("slotPlanos",str);   
          }
 
-         salvarPlanosBanco=function()
+         function salvarPlanosBanco()
          {
             for(var i=0; i<ePlano.length; i++)
             {
@@ -371,12 +371,12 @@
             }
          } 
 
-         selectPlanos=function()
+         function selectPlanos()
          {
              return db.getItem("slotPlanos");
          }
 
-         carregarPlanosBD=function()
+         function carregarPlanosBD()
          {
             zerarEPlano();
             var bdplanos = selectPlanos();
@@ -395,7 +395,7 @@
             } 
          }
 
-         contarDiasPlano=function(siglaPlano)
+         function contarDiasPlano(siglaPlano)
          {
             carregarPlanosBD();
             var c=0;  
@@ -409,7 +409,7 @@
             return c; 
          } 
 
-         selectDiasPlano=function(siglaPlano)
+         function selectDiasPlano(siglaPlano)
          {
             var dp=[];
             carregarPlanosBD();
@@ -423,7 +423,7 @@
             return dp;
          }
 
-         buscarNoVetor=function(planos, chave) 
+         function buscarNoVetor(planos, chave) 
          {
             var retorno = -1;
             for (var i=0; i<planos.length; i++)
@@ -436,7 +436,7 @@
             return retorno; 
          }
 
-         removerUmPlano=function(siglaPlano)
+         function removerUmPlano(siglaPlano)
          {
             carregarPlanosBD();
             db.removeItem('slotPlanos');
@@ -452,7 +452,7 @@
          } 
  
 
-         existeDataInicio=function(sigla)
+         function existeDataInicio(sigla)
          {
            var ret=db.getItem('slotPlanosDataInicio');
            if(ret==undefined||ret==null) return false;
@@ -465,7 +465,7 @@
            return false;
          }
 
-         getDataInicioPlano=function(sigla)
+         function getDataInicioPlano(sigla)
          {
             
             var retorno;
@@ -488,7 +488,7 @@
             return retorno; 
          }
 
-         buscarIndiceNoVetor=function(vet, chave) 
+         function buscarIndiceNoVetor(vet, chave) 
          {
             var retorno = -1;
             for (var i=0; i<vet.length; i++)
@@ -501,7 +501,7 @@
             return retorno; 
          }
 
-         gravarDataInicioEstudoBanco=function(sigla,data)
+         function gravarDataInicioEstudoBanco(sigla,data)
          {
            var ret=db.getItem('slotPlanosDataInicio');
            if (!existeDataInicio(sigla)) {
