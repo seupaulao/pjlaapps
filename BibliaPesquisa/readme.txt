@@ -44,8 +44,14 @@ ok * historico - ordenar por cores
 ok * colocar controle de tamanho do texto original  
 ok * exibir/esconder texto original + transliteracao
 * testar o plano de estudo
-  - nao existe mais botao de ir pro lado, agora o controle é com hammer 
-  - viabilizar a navegação no PLANO DE ESTUDO 
+ok  - nao existe mais botao de ir pro lado, agora o controle é com hammer 
+ok  - viabilizar navegação : remover forma atual, colocar quadrados de dias
+    - pintar dia LIDO de AMARELO
+    - No BD gravar um unico plano por vez 
+    - No BD gravar os dias efetivamente lidos, para poder pintar de amarelo
+      - mais de implementar facil e rapido, porem mais oneroso pro banco: gravar o dia e separar por ';'
+    - O Botao REINICIAR deve zerar a leitura do plano corrente
+    - Colocar botao SAIR do plano: deve remover o plano corrente do BD  
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
 biblia pesquisa 2.2

@@ -183,6 +183,7 @@
   .sidenav a {font-size: 18px;}
 
   body {margin:0;}
+}
 
 .navbar {
   overflow: hidden;
@@ -205,4 +206,20 @@
 .navbar a:hover {
   background: #ddd;
   color: black;
+}
+
+.diasDoPlano {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.diasDoPlano > div{
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 24px;
 }

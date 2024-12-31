@@ -20,7 +20,7 @@ function getBlvOrWeb()
 // plano eh numerico 1 .. MAX_PLANOS
 function selecionarTitulo(plano)
 {
-  var nacionalidade=getNacionalidade()=="pt-BR";
+  let nacionalidade=getNacionalidade()=="pt-BR";
   switch(plano){
      case 1: setSiglaPlano('ab5'); return nacionalidade ? "Ano Biblico - 5 capitulos por dia" : "Biblic Year - 5 chapter each day";  break;
      case 2: setSiglaPlano('ab3'); return nacionalidade ? "Ano Biblico - 3 capitulos por dia" : "Biblic Year - 3 chapter each day"; break;
@@ -32,10 +32,10 @@ function selecionarTitulo(plano)
 // mostrado quando: ao iniciar a tela, para exibir os planos de estudo
 function carregarDivPlanosEstudo()
 {
-       var str = getNacionalidade()=="pt-BR" ? "Selecione um plano" : "Select a plan";    
+       let str = getNacionalidade()=="pt-BR" ? "Selecione um plano" : "Select a plan";    
        str = ' <label><span id="idmsg30">' + str + '</span></label> ';
        str += ' <ul class="w3-ul w3-hoverable w3-center"> ';
-       for(var i=1;i<=MAX_PLANOS;i++)
+       for(let i=1;i<=MAX_PLANOS;i++)
        {
          str += '<li onclick="carregarPlanoEstudo('+i+')"><span id="idmsg'+(30+i)+'">'+selecionarTitulo(i)+'</span></li>';
        }
@@ -43,12 +43,15 @@ function carregarDivPlanosEstudo()
      document.getElementById('listarplanosestudo').innerHTML=str;
 }
 
-// function ultimoPlano()
-// {
-//   fecharControleLeitura();
-//   carregarPlanoEstudo(ultimoPlanoSelecionado);
-//   abrirTela('planosestudover');
-// }
+//TODO: só deve haver um plano de estudo controlado por vez, se quiser começar outro plano tem q encerrar o atual
+//      ou o atual sera substituido pelo novo
+//usado para fechar os controle de leitura e salvar o estado atual do plano ao concluir o dia
+function ultimoPlano()
+{
+  // fecharControleLeitura();
+  carregarPlanoEstudo(ultimoPlanoSelecionado);
+  abrirTela('planosestudover');
+}
 
 // function setarSiglaPlano(plano)
 // {
@@ -99,12 +102,12 @@ function carregarPlanoEstudo (plano)
 // carrega os numeros dos dias por plano com as respectivas leituras 
 function carregarPlano (plano)
 {
-  var str="";
+  let str="";
   switch (plano)
   {
     case 1: str = anoBib5PorDia(); break;
     case 2: str = anoBib3PorDia(); break;
-    case 4: str = planoPenta(); break;
+    case 3: str = planoPenta(); break;
   }
   return str;
 }
@@ -113,35 +116,33 @@ function carregarPlano (plano)
 function carregarVetorCapitulos (livros)
 {
    var gcap = new Array();
-   for(var i=1;i<=66;i++)
+   for(let i=1;i<=66;i++)
    {
       gcap.push({livro:livros[i].abrev, capitulos:livros[i].qtecapitulos});
    }
    return gcap;
 }
 
-function planoPenta ()
-{
-  var gcap = carregarVetorCapitulos(getBlvOrWeb());
-  return calculaPlanoBasico(1, 187, 5, gcap);
-}
+const QTE_LIVROS_VELHO = 39;
 
 // soma todos os capitulos do VT
 function somaTodosGCapVT (gcap)
 {
-  var soma=0;
-  for(var i=0;i<39;i++)
+  let soma=0;
+  for(let i=0;i<QTE_LIVROS_VELHO;i++)
   {
     soma+=parseInt(gcap[i].capitulos);
   }
   return soma;
 }
 
+const QTE_LIVROS_TODA_BILIA = 66;
+
 // soma todos os capitulos do NT
 function somaTodosGCapNT (gcap)
 {
-  var soma=0;
-  for(var i=39;i<66;i++)
+  let soma=0;
+  for(let i=QTE_LIVROS_VELHO;i<QTE_LIVROS_TODA_BILIA;i++)
   {
     soma+=parseInt(gcap[i].capitulos);
   }
@@ -151,30 +152,34 @@ function somaTodosGCapNT (gcap)
 // soma todos os capitulos do agrupador
 function somaTodosGCap (gcap)
 {
-  var soma=0;
-  for(var i=0;i<gcap.length;i++)
+  let soma=0;
+  for(let i=0;i<gcap.length;i++)
   {
     soma+=parseInt(gcap[i].capitulos);
   }
   return soma;
 }
 
+function planoPenta ()
+{
+  let gcap = carregarVetorCapitulos(getBlvOrWeb());
+  return calculaPlanoBasico(1, 187, 5, gcap);
+}
+
 function anoBib5PorDia()
 {
-  var gcap = carregarVetorCapitulos(getBlvOrWeb());
+  let gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(1, somaTodosGCap(gcap), 5, gcap);
 }  
 
 function anoBib3PorDia ()
 {
-  var gcap = carregarVetorCapitulos(getBlvOrWeb());
+  let gcap = carregarVetorCapitulos(getBlvOrWeb());
   return calculaPlanoBasico(1, somaTodosGCap(gcap), 3, gcap);
 }  
 
 
-
-  
-function abrirControleLeitura (vetorstring,dia)
+function abrirControleLeitura (vetorstring, dia)
 {
   //gravarDataInicioEstudoBanco(getSiglaPlano(), getDataInicioPlano(getSiglaPlano())); 
   //setDiaPlanoEstudo(dia);
@@ -195,7 +200,6 @@ function carregarEnderecoVetorPlanoEstudo()
    w3.hide("#botoesLeitura");
 }
 
-//TODO: preciso setar alguma flag para dizer que estou usando o PLANO DE ESTUDO nos eventos hammer
 function adiantarcapplanoestudo()
 {
    setPosicaoPlanoEstudo(getPosicaoPlanoEstudo() + 1);
@@ -239,15 +243,7 @@ function construirVetorPlanoEstudo(vetorstring)
 //   carregarPlanosBD();
 // }
 
-//reiniciarPlano=function()
-//{
-  //8. botao de recomecar plano
-  //removerUmPlano(getSiglaPlano());
-  //carregarPlanoEstudo(ultimoPlanoSelecionado);
-//}
 
-
-//TODO acho que aqui também merece ser revisado
 //gcap eh a lista de sigla e quantidade de capitulos
 //posicao eh a posicao do capitulo corrente
 //
@@ -277,16 +273,16 @@ function proximoCapituloAbrev(gcap, posicao)
   return endereco;
 }
 
-function acumula(valor, qte, gcap, total)
-{
-          var tempstr = "";
-          for (var i=valor; i<valor+qte; i++)
-          {
-             var escreve = proximoCapituloAbrev(gcap, i);
-             if (escreve.length > 0 && i<=total) tempstr += "<li>" + escreve + "</li>";
-          }
-          return tempstr;
-}
+// function acumula(valor, qte, gcap, total)
+// {
+//           var tempstr = "";
+//           for (var i=valor; i<valor+qte; i++)
+//           {
+//              var escreve = proximoCapituloAbrev(gcap, i);
+//              if (escreve.length > 0 && i<=total) tempstr += "<li>" + escreve + "</li>";
+//           }
+//           return tempstr;
+// }
 
 
 // essa rotina vai gerar a string separada por virgula da sequencia de capitulos usados para um dia de um plano
@@ -305,34 +301,26 @@ function acumulaControleLeitura(valor, qte, gcap, total)
 //total  : eh o numero de capitulos usados para criar o plano
 //somador: eh a quantidade de capitulos incorporados em um dia
 //gcap   : eh a lista de [sigla_livro, qtecapitulos]
-//modificar a exibicao para 
-//dia 1    dia 2    dia 3    dia 4
-//usar flexlayout se possivel 
 function calculaPlanoBasico (inicial, total, somador, gcap)
 {
-    var str = "<ul class='w3-ul w3-hoverable'>";
+    var str = "<br/ ><div class='diasDoPlano'>";
     var dia = 1;
     var contador=inicial;
     var todos = total; 
-    //TODO: nao pode ser por data esse controle, sera por ID
-    var t = getDataInicioPlano( getSiglaPlano() );
-    var data = new Date(t);
-    var dataNac; 
+    //TODO: pintar de amarelo, todos os já lidos
     while(contador <= todos)
     {
        var saidaControle=acumulaControleLeitura(contador, somador, gcap, todos); 
-       dataNac = getNacionalidade()=="pt-BR" ? "Dia " + dia + ": " + getDataPtFormatado(data) : "Day " + dia + ": " +getDataEnFormatado(data);
-       str += "<li id='s"+dia+"'onclick='abrirControleLeitura(\""+saidaControle+"\","+dia+")'>" + dataNac;
-       addDays(data, 1);
+       str += "<div id='s"+dia+"' onclick='abrirControleLeitura(\""+saidaControle+"\","+dia+")'>"; // + dataNac;
        var tempstr;
-       tempstr = "<ul>" + acumula(contador, somador, gcap, todos) + "</ul>"; 
+       tempstr = "Dia" + dia;
        str += tempstr;
        contador += somador;
        dia += 1;
-       str += "</li>";
+       str += "</div>";
     }
   
-    str += "</ul><p>&nbsp;</p><p>&nbsp;</p>";
+    str += "</div><p>&nbsp;</p><p>&nbsp;</p>";
     return str;
 }
 
@@ -377,8 +365,6 @@ function calculaPlanoBasico (inicial, total, somador, gcap)
 //     return str;
 
 // }
-
-
 
 // function somaTodosGCapAteLivro (gcap,livroabrev)
 // {
