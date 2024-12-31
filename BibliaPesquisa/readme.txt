@@ -54,6 +54,11 @@ ok  - viabilizar navegação : remover forma atual, colocar quadrados de dias
     - Colocar botao SAIR do plano: deve remover o plano corrente do BD  
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
+* problema base biblica transliteracao e texto original [faltando]
+ver exemplo oseias 14:1 e 13:16
+hebraico oseisas 14 tem 9 versos e o capitulo 13 tem 15 versos
+mover oseisas 14:1 para 13:16 - esse foi corrigido, listar os arquivo VPL e comparar
+
 biblia pesquisa 2.2
 
 1. integrar mapas aos textos		  
