@@ -49,7 +49,7 @@ ok  - viabilizar navegação : remover forma atual, colocar quadrados de dias
     - pintar dia LIDO de AMARELO
     - No BD gravar um unico plano por vez 
     - No BD gravar os dias efetivamente lidos, para poder pintar de amarelo
-      - mais de implementar facil e rapido, porem mais oneroso pro banco: gravar o dia e separar por ';'
+      - mais de implementar facil e rapido: gravar o dia e separar por ';' - maximo 2K por plano
     - O Botao REINICIAR deve zerar a leitura do plano corrente
     - Colocar botao SAIR do plano: deve remover o plano corrente do BD  
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
