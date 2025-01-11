@@ -55,26 +55,23 @@ ok  - viabilizar navegação : remover forma atual, colocar quadrados de dias
 
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
-
 * problema base biblica transliteracao e texto original [faltando]
-ver exemplo oseias 14:1 e 13:16
-hebraico oseisas 14 tem 9 versos e o capitulo 13 tem 15 versos
-mover oseisas 14:1 para 13:16 - esse foi corrigido, listar os arquivo VPL e comparar
-                  |  QUANT VERSOS
-				  +---------------
-VPL  BLV  HEB  AT |  23145
-VPL  BLV  GRC  NT |   7957
-HEB               |  23213
-GRC               |   7939
-TRANSLIT  HEB  AT |  23144
-TRANSLIT  GRC  NT |   7941
+ - comparador feito e executado no projeto extrator_biblia, arquivo comparadorJSON.js 
+   - rodar, verificar e corrigir base de dados
+
+* colocar mais uma ação ao clicar no verso : strong e referencia cruzada   
+  - verificar se dá pra colocar abaixo da tradução para o texto original, no comparativo de versões 
+    - só tem dados do grego 
 
 
 
 biblia pesquisa 2.2
 
-1. integrar mapas aos textos		  
+1. integrar mapas aos textos
+
 2. zoom na tela 
   - problema é o hammer, apenas no div 'capitulob1' que é a leitura, 
   por default ele desabilita o pinch e o rotate para nao ter element blocking
   - no resto do app por nao usar hammer o zoom funciona de boa 
+
+3. integrar hebraico na solução strong e referencia
