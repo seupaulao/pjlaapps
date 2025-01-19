@@ -46,23 +46,18 @@ ok * exibir/esconder texto original + transliteracao
 * testar o plano de estudo
 ok  - nao existe mais botao de ir pro lado, agora o controle é com hammer 
 ok  - viabilizar navegação : remover forma atual, colocar quadrados de dias
-    - pintar dia LIDO de AMARELO
+    - pintar dia LIDO de VERDE
+    - se incompleto o dia pintar de AMARELO
+    - deixar vermelho ou azul o dia que falta ser LIDO
     - No BD gravar um unico plano por vez 
-    - No BD gravar os dias efetivamente lidos, para poder pintar de amarelo
-      - mais de implementar facil e rapido: gravar o dia e separar por ';' - maximo 2K por plano
+    - usar a estratégia de gravação, marcação e navegação do projeto "PlanoEstudoBiblico"
     - O Botao REINICIAR deve zerar a leitura do plano corrente
+    - O Botao REINICIAR DIA deve apagar o estudo efetivado apenas daquele dia
     - Colocar botao SAIR do plano: deve remover o plano corrente do BD  
 
 * pensar e colocar o "buy me a coffee" no ajuda/ajude-nos 
 
 * problema base biblica transliteracao e texto original [faltando]
- - comparador feito e executado no projeto extrator_biblia, arquivo comparadorJSON.js 
-   - rodar, verificar e corrigir base de dados
-
-* colocar mais uma ação ao clicar no verso : strong e referencia cruzada   
-  - verificar se dá pra colocar abaixo da tradução para o texto original, no comparativo de versões 
-    - só tem dados do grego 
-
 
 
 biblia pesquisa 2.2
@@ -75,3 +70,4 @@ biblia pesquisa 2.2
   - no resto do app por nao usar hammer o zoom funciona de boa 
 
 3. integrar hebraico na solução strong e referencia
+    - usar BSB_TABLES e fazer um arquivo de traducoes para o HEB e GRK   
